@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css?ver=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://kit.fontawesome.com/581fc6d10b.js" crossorigin="anonymous"></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.sec2 {
+				width: 100%;
+			}
+			.sec2 .sec2wrap {
+				width: 94%;
+				max-width: 1600px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.sec2 .sec2wrap > .title {
+				margin: 8% 0 2%;
+				font-size: 40px;
+			}
+
+			.main1 {
+			}
+			.main1 .main1_wrap {
+			}
+			.main1 .main1_wrap ul {
+				width: 100%;
+				max-width: 1200px;
+				margin: 0 auto;
+				/* display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 3%; */
+				/* counter 사용법 
+				before가 속한 속성의 부모에 counter-reset: 이름;을 주고 
+				before에는  
+				content: 'step ' counter(number, decimal-leading-zero);
+				counter-increment: number;을 주고
+				*/
+				counter-reset: number;
+			}
+			.main1 .main1_wrap ul li {
+				background: rgba(246, 234, 186, 0.3);
+				border-radius: 50px;
+				width: calc(33.33% - 26.66px);
+				height: 350px;
+				position: relative;
+				margin: 0 0 40px 40px;
+				z-index: 0;
+			}
+			.main1 .main1_wrap ul li::before {
+				content: '';
+				background: url(img/about4/about4_1arr.png) no-repeat center;
+				position: absolute;
+				top: 50%;
+				left: -40px;
+				transform: translateY(-50%);
+				width: 40px;
+				height: 40px;
+			}
+			.main1 .main1_wrap ul li:nth-child(1):before {
+				display: none;
+			}
+			.main1 .main1_wrap ul li:nth-child(4):before {
+				display: none;
+			}
+			.main1 .main1_wrap ul li .text_wrap::before {
+				content: 'step ' counter(number, decimal-leading-zero);
+				counter-increment: number;
+				/* 텍스트 대문자로  */
+				text-transform: uppercase;
+				color: #f4b01b;
+				line-height: 60px;
+				font-weight: bold;
+				font-size: 16px;
+				display: block;
+				text-align: left;
+			}
+			.main1 .main1_wrap ul li .text_wrap {
+				width: 100%;
+				height: 100%;
+				margin: 0 auto;
+				padding: 13%;
+				text-align: left;
+				word-break: keep-all;
+			}
+			.main1 .main1_wrap ul li:nth-child(1) {
+				margin-left: 0;
+			}
+			.main1 .main1_wrap ul li:nth-child(2) {
+			}
+			.main1 .main1_wrap ul li:nth-child(3) {
+			}
+			.main1 .main1_wrap ul li:nth-child(4) {
+				margin-left: 0;
+			}
+			.main1 .main1_wrap ul li:nth-child(5) {
+			}
+			.main1 .main1_wrap ul li:nth-child(6) {
+			}
+			.main1 .main1_wrap ul li img {
+				background: #f6de7e;
+				position: absolute;
+				top: 9%;
+				right: 9%;
+				border-radius: 50%;
+			}
+			.main1 .main1_wrap ul li .name {
+				color: #f4b01b;
+				font-size: 32px;
+				font-weight: bold;
+				line-height: 32px;
+				margin: 7% 0 10%;
+			}
+			.main1 .main1_wrap ul li .sub {
+				color: #542623;
+				font-size: 18px;
+			}
+
+			.main2 {
+				margin-top: 5%;
+			}
+			.main2 .main2_wrap {
+			}
+			.main2 .main2_wrap h4 {
+				font-size: 30px;
+				color: #542623;
+				margin-bottom: 1%;
+			}
+			.main2 .main2_wrap table {
+				width: 100%;
+				max-width: 1200px;
+				margin: 0 auto;
+				word-break: keep-all;
+			}
+			.main2 .main2_wrap table colgroup {
+			}
+			.main2 .main2_wrap table {
+				border-spacing: 0;
+			}
+			.main2 .main2_wrap table thead {
+				background: #f4b01b;
+				color: white;
+				border-collapse: separate;
+			}
+			.main2 .main2_wrap table thead th {
+				font-size: 22px;
+				font-weight: 500;
+				padding: 1% 0;
+			}
+			.main2 .main2_wrap table thead th:nth-child(2) {
+				border-left: 1px dashed white;
+				border-right: 1px dashed white;
+			}
+			.main2 .main2_wrap table tbody {
+			}
+			.main2 .main2_wrap table tbody tr {
+			}
+			.main2 .main2_wrap table tbody tr th {
+				padding: 2% 0;
+				border-bottom: #ede8d9 1px solid;
+				color: #542623;
+				font-size: 18px;
+			}
+			.main2 .main2_wrap table tbody tr td {
+				padding: 2% 0;
+				border-bottom: #ede8d9 1px solid;
+				color: #686868;
+				font-size: 18px;
+			}
+			.main2 .main2_wrap table tbody tr td:nth-child(2) {
+				border-left: 1px dashed #ddd;
+				border-right: 1px dashed #ddd;
+			}
+			.main2 .main2_wrap table tbody tr td span {
+				text-decoration: line-through;
+				vertical-align: middle;
+			}
+			.main2 .main2_wrap table tfoot {
+				background: #e04b32;
+			}
+			.main2 .main2_wrap table tfoot tr {
+			}
+			.main2 .main2_wrap table tfoot tr th {
+				font-size: 22px;
+				color: white;
+				padding: 2% 0;
+				font-weight: 500;
+			}
+			.main2 .main2_wrap table tfoot tr td {
+				font-size: 22px;
+				color: white;
+				padding: 2% 0;
+			}
+
+			.main3 {
+				margin-top: 3%;
+			}
+			.main3 .main3_wrap {
+			}
+			.main3 .main3_wrap img {
+				max-width: 100%;
+			}
+
+			.sec2 .main7 {
+				background-color: rgb(253, 249, 238);
+				height: 280px;
+				padding: 60px 0 0;
+				margin-top: 5%;
+			}
+
+			.sec2 .main7 div {
+				position: relative;
+				margin-top: 30px;
+
+				animation-name: arr;
+				animation-duration: 1s;
+				animation-timing-function: linear;
+
+				animation-delay: 0s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes arr {
+				0% {
+					margin-top: 30px;
+				}
+
+				50% {
+					margin-top: 15px;
+				}
+
+				100% {
+					margin-top: 30px;
+				}
+			}
+			.sec2 .main7 div .arr {
+				width: 18px;
+				height: 30px;
+				margin: 0 auto;
+			}
+			.sec2 .main7 div .arr span:nth-child(1) {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 2px;
+				height: 40px;
+				background-color: black;
+			}
+			.sec2 .main7 div .arr span:nth-child(2) {
+				position: absolute;
+				top: -4px;
+				left: 0;
+				transform: rotate(45deg);
+				width: 2px;
+				height: 25px;
+				background-color: black;
+			}
+			.sec2 .main7 div .arr span:nth-child(3) {
+				position: absolute;
+				top: -4px;
+				right: 0;
+				transform: rotate(135deg);
+				width: 2px;
+				height: 25px;
+				background-color: black;
+			}
+			.sec2 .main7 div p {
+				position: absolute;
+				width: 100%;
+				top: 60px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-size: 18px;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1500px) {
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				.main1 .main1_wrap ul li .text_wrap::before {
+					line-height: 60px;
+					font-size: 12px;
+				}
+				.main1 .main1_wrap ul li {
+					border-radius: 50px;
+					width: calc(33.33% - 26.66px);
+					height: 280px;
+					position: relative;
+					margin: 0 0 40px 40px;
+				}
+				.main1 .main1_wrap ul li img {
+					top: 9%;
+					right: 9%;
+					width: 50px;
+					height: 50px;
+				}
+				.main1 .main1_wrap ul li .name {
+					font-size: 24px;
+					line-height: 24px;
+					margin: 7% 0 10%;
+				}
+				.main1 .main1_wrap ul li .sub {
+					font-size: 14px;
+				}
+				.main1 .main1_wrap ul li .sub br {
+					display: none;
+				}
+			}
+
+			@media only screen and (min-width: 100px) and (max-width: 900px) {
+				.main2 .main2_wrap table thead th {
+					font-size: 18px;
+					line-height: 18px;
+					padding: 2% 0;
+				}
+				.main2 .main2_wrap table tbody tr th {
+					padding: 2% 0;
+					font-size: 16px;
+				}
+				.main2 .main2_wrap table tbody tr td {
+					padding: 2% 0;
+					font-size: 16px;
+				}
+				.main2 .main2_wrap table tfoot tr th {
+					font-size: 18px;
+					padding: 2% 0;
+				}
+				.main2 .main2_wrap table tfoot tr td {
+					font-size: 18px;
+					padding: 2% 0;
+				}
+
+				.main3 {
+					margin-top: 6%;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				.sec2 .sec2wrap > .title {
+					margin: 15% 0 2%;
+					font-size: 40px;
+				}
+
+				.main1 .main1_wrap ul li {
+					border-radius: 50px;
+					width: calc(50% - 40px);
+					height: 250px;
+					position: relative;
+					margin: 0 0 40px 40px;
+				}
+				.main1 .main1_wrap ul li:nth-child(1):before {
+					display: none;
+				}
+				.main1 .main1_wrap ul li:nth-child(3):before {
+					display: none;
+				}
+				.main1 .main1_wrap ul li:nth-child(4):before {
+					display: block;
+				}
+				.main1 .main1_wrap ul li:nth-child(5):before {
+					display: none;
+				}
+				.main1 .main1_wrap ul li:nth-child(1) {
+					margin-left: 0;
+				}
+				.main1 .main1_wrap ul li:nth-child(2) {
+				}
+				.main1 .main1_wrap ul li:nth-child(3) {
+					margin-left: 0;
+				}
+				.main1 .main1_wrap ul li:nth-child(4) {
+					margin-left: 40px;
+				}
+				.main1 .main1_wrap ul li:nth-child(5) {
+					margin-left: 0;
+				}
+				.main1 .main1_wrap ul li:nth-child(6) {
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 590px) {
+				.sec2 .sec2wrap > .title {
+					margin: 25% 0 2%;
+					font-size: 40px;
+				}
+
+				.main1 .main1_wrap ul li {
+					border-radius: 50px;
+					width: 100%;
+					height: 200px;
+					position: relative;
+					margin: 0 0 40px 0px;
+				}
+				.main1 .main1_wrap ul li .text_wrap {
+					width: 100%;
+					height: 100%;
+					margin: 0 auto;
+					padding: 10%;
+					text-align: left;
+					word-break: keep-all;
+				}
+				.main1 .main1_wrap ul li:nth-child(4) {
+					margin-left: 0px;
+				}
+				.main1 .main1_wrap ul li .text_wrap::before {
+					line-height: 0px;
+					font-size: 12px;
+				}
+				.main1 .main1_wrap ul li img {
+					background: #f6de7e;
+					position: absolute;
+					top: 9%;
+					right: 9%;
+					border-radius: 50%;
+				}
+				.main1 .main1_wrap ul li .name {
+					color: #f4b01b;
+					font-size: 24px;
+					font-weight: bold;
+					line-height: 24px;
+					margin: 10% 0 5%;
+				}
+				.main1 .main1_wrap ul li .name br {
+					display: none;
+				}
+				.main1 .main1_wrap ul li .sub {
+					color: #542623;
+					font-size: 14px;
+				}
+
+				.main1 .main1_wrap ul li::before {
+					content: '';
+					background: url(img/about4/about4_1arr.png) no-repeat center;
+					position: absolute;
+					top: -40px;
+					left: 50%;
+					transform: translateX(-50%) rotate(90deg);
+					width: 40px;
+					height: 40px;
+				}
+				.main1 .main1_wrap ul li:nth-child(3):before {
+					display: block;
+				}
+				.main1 .main1_wrap ul li:nth-child(5):before {
+					display: block;
+				}
+
+				.main3 {
+					margin-top: 10%;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 430px) {
+				.main1 .main1_wrap ul li .name {
+					color: #f4b01b;
+					font-size: 22px;
+					font-weight: bold;
+					line-height: 24px;
+					margin: 13% 0 5%;
+				}
+				.main1 .main1_wrap ul li .sub {
+					color: #542623;
+					font-size: 13px;
+				}
+
+				.main2 .main2_wrap table thead th {
+					font-size: 16px;
+					line-height: 18px;
+					padding: 3% 0;
+				}
+				.main2 .main2_wrap table tbody tr th {
+					padding: 3% 0;
+					font-size: 14px;
+				}
+				.main2 .main2_wrap table tbody tr td {
+					padding: 2% 0;
+					font-size: 14px;
+				}
+				.main2 .main2_wrap table tfoot tr th {
+					font-size: 16px;
+					padding: 2% 0;
+				}
+				.main2 .main2_wrap table tfoot tr td {
+					font-size: 16px;
+					padding: 2% 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sec2">
+			<div class="sec2wrap">
+				<div class="title">창업 비용</div>
+
+				<div class="main1">
+					<div class="main1_wrap">
+						<ul>
+							<li data-aos="zoom-in" data-aos-delay="100">
+								<div class="text_wrap">
+									<img src="img/about4/about4_1_1.png" alt="" />
+									<div class="name">
+										가맹점<br />
+										개설 상담
+									</div>
+									<div class="sub">홈페이지 창업 문의 및 전화로 상담<br />후 방문 면접 일정 협의</div>
+								</div>
+							</li>
+							<li data-aos="zoom-in" data-aos-delay="200">
+								<div class="text_wrap">
+									<img src="img/about4/about4_1_2.png" alt="" />
+									<div class="name">
+										가맹<br />
+										계약
+									</div>
+									<div class="sub">본사와 향후 일정 협의,<br />가맹계약 체결, 점포 개발</div>
+								</div>
+							</li>
+							<li data-aos="zoom-in" data-aos-delay="300">
+								<div class="text_wrap">
+									<img src="img/about4/about4_1_3.png" alt="" />
+									<div class="name">
+										가맹점주<br />
+										교육
+									</div>
+									<div class="sub">위생교육, 조리교육, 서비스교육,<br />세무교육 등 진행</div>
+								</div>
+							</li>
+							<li data-aos="zoom-in" data-aos-delay="400">
+								<div class="text_wrap">
+									<img src="img/about4/about4_1_4.png" alt="" />
+									<div class="name">
+										리허설 및<br />
+										시뮬레이션
+									</div>
+									<div class="sub">매장 오픈에 앞서 전반적인 영업<br />시스템 최종 점검</div>
+								</div>
+							</li>
+							<li data-aos="zoom-in" data-aos-delay="500">
+								<div class="text_wrap">
+									<img src="img/about4/about4_1_5.png" alt="" />
+									<div class="name">
+										오픈 및<br />
+										사후관리
+									</div>
+									<div class="sub">슈퍼바이저 파견, 지속적인 가맹점<br />관리, 점포운영 지도평가</div>
+								</div>
+							</li>
+							<li data-aos="zoom-in" data-aos-delay="600">
+								<div class="text_wrap">
+									<div class="name">SUCCESS<br />FRANSHISE</div>
+									<div class="sub">성공창업</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="main2">
+					<div class="main2_wrap">
+						<h4>개설비용</h4>
+						<table>
+							<colgroup>
+								<col style="width: 29%" />
+								<col style />
+								<col style="width: 20%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>항목</th>
+									<th>내역</th>
+									<th>비용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>가맹비</th>
+									<td>브랜드 상표 사용비용</td>
+									<td>300만원</td>
+								</tr>
+								<tr>
+									<th>교육비</th>
+									<td>본사 교육 1일 + 매장 오픈바이저 파견 2일</td>
+									<td><span>200만원</span> 0원</td>
+								</tr>
+								<tr>
+									<th>로열티</th>
+									<td>0</td>
+									<td>10만원/월</td>
+								</tr>
+								<tr>
+									<th>보증금</th>
+									<td>물류보증금, 계약이행보증금</td>
+									<td>0원</td>
+								</tr>
+								<tr>
+									<th>감리비</th>
+									<td>도면 제작 및 인테리어 감리 비용</td>
+									<td>0원</td>
+								</tr>
+								<tr>
+									<th>주방기기/집기</th>
+									<td>냉동고, 냉장고, 화구, 작업대, 집기류 등 필요 물품 리스트 제공</td>
+									<td>자율</td>
+								</tr>
+								<tr>
+									<th>인테리어</th>
+									<td>내부 바닥, 천정, 벽, 가벽, 주방 공사 도면 무상 제공</td>
+									<td>자율</td>
+								</tr>
+								<tr>
+									<th>외부인테리어</th>
+									<td>외부 간판, 외부 시트지 디자인 제공</td>
+									<td>자율</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th>창업 비용</th>
+									<td colspan="2">300만원 + a</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+
+				<div class="main3">
+					<div class="main3_wrap">
+						<img src="img/about4/about4_2.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="main7">
+				<a href="about5.php"><img src="img/about4/about4_3.png" alt="" /></a>
+				<div>
+					<div class="arr">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<p>다음 페이지로 이동하기!</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+			}
+			header {
+				position: fixed;
+				width: 100%;
+				height: 100px;
+				font-family: 'GmarketSans';
+				background-color: #fff;
+				z-index: 999;
+			}
+			.h2 {
+				height: 100px;
+			}
+			header:hover .menubox {
+				max-height: 500px;
+			}
+			header .logo {
+				position: absolute;
+				top: 50%;
+				left: 2%;
+				transform: translateY(-60%);
+				z-index: 3;
+			}
+			header .logo img {
+				width: 100%;
+			}
+			header .menu {
+				height: 100px;
+			}
+
+			header .menu .wrap {
+				width: 820px;
+				position: relative;
+				right: 0%;
+			}
+			header .menu .grid {
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+				padding: 35px 0;
+			}
+			header .menu .grid li {
+				width: 100%;
+				border-right: 1px solid rgba(206, 204, 204, 0.8);
+			}
+			header .menu .grid li:last-child {
+				border: none;
+			}
+			header .menu .grid li:last-child a {
+				color: #e04b32;
+			}
+			header .menu .grid li a {
+				font-size: 18px;
+				font-weight: 500;
+			}
+			header .menu .grid li a:hover {
+				color: #e04b32;
+			}
+			header .box {
+				position: absolute;
+				top: 50%;
+				right: 3%;
+				transform: translateY(-60%);
+				width: 90px;
+				height: 38px;
+				background-color: #e04b32;
+				border-radius: 3px;
+			}
+			header .box a {
+				color: white;
+				font-size: 16px;
+				line-height: 40px;
+			}
+			header .box .br {
+				display: none;
+			}
+
+			.menubox {
+				position: absolute;
+				width: 100%;
+				background-color: #e04b32;
+				max-height: 0;
+				overflow: hidden;
+			}
+			.menubox .wrap {
+				width: 820px;
+			}
+			.menubox .grid {
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+				padding: 40px 0 15px;
+			}
+			.menubox .grid li {
+				width: 100%;
+				line-height: 30px;
+			}
+			.menubox .grid li a {
+				font-size: 16px;
+				color: white;
+			}
+			.mobile {
+			}
+			header .mobile .mmenu {
+				width: 380px;
+				height: 100vh;
+				position: fixed;
+				background: rgba(224, 75, 49, 0.9);
+				padding-top: 83px;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				transform: translateX(-100%);
+				transition: 0.3s;
+			}
+			header .mobile .mmenu > ul {
+				padding: 0 20px;
+			}
+			header .mobile .mmenu ul li {
+				width: 100%;
+				text-align: left;
+			}
+
+			header .mobile .mmenu ul li span p {
+				color: white;
+				padding: 23px 0;
+				width: 100%;
+				font-size: 15px;
+				border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+			}
+			header .mobile .mmenu ul li .msubmenu {
+				max-height: 0;
+				overflow: hidden;
+				transition: 0.5s;
+			}
+			header .mobile .mmenu .list li.view .msubmenu {
+				max-height: 500px;
+			}
+			header .mobile .mmenu ul li .msubmenu li:first-child {
+				margin-top: 10px;
+			}
+			header .mobile .mmenu ul li .msubmenu li a {
+				width: 100%;
+				color: white;
+				font-size: 14px;
+				padding: 7px 0 0 25px;
+			}
+			header .mobile .mmenu ul li .msubmenu li a:hover {
+				background-color: rgba(0, 0, 0, 0.2);
+				transition: 0.5s;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				header .pc {
+					display: none !important;
+				}
+				header {
+					height: 80px;
+				}
+				.h2 {
+					height: 80px;
+				}
+				.h1 {
+					position: fixed;
+					width: 100%;
+					height: 80px;
+					background-color: #fff;
+					z-index: 2;
+				}
+				#home .slider {
+					height: calc(100vh - 80px);
+				}
+				header .logo {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+				header .box {
+					position: absolute;
+					top: 50%;
+					right: 10px;
+					transform: translateY(-50%);
+					width: 55px;
+					height: 55px;
+					background-color: #e04b32;
+					border-radius: 50%;
+					z-index: 4;
+				}
+				header .box2 {
+					position: absolute;
+					top: 50%;
+					right: 0px;
+					transform: translateY(-50%);
+					width: 80px;
+					height: 80px;
+					background-color: #e04b32;
+					opacity: 0;
+					z-index: 3;
+					transition: 0.2s;
+				}
+
+				header .box a {
+					font-size: 13px;
+					line-height: 15px;
+					font-weight: bold;
+					position: absolute;
+					top: 25%;
+					left: 50%;
+					transform: translate(-50%, 0%);
+					width: 100%;
+					height: 100%;
+				}
+
+				header .box .br {
+					display: block;
+				}
+				.mobile {
+					display: block !important; /*inline-block이 아니라 block*/
+				}
+				.mobile .menuBox {
+					position: absolute;
+					top: 50%;
+					left: 13px;
+					transform: translateY(-50%);
+					width: 55px;
+					height: 55px;
+					background-color: #f4b01b;
+					border-radius: 50%;
+					z-index: 2;
+					background-image: url(./img/mobilemenu.png);
+					background-repeat: no-repeat;
+					background-position: center;
+					opacity: 1;
+					transition: 0.2s;
+				}
+				.mobile .menuBox2 {
+					position: absolute;
+					top: 50%;
+					left: 0%;
+					transform: translateY(-50%);
+					width: 80px;
+					height: 80px;
+					background-color: #f4b01b;
+					z-index: 3;
+					opacity: 0;
+					background-image: url(./img/mobilemenu.png);
+					background-repeat: no-repeat;
+					background-position: center;
+					transition: 0.2s;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="h1"></div>
+			<!-- 부모자식이 둘 다 fixed면 z-index 상관없이 자식이 무조건 위로 올라오기 때문에 h1만듦-->
+			<div class="logo">
+				<a href="../i/index.php"><img src="./img/logo.png" alt="" /></a>
+			</div>
+			<div class="box">
+				<a href="../about/about5.php"> 창업<br class="br" />문의 </a>
+			</div>
+			<div class="box2"></div>
+			<div class="pc">
+				<div class="menu">
+					<div class="wrap">
+						<ul class="grid">
+							<li><a href="../menu/menu1.php">메뉴</a></li>
+							<li><a href="../store/store1.php">매장 찾기</a></li>
+							<li><a href="../news/news1.php">커뮤니티</a></li>
+							<li><a href="../cus/cus1.php">고객의 소리</a></li>
+							<li><a href="../about/about1.php">창업 안내</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="menubox">
+					<div class="wrap">
+						<ul class="grid">
+							<li>
+								<ul>
+									<li><a href="../menu/menu1.php">대표메뉴</a></li>
+									<li><a href="../menu/menu2.php">1첩</a></li>
+									<li><a href="../menu/menu3.php">2첩</a></li>
+									<li><a href="../menu/menu4.php">3첩</a></li>
+									<li><a href="../menu/menu5.php">더하다</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li><a href="../store/store1.php">매장찾기</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li><a href="../news/news1.php">새소식</a></li>
+									<li>
+										<a href="https://www.instagram.com/samcheop__official/" target="_blank">인스타그램</a>
+									</li>
+									<li>
+										<a href="https://sambanggu.com/" target="_blank">
+											<img src="./img/menu_img.png" alt="" />삼방구
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li><a href="../cus/cus1.php">고객 칭찬</a></li>
+									<li><a href="../cus/cus2.php">고객의 소리</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li><a href="../about/about1.php">왜 삼첩분식인가</a></li>
+									<li><a href="../about/about2.php">브랜드 강점</a></li>
+									<li><a href="../about/about3.php">창업 강점</a></li>
+									<li><a href="../about/about4.php">창업 비용</a></li>
+									<li><a href="../about/about5.php">창업 문의</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="mobile">
+				<div class="menuBox"></div>
+				<div class="menuBox2"></div>
+				<div class="mmenu">
+					<ul class="list">
+						<li>
+							<span class="mmainmenu"><p>메뉴</p></span>
+							<ul class="msubmenu">
+								<li><a href="../menu/menu1.php">대표메뉴</a></li>
+								<li><a href="../menu/menu2.php">1첩</a></li>
+								<li><a href="../menu/menu3.php">2첩</a></li>
+								<li><a href="../menu/menu4.php">3첩</a></li>
+								<li><a href="../menu/menu5.php">더하다</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="mmainmenu">
+								<p>매장찾기</p>
+							</span>
+							<ul class="msubmenu">
+								<li><a href="../store/store1.php">매장찾기</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="mmainmenu"><p>커뮤니티</p></span>
+							<ul class="msubmenu">
+								<li><a href="../news/news1.php">새소식</a></li>
+								<li><a href="https://www.instagram.com/samcheop__official/" target="_blank">인스타그램</a></li>
+								<li>
+									<a href="https://sambanggu.com/" target="_blank"
+										><img src="./img/menu_img.png" alt="" />삼방구</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span class="mmainmenu"><p>고객의 소리</p></span>
+							<ul class="msubmenu">
+								<li><a href="../cus/cus1.php">고객 칭찬</a></li>
+								<li><a href="../cus/cus2.php">고객의 소리</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="mmainmenu"><p>창업 안내</p></span>
+							<ul class="msubmenu">
+								<li><a href="../about/about1.php">왜 삼첩분식인가</a></li>
+								<li><a href="../about/about2.php">브랜드 강점</a></li>
+								<li><a href="../about/about3.php">창업 강점</a></li>
+								<li><a href="../about/about4.php">창업 비용</a></li>
+								<li><a href="../about/about5.php">창업 문의</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div class="h2"></div>
+	</body>
+	<script>
+		mobileBox = document.querySelector('.mobile .menuBox');
+		mobileBox2 = document.querySelector('.mobile .menuBox2');
+		msubmenu = document.querySelectorAll('.msubmenu');
+		mmainmenu = document.querySelectorAll('.mmainmenu');
+		mb = 0;
+
+		mobileBox2.addEventListener('click', function () {
+			if (mb == 0) {
+				document.querySelector('header .box2').style.opacity = '1';
+				document.querySelector('.mobile .menuBox2').style.opacity = '1';
+				mobileBox.style.opacity = '0';
+				document.querySelector('.mmenu').style.transform = 'translateX(0)';
+				// for (i = 0; i < 6; i++) {
+				// 	msubmenu[i].style.display = 'block';
+				// }
+				mb = 1;
+			} else {
+				document.querySelector('header .box2').style.opacity = '0';
+				document.querySelector('.mobile .menuBox2').style.opacity = '0';
+				mobileBox.style.opacity = '1';
+				document.querySelector('.mmenu').style.transform = 'translateX(-100%)';
+
+				mb = 0;
+			}
+		});
+
+		$(function () {
+			$('header .mobile .mmenu .list li').on('click', function () {
+				const check = $(this).hasClass('view');
+
+				$('header .mobile .mmenu .list li').removeClass('view');
+
+				if (!check) {
+					$(this).addClass('view');
+				}
+			});
+		});
+	</script>
+</html>

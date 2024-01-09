@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css?ver=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			span {
+				font-size: inherit;
+				line-height: inherit;
+			}
+
+			.sec2 {
+				width: 100%;
+				overflow: hidden;
+			}
+			.sec2 .sec2wrap {
+				width: 94%;
+				max-width: 1600px;
+				margin: 0 auto;
+			}
+			.sec2 .sec2wrap .title {
+				position: relative;
+				z-index: 3;
+			}
+			.sec2 .sec2wrap > .title .name {
+				font-size: 40px;
+				padding: 8% 0 2%;
+			}
+			.sec2 .sec2wrap > .title img {
+				padding: 0 0 10px;
+			}
+
+			.main1 {
+				background: #fdfaf0;
+				position: relative;
+			}
+			.main1::before {
+				content: '';
+				width: 410px;
+				height: 600px;
+				position: absolute;
+				top: 20%;
+				left: -3%;
+				background: url(img/menu2/menu2_bg.png) no-repeat left bottom;
+				background-size: 100% auto;
+
+				z-index: 0;
+			}
+			.main1::after {
+				content: '';
+				width: 410px;
+				height: 600px;
+				position: absolute;
+				top: -15%;
+				right: -4%;
+				background: url(img/menu2/menu2_bg2.png) no-repeat left top;
+				background-size: 100% auto;
+				z-index: 0;
+			}
+			.main1 .main1_wrap {
+				width: 90%;
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: 47% 53%;
+			}
+			.main1 .main1_wrap .img {
+			}
+			.main1 .main1_wrap .img img {
+				width: 100%;
+			}
+			.main1 .main1_wrap .text {
+				text-align: left;
+				padding: 25% 0;
+			}
+			.main1 .main1_wrap .text .sub {
+				font-size: 72px;
+				color: #542623;
+			}
+			.main1 .main1_wrap .text .sub span {
+				color: #e04b32;
+			}
+			.main1 .main1_wrap .text .sub2 {
+				font-size: 26px;
+				color: #542623;
+			}
+
+			.btn {
+				padding: 5% 0;
+			}
+			.btn a {
+				background: #e04b32;
+				color: white;
+				padding: 1% 4.3%;
+				font-size: 22px;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				.sec2 .sec2wrap {
+					width: 90%;
+					margin: 0 auto;
+				}
+
+				.sec2 .sec2wrap > .title .name {
+					font-size: 35px;
+					padding: 10% 0 4%;
+				}
+
+				.main1 .main1_wrap {
+					width: 95%;
+					margin: 0 auto;
+					display: grid;
+					grid-template-columns: 47% 53%;
+				}
+				.main1 .main1_wrap .text {
+					text-align: left;
+					padding: 20% 0;
+				}
+				.main1 .main1_wrap .text .sub {
+					font-size: 60px;
+					color: #542623;
+				}
+				.main1 .main1_wrap .text .sub2 {
+					font-size: 20px;
+					color: #542623;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				.sec2 .sec2wrap .title {
+					margin-top: 10%;
+				}
+
+				.sec2 .sec2wrap {
+					width: 70%;
+					margin: 0 auto;
+				}
+				.sec2 .sec2wrap > .title .name {
+					font-size: 30px;
+					padding: 15% 0 4%;
+				}
+
+				.main1::before {
+					width: 40%;
+					height: 600px;
+					top: -10%;
+					left: -10%;
+				}
+				.main1::after {
+					width: 40%;
+					height: 600px;
+					top: -25%;
+					right: -10%;
+				}
+				.main1 .main1_wrap {
+					width: 80%;
+					margin: 0 auto;
+					display: grid;
+					grid-template-columns: 1fr;
+				}
+				.main1 .main1_wrap .img img {
+					width: 80%;
+				}
+				.main1 .main1_wrap .text {
+					text-align: left;
+					padding: 5% 0;
+				}
+				.main1 .main1_wrap .text .sub {
+					font-size: 48px;
+					color: #542623;
+				}
+				.main1 .main1_wrap .text .sub2 {
+					font-size: 17px;
+					color: #542623;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 590px) {
+				.main1 .main1_wrap .text .sub {
+					font-size: 42px;
+					color: #542623;
+				}
+				.main1 .main1_wrap .text .sub2 {
+					font-size: 15px;
+					color: #542623;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 464px) {
+				.sec2 .sec2wrap {
+					width: 90%;
+					margin: 0 auto;
+				}
+				.main1 .main1_wrap {
+					width: 90%;
+					margin: 0 auto;
+					display: grid;
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sec2">
+			<div class="sec2wrap">
+				<div class="title">
+					<div class="name">1첩</div>
+					<img src="img/menu2/menu2_tit.png" alt="" />
+				</div>
+
+				<div class="main1">
+					<div class="main1_wrap">
+						<div class="img">
+							<img src="img/menu2/menu2_1.png" alt="" />
+						</div>
+						<div class="text">
+							<div class="sub"><span>삼첩</span>떡볶이</div>
+							<div class="sub2">
+								매콤하고 칼칼한 삼첩분식의 시그니처,<br />
+								기본 국물떡볶이!
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn">
+					<a href="menu2.php">목록보기</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

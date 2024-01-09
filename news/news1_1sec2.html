@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css?ver=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://kit.fontawesome.com/581fc6d10b.js" crossorigin="anonymous"></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.sec2 {
+				width: 100%;
+			}
+			.sec2 .sec2wrap {
+				width: 88%;
+				margin: 0 auto;
+			}
+			.sec2 .sec2wrap .title {
+			}
+			.sec2 .sec2wrap .title .name {
+				font-size: 40px;
+				padding: 8% 0 3%;
+			}
+			.sec2 .sec2wrap .title .sub {
+				font-size: 26px;
+				border-top: 2px solid #000;
+				border-bottom: 1px solid #ccc;
+				padding: 15px 0;
+				margin-bottom: 60px;
+			}
+
+			.sec2 .sec2wrap .main {
+				display: grid;
+				grid-template-columns: repeat(1, 1fr);
+				gap: 0%;
+			}
+			.sec2 .sec2wrap .main img {
+				width: 50%;
+				margin: 0 auto;
+			}
+
+			.sec2 .sec2wrap .btn {
+				padding: 60px 0 20px;
+				text-align: right;
+			}
+			.sec2 .sec2wrap .btn a {
+				background-color: #f4b01b;
+				color: #fff;
+				font-size: 16px;
+				font-weight: bold;
+				padding: 0 10px;
+				height: 35px;
+				line-height: 35px;
+				transition: 0.2s;
+			}
+			.sec2 .sec2wrap .btn a:hover {
+				background-color: #f49d1b;
+			}
+			.sec2 .sec2wrap .btn a i {
+				line-height: 33px;
+				font-weight: bold;
+				margin-right: 3px;
+			}
+
+			.sec2 .sec2wrap .box {
+				border: 1px solid #ddd;
+				margin: 0 0 80px;
+			}
+			.sec2 .sec2wrap .box li {
+				width: 100%;
+				padding: 10px 0;
+				background-color: white;
+			}
+			.sec2 .sec2wrap .box li:hover {
+				background-color: #f0f0f08e;
+			}
+			.sec2 .sec2wrap .box li span {
+				color: #f0a500;
+				font-size: 16px;
+				float: left;
+				padding: 0 20px 0 10px;
+			}
+			.sec2 .sec2wrap .box li span i {
+				line-height: 20px;
+				margin-right: 3px;
+			}
+			.sec2 .sec2wrap .box li span:last-child {
+				color: #888;
+				float: right;
+			}
+			.sec2 .sec2wrap .box li a {
+				font-size: 16px;
+				float: left;
+			}
+			.sec2 .sec2wrap .box .prev {
+				border-bottom: 1px solid #ddd;
+			}
+
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				.sec2 .sec2wrap {
+					width: 90%;
+					margin: 0 auto;
+				}
+
+				.sec2 .sec2wrap .title .name {
+					font-size: 35px;
+					padding: 15% 0 4%;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				.sec2 .sec2wrap .title .name {
+					font-size: 30px;
+					padding: 15% 0 4%;
+				}
+				.sec2 .sec2wrap .title .sub {
+					font-size: 20px;
+				}
+				.sec2 .sec2wrap .main img {
+					width: 70%;
+					margin: 0 auto;
+				}
+				.sec2 .sec2wrap .box li span {
+					color: #f0a500;
+					font-size: 14px;
+					float: left;
+					padding: 0 20px 0 10px;
+				}
+
+				.sec2 .sec2wrap .box li a {
+					font-size: 14px;
+					float: left;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 430px) {
+				.sec2 .sec2wrap .title .name {
+					font-size: 30px;
+					padding: 25% 0 4%;
+				}
+				.sec2 .sec2wrap .title .sub {
+					font-size: 18px;
+				}
+				.sec2 .sec2wrap .main img {
+					width: 90%;
+					margin: 0 auto;
+				}
+
+				.sec2 .sec2wrap .btn {
+					padding: 60px 0 20px;
+					text-align: center;
+				}
+				.sec2 .sec2wrap .box li span {
+					color: #f0a500;
+					font-size: 12px;
+					float: left;
+					padding: 0 15px 0 6px;
+				}
+
+				.sec2 .sec2wrap .box li a {
+					font-size: 12px;
+					float: left;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sec2">
+			<div class="sec2wrap">
+				<div class="title">
+					<div class="name">새소식</div>
+					<div class="sub">삼첩분식 인스타그램 스티커 출시!</div>
+				</div>
+				<div class="main">
+					<img src="img/news1/news1.gif" alt="" />
+					<img src="img/news1/news1_2.png" alt="" />
+					<img src="img/news1/news1_3.gif" alt="" />
+					<img src="img/news1/news1_4.png" alt="" />
+					<img src="img/news1/news1_5.gif" alt="" />
+					<img src="img/news1/news1_6.png" alt="" />
+					<img src="img/news1/news1_7.gif" alt="" />
+					<img src="img/news1/news1_8.png" alt="" />
+				</div>
+				<div class="btn">
+					<a href="news1.php"><i class="fa-solid fa-list"></i>목록</a>
+				</div>
+				<ul class="box">
+					<li class="prev">
+						<span><i class="fa-solid fa-caret-up"></i>이전글</span>
+						<a href="store1_1.php">삼첩분식 앱출시!</a>
+						<span>23.07.04</span>
+					</li>
+					<li class="next">
+						<span><i class="fa-solid fa-caret-down"></i>다음글</span>
+						<a href="store1_1.php">2023 봄 한정판 봄패키지 출시!</a>
+						<span>23.07.04</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

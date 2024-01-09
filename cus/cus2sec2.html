@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css?ver=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://kit.fontawesome.com/581fc6d10b.js" crossorigin="anonymous"></script>
+		<link href="node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.sec2 {
+				width: 100%;
+			}
+			.sec2 .sec2wrap {
+				width: 88%;
+				margin: 0 auto;
+			}
+			.sec2 .sec2wrap .title {
+			}
+			.sec2 .sec2wrap .title .name {
+				font-size: 40px;
+				padding: 8% 0 3%;
+			}
+
+			.sec2 .sec2wrap section {
+				width: 70%;
+				margin: 0 auto;
+				border-top: 2px solid black;
+			}
+			.sec2 .sec2wrap section .agree {
+				text-align: left;
+			}
+			.sec2 .sec2wrap section .agree h6 {
+				font-size: 20px;
+				color: #686868;
+				margin: 15px 0 5px;
+			}
+			.sec2 .sec2wrap section .agree textarea {
+				font-size: 15px;
+				padding: 20px;
+				background: #f9f9f9;
+				border: 1px solid #eee;
+				line-height: 20px;
+				letter-spacing: -2px;
+				margin: 0px 0 15px;
+			}
+			.sec2 .sec2wrap section .agree label {
+				font-size: 15px;
+				color: #686868;
+			}
+
+			.sec2 .sec2wrap section form {
+				width: 100%;
+				margin: 0 auto;
+				padding: 25px 0 0;
+			}
+			.sec2 .sec2wrap section form > div {
+				width: 100%;
+				border-top: 1px solid #ececec;
+				padding: 15px 0;
+				display: grid;
+				grid-template-columns: 15% 85%;
+			}
+			.sec2 .sec2wrap section form div span {
+				font-size: 17px;
+				color: #686868;
+				padding: 11.5px 0 11.5px 10px;
+				text-align: left;
+			}
+			.sec2 .sec2wrap section form div select {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				font-size: 17px;
+				padding: 5px;
+				background-color: #f9f9f9;
+				border: 1px solid #eee;
+				color: #686868;
+			}
+			.sec2 .sec2wrap section form div input {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				font-size: 17px;
+				padding: 5px;
+				background-color: #f9f9f9;
+				border: 1px solid #eee;
+			}
+			.sec2 .sec2wrap section form #fr-logo {
+				display: none;
+			}
+			.sec2 .sec2wrap section form .fr-placeholder {
+				display: none;
+			}
+			.sec2 .sec2wrap section form .fr-element {
+				height: 200px;
+			}
+			.sec2 .sec2wrap section form .fr-wrapper div:first-child {
+				display: none;
+			}
+			.sec2 .sec2wrap section .btn {
+				border-top: 2px solid black;
+				padding: 30px 0 0;
+				text-align: right;
+			}
+			.sec2 .sec2wrap section .btn input {
+				width: 200px;
+				height: 55px;
+				line-height: 55px;
+				cursor: pointer;
+				font-size: 17px;
+				background: #e04b32;
+				color: white;
+				border: 0;
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+			}
+
+			.sec2 .sec2wrap .pros {
+				padding: 120px 0 0;
+				width: 100%;
+			}
+			.sec2 .sec2wrap .pros h4 {
+				font-size: 27px;
+				color: #542623;
+			}
+			.sec2 .sec2wrap .pros ul {
+				width: 100%;
+				padding: 40px 0 80px;
+			}
+			.sec2 .sec2wrap .pros > ul > li {
+				width: calc(20% - 40px);
+				background-color: #f4b01b;
+				height: 280px;
+				padding: 0 20px;
+				border-radius: 280px;
+				position: relative;
+				margin: 0 20px;
+			}
+			.sec2 .sec2wrap .pros > ul > li::before {
+				content: '';
+				background: url(./img/cus1/step_arr.png) no-repeat center;
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				top: 50%;
+				left: -40px;
+				transform: translateY(-50%);
+			}
+			.sec2 .sec2wrap .pros > ul > li:first-child::before {
+				content: '';
+				display: none;
+			}
+			.sec2 .sec2wrap .pros ul li .title {
+				padding: 60px 0;
+				word-break: keep-all;
+			}
+			.sec2 .sec2wrap .pros ul li .title li {
+				color: white;
+				width: 100%;
+			}
+			.sec2 .sec2wrap .pros ul li .title li:nth-child(1) {
+				font-weight: 600;
+				font-size: 16px;
+			}
+			.sec2 .sec2wrap .pros ul li .title li:nth-child(2) {
+				font-size: 32px;
+				font-weight: 600;
+				line-height: 32px;
+				padding: 20px 0;
+			}
+			.sec2 .sec2wrap .pros ul li .title li:nth-child(3) {
+				font-size: 17px;
+			}
+
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				.sec2 .sec2wrap {
+					width: 90%;
+					margin: 0 auto;
+				}
+				.sec2 .sec2wrap .title .name {
+					font-size: 35px;
+					padding: 15% 0 4%;
+				}
+
+				.sec2 .sec2wrap .pros > ul > li {
+					width: calc(33% - 40px);
+					background-color: #f4b01b;
+					height: 280px;
+					padding: 0 20px;
+					border-radius: 280px;
+					position: relative;
+					margin: 0 20px;
+				}
+				.sec2 .sec2wrap .pros ul li .title li:nth-child(1) {
+					font-weight: 600;
+					font-size: 14px;
+				}
+				.sec2 .sec2wrap .pros ul li .title li:nth-child(2) {
+					font-size: 26px;
+					font-weight: 600;
+					line-height: 32px;
+					padding: 20px 0;
+				}
+				.sec2 .sec2wrap .pros ul li .title li:nth-child(3) {
+					font-size: 15px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				.sec2 .sec2wrap .title .name {
+					font-size: 30px;
+					padding: 15% 0 4%;
+				}
+
+				.sec2 .sec2wrap section {
+					width: 100%;
+				}
+				.sec2 .sec2wrap section form div span {
+					font-size: 15px;
+				}
+				.sec2 .sec2wrap section form div select {
+					font-size: 15px;
+				}
+				.sec2 .sec2wrap section form div input {
+					font-size: 15px;
+				}
+
+				.sec2 .sec2wrap .pros > ul > li {
+					width: calc(50% - 40px);
+					background-color: #f4b01b;
+					height: 180px;
+					padding: 0 20px;
+					border-radius: 280px;
+					position: relative;
+					margin: 10px 20px;
+				}
+				.sec2 .sec2wrap .pros ul li .title {
+					padding: 30px 0;
+					word-break: keep-all;
+				}
+				.sec2 .sec2wrap .pros > ul > li:nth-child(3)::before {
+					content: '';
+					display: none;
+				}
+				.sec2 .sec2wrap .pros ul li .title li:nth-child(1) {
+					font-weight: 600;
+					font-size: 12px;
+				}
+				.sec2 .sec2wrap .pros ul li .title li:nth-child(2) {
+					font-size: 22px;
+					font-weight: 600;
+					line-height: 22px;
+					padding: 5px 0;
+				}
+				.sec2 .sec2wrap .pros ul li .title li:nth-child(3) {
+					font-size: 13px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 430px) {
+				.sec2 .sec2wrap .title .name {
+					font-size: 30px;
+					padding: 25% 0 4%;
+				}
+				.sec2 .sec2wrap section form div span {
+					font-size: 13px;
+				}
+				.sec2 .sec2wrap section form div select {
+					font-size: 13px;
+				}
+				.sec2 .sec2wrap section form div input {
+					font-size: 13px;
+				}
+				.sec2 .sec2wrap section form .fr-element {
+					height: 120px;
+				}
+
+				.sec2 .sec2wrap .pros > ul > li {
+					width: calc(100%);
+					background-color: #f4b01b;
+					height: 150px;
+					padding: 0 20px;
+					border-radius: 280px;
+					position: relative;
+					margin: 10px 0px;
+				}
+				.sec2 .sec2wrap .pros ul li .title {
+					padding: 30px 0;
+					word-break: keep-all;
+				}
+				.sec2 .sec2wrap .pros ul li .title li:nth-child(1) {
+					font-weight: 600;
+					font-size: 12px;
+				}
+				.sec2 .sec2wrap .pros ul li .title li:nth-child(2) {
+					font-size: 22px;
+					font-weight: 600;
+					line-height: 22px;
+					padding: 15px 0;
+				}
+				.sec2 .sec2wrap .pros ul li .title li:nth-child(3) {
+					font-size: 13px;
+				}
+				.sec2 .sec2wrap .pros ul li .title li:nth-child(2) br {
+					display: none;
+				}
+
+				.sec2 .sec2wrap .pros > ul > li::before {
+					content: '';
+					background: url(./img/cus1/step_arr.png) no-repeat center;
+					background-size: auto 20%;
+					width: 30px;
+					height: 30px;
+					position: absolute;
+					top: 97%;
+					left: 50%;
+					transform: translateX(-50%) rotate(90deg);
+				}
+				.sec2 .sec2wrap .pros > ul > li:nth-child(1)::before {
+					content: '';
+					display: block;
+				}
+				.sec2 .sec2wrap .pros > ul > li:nth-child(3)::before {
+					content: '';
+					display: block;
+				}
+				.sec2 .sec2wrap .pros > ul > li:nth-child(5)::before {
+					content: '';
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sec2">
+			<div class="sec2wrap">
+				<div class="title">
+					<div class="name">고객의 소리</div>
+				</div>
+				<section>
+					<div class="agree">
+						<h6>개인정보취급방침</h6>
+						<textarea name="textarea" style="width: 100%; height: 200px">
+씨지에프 주식회사(이하 '회사'라 함)는 “정보통신망 이용촉진” 및 “정보보호 등에 관한 법률”, “개인정보보호법” 등 관련 법령에 따라 정보통신 서비스 제공자가 준수하여야 할 개인정보보호 규정을 준수하며, 관련 법령에 의거한 개인정보처리방침을 정하여 이용자 권익 보호에 최선을 다하고 있습니다. 개인정보보호방침을 통하여 귀하께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+
+본 개인정보처리방침은 회사가 제공하는 서비스(회사가 운영하는 “삼첩분식 홈페이지”와 모바일에 적용되며 다음과 같은 내용을 담고 있습니다
+
+1. 개인정보의 수집목적 및 이용목적
+2. 개인정보의 수집항목
+3. 개인정보의 보유 및 이용기간
+
+
+1. 개인정보의 수집목적 및 이용목적
+                        </textarea
+						>
+						<input type="checkbox" name="agree" />
+						<label for="agree">위 이용약관에 동의합니다.</label>
+					</div>
+					<form action="">
+						<div>
+							<span>유형</span>
+							<select name="" id="">
+								<option value="">분류를 선택하세요</option>
+								<option value="">맛</option>
+								<option value="">위생</option>
+								<option value="">서비스</option>
+								<option value="">제안</option>
+							</select>
+						</div>
+						<div>
+							<span>이름</span>
+							<input type="text" class="required" placeholder="이름" />
+						</div>
+						<div>
+							<span>연락처</span>
+							<input type="text" class="required" placeholder="연락처" />
+						</div>
+						<div>
+							<span>이메일</span>
+							<input type="text" class="required" placeholder="이메일" />
+						</div>
+						<div>
+							<span>매장</span>
+							<input type="text" class="required" placeholder="매장" />
+						</div>
+						<div>
+							<span>내용</span>
+							<div id="example"></div>
+						</div>
+					</form>
+					<div class="btn">
+						<input type="submit" value="등록하기" />
+					</div>
+				</section>
+				<div class="pros">
+					<h4>고객의 소리 처리 프로세스</h4>
+					<ul>
+						<li data-aos="zoom-in" data-aos-delay="100">
+							<ul class="title">
+								<li>STEP 01</li>
+								<li>고객의 소리<br />접수</li>
+								<li>대표번호, 홈페이지, SNS 등</li>
+							</ul>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="200">
+							<ul class="title">
+								<li>STEP 02</li>
+								<li>고객<br />상담</li>
+								<li>접수확인 및 현황 파악</li>
+							</ul>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="300">
+							<ul class="title">
+								<li>STEP 03</li>
+								<li>개선대책<br />마련</li>
+								<li>대책 마련</li>
+							</ul>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="400">
+							<ul class="title">
+								<li>STEP 04</li>
+								<li>원인<br />분석</li>
+								<li>담당부서 전달</li>
+							</ul>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="500">
+							<ul class="title">
+								<li>STEP 05</li>
+								<li>결과<br />안내</li>
+								<li>고객의 소리 답변</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var editor = new FroalaEditor('#example');
+		AOS.init({
+			duration: 1000,
+			delay: 200,
+		});
+	</script>
+</html>

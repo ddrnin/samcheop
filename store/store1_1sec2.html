@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css?ver=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://kit.fontawesome.com/581fc6d10b.js" crossorigin="anonymous"></script>
+		<script
+			type="text/javascript"
+			src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fdb68bbe65f413a0e9bb19a823e5712c
+		"
+		></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.sec2 {
+				width: 100%;
+			}
+			.sec2 .sec2wrap {
+				width: 88%;
+				margin: 0 auto;
+			}
+			.sec2 .sec2wrap .title {
+			}
+			.sec2 .sec2wrap .title .name {
+				font-size: 40px;
+				padding: 8% 0 3%;
+			}
+
+			.sec2 .sec2wrap .main {
+				width: 100%;
+				border-top: 1px solid black;
+			}
+			.sec2 .sec2wrap .main > .name {
+				font-size: 21px;
+				color: #e04b31;
+				line-height: 50px;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.377);
+				text-align: left;
+				padding: 12px 0 5px;
+			}
+			.sec2 .sec2wrap .main .name span {
+				font-size: 30px;
+				color: #212121;
+			}
+			.sec2 .sec2wrap .main .grid {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 40px;
+			}
+			.sec2 .sec2wrap .main .grid #map {
+				background-color: red;
+				width: 600px;
+				height: 350px;
+			}
+			.sec2 .sec2wrap .main .grid .info {
+				width: 600px;
+				text-align: left;
+			}
+			.sec2 .sec2wrap .main .grid .info p {
+				font-size: 36px;
+				color: #212121;
+				border-bottom: 2px solid black;
+				padding-bottom: 12px;
+			}
+			.sec2 .sec2wrap .main .grid .info ul {
+			}
+			.sec2 .sec2wrap .main .grid .info ul li {
+				display: grid;
+				grid-template-columns: 20% 80%;
+				border-bottom: dotted 1px #212121;
+				padding: 10px 0;
+			}
+			.sec2 .sec2wrap .main .grid .info ul li .name {
+				font-size: 16px;
+				color: #212121;
+			}
+			.sec2 .sec2wrap .main .grid .info ul li .sub {
+				font-size: 16px;
+				color: #787878;
+			}
+
+			.sec2 .sec2wrap .main .btn {
+				padding: 100px 0 30px;
+			}
+			.sec2 .sec2wrap .main .btn a {
+				background-color: #f4b01b;
+				color: #fff;
+				font-size: 16px;
+				font-weight: bold;
+				padding: 0 10px;
+				height: 35px;
+				line-height: 35px;
+				transition: 0.2s;
+			}
+			.sec2 .sec2wrap .main .btn a:hover {
+				background-color: #f49d1b;
+			}
+			.sec2 .sec2wrap .main .btn a i {
+				line-height: 33px;
+				font-weight: bold;
+				margin-right: 3px;
+			}
+			.sec2 .sec2wrap .main .btn a:nth-child(1) {
+				float: left;
+			}
+			.sec2 .sec2wrap .main .btn a:nth-child(2) {
+				float: right;
+			}
+			.sec2 .sec2wrap .main .box {
+				border: 1px solid #ddd;
+				margin: 30px 0;
+			}
+			.sec2 .sec2wrap .main .box li {
+				width: 100%;
+				padding: 10px 0;
+				background-color: white;
+			}
+			.sec2 .sec2wrap .main .box li:hover {
+				background-color: #f0f0f08e;
+			}
+			.sec2 .sec2wrap .main .box li span {
+				color: #4567b5;
+				font-size: 16px;
+				float: left;
+				padding: 0 20px 0 10px;
+			}
+			.sec2 .sec2wrap .main .box li span i {
+				line-height: 20px;
+				margin-right: 3px;
+			}
+			.sec2 .sec2wrap .main .box li span:last-child {
+				color: #888;
+				float: right;
+			}
+			.sec2 .sec2wrap .main .box li a {
+				font-size: 16px;
+				float: left;
+			}
+			.sec2 .sec2wrap .main .box .prev {
+				border-bottom: 1px solid #ddd;
+			}
+
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				.sec2 .sec2wrap {
+					width: 90%;
+					margin: 0 auto;
+				}
+
+				.sec2 .sec2wrap .title .name {
+					font-size: 35px;
+					padding: 15% 0 4%;
+				}
+
+				.sec2 .sec2wrap .main .grid #map {
+					background-color: red;
+					width: 400px;
+					height: 250px;
+				}
+				.sec2 .sec2wrap .main .grid .info {
+					width: 400px;
+					text-align: left;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				.sec2 .sec2wrap .title .name {
+					font-size: 30px;
+					padding: 15% 0 4%;
+				}
+				.sec2 .sec2wrap .main .grid {
+					display: grid;
+					grid-template-columns: 1fr;
+					padding: 40px 0 0;
+					margin: 0 auto;
+				}
+				.sec2 .sec2wrap .main .grid #map {
+					background-color: red;
+					width: 100%;
+					height: 250px;
+				}
+				.sec2 .sec2wrap .main .grid .info {
+					width: 100%;
+					text-align: left;
+					margin-top: 15%;
+				}
+				.sec2 .sec2wrap .main .grid .info p {
+					font-size: 26px;
+					color: #212121;
+					border-bottom: 2px solid black;
+					padding-bottom: 8px;
+				}
+				.sec2 .sec2wrap .main .grid .info ul li .name {
+					font-size: 14px;
+					color: #212121;
+				}
+				.sec2 .sec2wrap .main .grid .info ul li .sub {
+					font-size: 14px;
+					color: #787878;
+				}
+				.sec2 .sec2wrap .main .btn {
+					padding: 20px 0 30px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 430px) {
+				.sec2 .sec2wrap .title .name {
+					font-size: 30px;
+					padding: 25% 0 4%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sec2">
+			<div class="sec2wrap">
+				<div class="title">
+					<div class="name">매장찾기</div>
+				</div>
+				<div class="main">
+					<div class="name">강원<span> 주문진점</span></div>
+					<ul class="grid">
+						<li id="map"></li>
+						<li class="info">
+							<p>주문진점</p>
+							<ul>
+								<li>
+									<div class="name">전화번호</div>
+									<div class="sub">033-661-3711</div>
+								</li>
+								<li>
+									<div class="name">주소</div>
+									<div class="sub">강원도 강릉시 주문진읍 신리천로56, 1층</div>
+								</li>
+								<li>
+									<div class="name">오픈일</div>
+									<div class="sub">2022.05.04</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<div class="btn">
+						<a href="store1.php"><i class="fa-solid fa-magnifying-glass"></i>검색</a>
+						<a href="store1.php"><i class="fa-solid fa-list"></i>목록</a>
+					</div>
+					<ul class="box">
+						<li class="prev">
+							<span><i class="fa-solid fa-caret-up"></i>이전글</span>
+							<a href="store1_1.php">주문진점</a>
+							<span>23.07.04</span>
+						</li>
+						<li class="next">
+							<span><i class="fa-solid fa-caret-down"></i>다음글</span>
+							<a href="store1_1.php">주문진점</a>
+							<span>23.07.04</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+			mapOption = {
+				center: new kakao.maps.LatLng(37.8839997, 128.82465), // 지도의 중심좌표
+				level: 3, // 지도의 확대 레벨
+			};
+		var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+		// 마커가 표시될 위치입니다
+		var markerPosition = new kakao.maps.LatLng(37.8839997, 128.82465);
+		// 마커를 생성합니다
+		var marker = new kakao.maps.Marker({
+			position: markerPosition,
+		});
+		// 마커가 지도 위에 표시되도록 설정합니다
+		marker.setMap(map);
+
+		var iwContent =
+				'<a href="https://naver.me/xl1hWQO2" style="font-size:12px; text-decoration:underline; width:250px" target="_blank">강원특별자치도 강릉시 주문진읍 신리천로 56 </a>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+			iwPosition = new kakao.maps.LatLng(37.8839997, 128.82465); //인포윈도우 표시 위치입니다
+
+		// 인포윈도우를 생성합니다
+		var infowindow = new kakao.maps.InfoWindow({
+			position: iwPosition,
+			content: iwContent,
+		});
+
+		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+		infowindow.open(map, marker);
+	</script>
+</html>

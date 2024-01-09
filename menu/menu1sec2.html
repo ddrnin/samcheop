@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css?ver=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.sec2 {
+				width: 100%;
+			}
+			.sec2 .sec2wrap {
+				width: 88%;
+				margin: 0 auto;
+			}
+			.sec2 .sec2wrap .title {
+			}
+			.sec2 .sec2wrap > .title .name {
+				font-size: 40px;
+				padding: 8% 0 3%;
+			}
+			.sec2 .sec2wrap > .title .sub {
+				font-size: 34px;
+				color: #542623;
+				font-weight: 500;
+			}
+			.sec2 .sec2wrap > .title .sub span {
+				font-size: 34px;
+				color: #e04b31;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2%;
+				width: 90%;
+				margin: 0 auto;
+				padding: 40px 0 80px;
+			}
+			.sec2 .sec2wrap .grid .gridbox {
+				border: 1px solid #e5e5e5;
+				width: 100%;
+			}
+			.sec2 .sec2wrap .grid .gridbox img {
+				width: 85%;
+			}
+			.sec2 .sec2wrap .grid .gridbox .title {
+				padding: 10% 0 2%;
+			}
+			.sec2 .sec2wrap .grid .gridbox .title .name {
+				font-size: 30px;
+				color: #542623;
+			}
+			.sec2 .sec2wrap .grid .gridbox .title .name span {
+				font-size: 30px;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .grid .gridbox .title .sub {
+				font-size: 16px;
+				color: #989898;
+			}
+			.br {
+				display: none;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				.sec2 .sec2wrap {
+					width: 90%;
+					margin: 0 auto;
+				}
+
+				.sec2 .sec2wrap > .title .name {
+					font-size: 35px;
+					padding: 10% 0 4%;
+				}
+				.sec2 .sec2wrap > .title .sub {
+					font-size: 28px;
+					color: #542623;
+					font-weight: 500;
+				}
+				.sec2 .sec2wrap > .title .sub span {
+					font-size: 28px;
+					color: #e04b31;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .grid {
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+					gap: 2%;
+					width: 100%;
+					margin: 0 auto;
+					padding: 40px 0 80px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				.sec2 .sec2wrap {
+					width: 100%;
+					margin: 0 auto;
+				}
+				.sec2 .sec2wrap > .title .name {
+					font-size: 30px;
+					padding: 15% 0 4%;
+				}
+
+				.sec2 .sec2wrap > .title .sub {
+					font-size: 20px;
+					color: #542623;
+					font-weight: 500;
+				}
+				.sec2 .sec2wrap > .title .sub span {
+					font-size: 20px;
+					color: #e04b31;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .grid {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					width: 90%;
+					margin: 0 auto;
+					padding: 40px 0 80px;
+				}
+				.sec2 .sec2wrap .grid .gridbox:last-child {
+					margin-top: 5%;
+				}
+				.sec2 .sec2wrap .grid .gridbox .title {
+					padding: 5% 0 2%;
+				}
+				.sec2 .sec2wrap .grid .gridbox .title .name {
+					font-size: 20px;
+					color: #542623;
+				}
+				.sec2 .sec2wrap .grid .gridbox .title .name span {
+					font-size: 20px;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .grid .gridbox .title .sub {
+					font-size: 14px;
+					color: #989898;
+					word-break: keep-all;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 580px) {
+				.br {
+					display: inline-block;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 464px) {
+				.sec2 .sec2wrap > .title .sub {
+					font-size: 17px;
+					color: #542623;
+					font-weight: 500;
+				}
+				.sec2 .sec2wrap > .title .sub span {
+					font-size: 17px;
+					color: #e04b31;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .grid .gridbox .title .sub {
+					font-size: 12.5px;
+					color: #989898;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sec2">
+			<div class="sec2wrap">
+				<div class="title">
+					<div class="name">대표메뉴</div>
+					<div class="sub">
+						<span>NO.1 프리미엄 토핑전문 떡볶이!</span> <br />고객님들의 취향을 존중하는 브랜드 삼첩분식
+					</div>
+				</div>
+				<div class="grid">
+					<div class="gridbox">
+						<img src="./img/menu1/menu1_img.png" alt="" />
+						<div class="title">
+							<div class="name"><span>一첩</span> 세트</div>
+							<div class="sub">
+								떡볶이 선택 + 감자폭탄1/2 <br class="br" />
+								+ 5종튀김
+							</div>
+						</div>
+					</div>
+					<div class="gridbox">
+						<img src="./img/menu1/menu1_img2.png" alt="" />
+						<div class="title">
+							<div class="name"><span>二첩</span> 세트</div>
+							<div class="sub">떡볶이 선택 + 감자폭탄 + 토핑</div>
+						</div>
+					</div>
+					<div class="gridbox">
+						<img src="./img/menu1/menu1_img3.png" alt="" />
+						<div class="title">
+							<div class="name"><span>三첩</span> 세트</div>
+							<div class="sub">떡볶이 선택 + 감자폭탄 + <br class="br" />토핑 + 사이드 + 음료</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

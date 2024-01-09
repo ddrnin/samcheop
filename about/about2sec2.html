@@ -1,0 +1,2345 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css?ver=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://kit.fontawesome.com/581fc6d10b.js" crossorigin="anonymous"></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			}
+			.sec2 {
+				width: 100%;
+			}
+			.sec2 .sec2wrap {
+				width: 88%;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.sec2 .sec2wrap > .title {
+				margin: 8% 0 2%;
+				font-size: 40px;
+			}
+
+			.sec2 .sec2wrap .main1 {
+				background: url(img/about2/about2_1bg.png) no-repeat center;
+				background-size: auto 100%;
+			}
+			.sec2 .sec2wrap .main1 .main1_wrap {
+				padding: 7% 5%;
+				position: relative;
+			}
+			.sec2 .sec2wrap .main1 .main1_wrap div {
+				display: inline-block;
+			}
+			.sec2 .sec2wrap .main1 .titleinner {
+				width: 40%;
+				text-align: left;
+				color: white;
+				overflow: hidden;
+			}
+			.sec2 .sec2wrap .main1 .titleinner .title {
+				font-size: 60px;
+				font-weight: 300;
+				line-height: 70px;
+			}
+			.sec2 .sec2wrap .main1 .titleinner .title span {
+				font-size: 60px;
+				color: #e6423e;
+				font-weight: bold;
+				line-height: 70px;
+			}
+			.sec2 .sec2wrap .main1 .titleinner .sub {
+				font-size: 26px;
+				word-break: keep-all;
+				padding: 1% 0 10%;
+			}
+			.sec2 .sec2wrap .main1 .titleinner .sub2 {
+				font-size: 18px;
+			}
+
+			.sec2 .sec2wrap .main1 .content {
+				width: 58%;
+			}
+			.sec2 .sec2wrap .main1 .content .grid {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+			}
+			.sec2 .sec2wrap .main1 .content .li {
+				margin-top: 100px;
+				width: 100%;
+				height: 450px;
+				transform: rotate(180deg);
+				opacity: 0.4;
+			}
+			.sec2 .sec2wrap .main1 .content li:nth-child(3) .li {
+				opacity: 0.5;
+			}
+			.sec2 .sec2wrap .main1 .content li:last-child .li {
+				opacity: 1;
+			}
+			.sec2 .sec2wrap .main1 .content .li .date {
+				width: 100%;
+				transform: rotate(180deg);
+				color: white;
+				padding: 10px 0 0;
+				font-size: 20px;
+			}
+			.sec2 .sec2wrap .main1 .content li:last-child .date {
+				font-size: 24px;
+				line-height: 30px;
+			}
+			.sec2 .sec2wrap .main1 .content .li .grap {
+				background-color: #e6423e;
+				width: 50%;
+				margin: 0 auto;
+				display: block;
+			}
+			.sec2 .sec2wrap .main1 .content .li .grap1 {
+				height: 5%;
+			}
+			.sec2 .sec2wrap .main1 .content .li .grap2 {
+				height: 50%;
+			}
+			.sec2 .sec2wrap .main1 .content .li .grap3 {
+				height: 80%;
+			}
+			.sec2 .sec2wrap .main1 .content .li .grap4 {
+				height: 100%;
+				background: linear-gradient(#e64231, #f19816);
+			}
+			.sec2 .sec2wrap .main1 .content .li .numb {
+				transform: rotate(180deg);
+				color: #e6423e;
+				font-size: 27px;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .main1 .content li:last-child .numb {
+				font-size: 42px;
+				color: #f19816;
+
+				animation-name: grap;
+				animation-duration: 1s;
+				animation-timing-function: step-end;
+
+				animation-delay: 0s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes grap {
+				50% {
+					opacity: 0;
+				}
+			}
+
+			.sec2 .sec2wrap .main2 {
+				background-color: #fdfaf0;
+				padding: 5% 0;
+				position: relative;
+			}
+			.sec2 .sec2wrap .main2::before {
+				content: '';
+				background: url(img/about2/about2_2bg.png) no-repeat center;
+				width: 339px;
+				height: 321px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+			.sec2 .sec2wrap .main2::after {
+				content: '';
+				background: url(img/about2/about2_2bg2.png) no-repeat center;
+				width: 335px;
+				height: 468px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				z-index: 1;
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap {
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap .title {
+				position: relative;
+				z-index: 2;
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap .title .name {
+				font-size: 60px;
+				font-weight: 300;
+				word-break: keep-all;
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap .title .name span {
+				font-size: 60px;
+				color: #e64231;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap .title .sub {
+				font-size: 26px;
+				color: #686868;
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap .content {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 5%;
+				width: 85%;
+				margin: 0 auto;
+				padding: 5% 0 0;
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap .content ul {
+				background-color: white;
+				position: relative;
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap .content ul div {
+			}
+
+			.sec2 .sec2wrap .main2 .main2_wrap .content ul div p {
+				display: inline;
+				border-radius: 30px;
+				background-color: #e64231;
+				color: white;
+				margin: 0 auto;
+				font-size: 36px;
+				font-weight: bold;
+				padding: 5px 25px 0px;
+
+				position: absolute;
+				top: -25px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap .content ul li {
+				width: 95%;
+				font-size: 26px;
+				color: #686868;
+				line-height: 70px;
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap .content ul li span {
+				font-size: 40px;
+				font-weight: bold;
+				color: black;
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap .content ul li:nth-child(2) {
+				padding: 10% 0 3%;
+				border-bottom: 1px dashed #f8cd4081;
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap .content ul li:nth-child(2) span {
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap .content ul li:last-child {
+				padding: 3% 0 6%;
+			}
+			.sec2 .sec2wrap .main2 .main2_wrap .content ul li:last-child span {
+			}
+
+			.sec2 .sec2wrap .main3 {
+				background-color: #e04b32;
+				position: relative;
+				overflow: hidden;
+			}
+			.sec2 .sec2wrap .main3::before {
+				content: '';
+				background: url(img/about2/about2_3bg.png) no-repeat center;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 290px;
+				height: 277px;
+				z-index: 1;
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap {
+				padding: 7% 5%;
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid {
+				display: grid;
+				grid-template-columns: 45% 55%;
+				position: relative;
+				z-index: 2;
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .title {
+				text-align: left;
+				overflow: hidden;
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .title .name {
+				word-break: keep-all;
+				color: white;
+				font-size: 60px;
+				font-weight: 300;
+				line-height: 70px;
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .title .name span {
+				font-size: 60px;
+				color: #ffd800;
+				font-weight: bold;
+				line-height: 70px;
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .title .sub {
+				padding: 2% 0 0;
+				font-size: 26px;
+				color: white;
+				line-height: 34px;
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .content {
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .content ul {
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .content ul li {
+				width: 100%;
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .content ul li .text {
+				color: white;
+				display: flex;
+				justify-content: space-between;
+				margin-top: 20px;
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .content ul li .text p {
+				display: inline-block;
+				font-size: 30px;
+				padding: 20px 0 0;
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .content ul li .text span {
+				font-size: 44px;
+				color: #ffd800;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .content ul li .animate_wrap {
+				width: 100%;
+				height: 30px;
+				background: #cb3921;
+				border-radius: 50px;
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .content ul li .animate_wrap .animate {
+				width: 0;
+				height: 30px;
+				border: 10px solid #cb3921;
+				background: #ffd800;
+				border-radius: 50px;
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .content ul li .animate_wrap .an1.on {
+				animation: an1 2s 1;
+				animation-fill-mode: forwards;
+			}
+			@keyframes an1 {
+				0% {
+					width: 0;
+				}
+				100% {
+					width: 94%;
+				}
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .content ul li .animate_wrap .an2.on {
+				animation: an2 2s 1;
+				animation-fill-mode: forwards;
+			}
+			@keyframes an2 {
+				0% {
+					width: 0;
+				}
+				100% {
+					width: 82%;
+				}
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .content ul li .animate_wrap .an3.on {
+				animation: an2 2s 1;
+				animation-fill-mode: forwards;
+			}
+			@keyframes an2 {
+				0% {
+					width: 0;
+				}
+				100% {
+					width: 77%;
+				}
+			}
+			.sec2 .sec2wrap .main3 .main3_wrap .grid .content ul li .animate_wrap .an4.on {
+				animation: an2 2s 1;
+				animation-fill-mode: forwards;
+			}
+			@keyframes an2 {
+				0% {
+					width: 0;
+				}
+				100% {
+					width: 73%;
+				}
+			}
+
+			.sec2 .sec2wrap .main4 {
+				background: url(img/about2/about2_4bg.png) no-repeat center;
+				background-size: cover;
+				margin-top: -3px;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap {
+				overflow: hidden;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .title {
+				color: white;
+				font-size: 60px;
+				font-weight: 300;
+				padding: 5% 0;
+				word-break: keep-all;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .title span {
+				color: #ffd800;
+				font-weight: bold;
+				font-size: 60px;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .main4_br {
+				display: none;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .swiper {
+				overflow: visible !important;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider2 {
+				width: 100%;
+				margin: 0 0 5%;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider2 .slider {
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider2 .slider .swiper-slide {
+				transform: scale(0.85);
+				transform-origin: 50% 100%;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider2 .slider .swiper-slide-active {
+				transform: scale(1);
+				transition: 0.5s;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider2 .slider .swiper-slide img {
+				width: 100%;
+			}
+			.main4 .main4_wrap .slider2 .swiper-button-next {
+				background: url(img/about1/arrow_next.png) no-repeat center;
+				width: 60px;
+				height: 60px;
+				background-color: rgba(246, 221, 114, 0.9);
+				border-radius: 50%;
+				right: 0%;
+			}
+			.main4 .main4_wrap .slider2 .swiper-button-prev {
+				background: url(img/about1/arrow_prev.png) no-repeat center;
+				width: 60px;
+				height: 60px;
+				background-color: rgba(246, 221, 114, 0.9);
+				border-radius: 50%;
+				left: 0%;
+			}
+			.swiper-button-next::after,
+			.swiper-button-prev::after {
+				display: none;
+			}
+
+			.sec2 .sec2wrap .main5 {
+				background-color: #fdfaf0;
+				padding: 6% 0% 6%;
+				position: relative;
+				overflow: hidden;
+			}
+			.sec2 .sec2wrap .main5::before {
+				content: '';
+				background: url(img/about2/about2_5bg.png) no-repeat center;
+				background-size: 100% auto;
+				width: 372px;
+				height: 372px;
+				position: absolute;
+				top: 50%;
+				left: 5%;
+				z-index: 0;
+			}
+			.sec2 .sec2wrap .main5::after {
+				content: '';
+				background: url(img/about2/about2_5bg2.png) no-repeat center;
+				background-size: 100% auto;
+				width: 296px;
+				height: 531px;
+				position: absolute;
+				top: 25%;
+				right: 0;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap {
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .title {
+				word-break: keep-all;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .title .name {
+				font-size: 60px;
+				font-weight: 300;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .title .name span {
+				font-size: 60px;
+				color: #e64231;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .title .sub {
+				font-size: 26px;
+				color: #686868;
+				line-height: 30px;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part1 {
+				position: relative;
+				z-index: 1;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part1 .content {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 5%;
+				width: 85%;
+				margin: 0 auto;
+				padding: 8% 0 0;
+				overflow: hidden;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul {
+				background: white;
+				width: 100%;
+				position: relative;
+				border-radius: 20px;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul > p {
+				display: inline;
+				font-size: 42px;
+				background-color: #e64231;
+				color: white;
+				border-radius: 40px;
+				font-weight: bold;
+				padding: 13px 30px 3px;
+
+				position: absolute;
+				top: -30px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li {
+				width: 100%;
+				text-align: left;
+				/* display: grid; */
+				margin: 0 auto;
+				padding: 2% 0;
+			}
+
+			.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li:nth-child(2) {
+				border-bottom: 1px dashed #f8cd4081;
+				padding: 10% 0 2%;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li:nth-child(4) {
+				border-top: 1px dashed #f8cd4081;
+				padding: 2% 0 8%;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul:first-child li {
+				/* grid-template-columns: 38% 62%; */
+				padding-left: 5%;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul:first-child li p {
+				padding-right: 2%;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul:last-child li {
+				/* grid-template-columns: 45% 38%; */
+				padding-left: 5%;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul:last-child li span {
+				padding-right: 2%;
+			}
+
+			.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li p {
+				font-size: 24px;
+				color: #686868;
+				line-height: 55px;
+				text-align: center;
+				display: inline-block;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li span {
+				font-size: 36px;
+				font-weight: bold;
+				color: black;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part2 {
+				width: 70%;
+				margin: 0 auto;
+				position: relative;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part2 .title {
+				font-size: 60px;
+				color: #e64231;
+				font-weight: bold;
+				margin: 8% 0 3%;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part2 .slider3 {
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part2 .slider3 .slider {
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part2 .slider3 .slider .swiper-slide {
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part2 .slider3 .slider .swiper-slide img {
+				width: 100%;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part2 .swiper-pagination {
+				position: absolute;
+				bottom: -40px;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part2 .swiper-pagination-bullet {
+				width: 8px;
+				height: 8px;
+				background: #e64231;
+				border: 1px solid #e64231;
+				opacity: 1;
+				margin: 0 2px;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part2 .swiper-pagination-bullet-active {
+				width: 30px;
+				/* transition: width 0.5s; */
+				border-radius: 5px;
+				background: #e64231;
+				border: 1px solid transparent;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part3 {
+				position: relative;
+				z-index: 3;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part3::before {
+				content: '';
+				background: url(img/about2/about2_5bg3.png) no-repeat center;
+				background-size: 100% auto;
+				width: 220px;
+				height: 355px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 0;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part3::after {
+				content: '';
+				background: url(img/about2/about2_5bg4.png) no-repeat center;
+				background-size: 100% auto;
+				width: 210px;
+				height: 260px;
+				position: absolute;
+				top: 12%;
+				right: 0;
+				z-index: 0;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part3 .part3_wrap {
+				width: 70%;
+				margin: 0 auto;
+				position: relative;
+				z-index: 3;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part3 .title {
+				margin: 8% 0 3%;
+				font-size: 60px;
+				color: #e64231;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part3 .slider4 {
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part3 .slider4 .slider {
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part3 .slider4 .slider .swiper-slide {
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part3 .slider4 .slider .swiper-slide img {
+				width: 100%;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part3 .swiper-pagination1 {
+				position: absolute;
+				bottom: -40px;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part3 .swiper-pagination-bullet {
+				width: 8px;
+				height: 8px;
+				background: #e64231;
+				border: 1px solid #e64231;
+				opacity: 1;
+				margin: 0 2px;
+			}
+			.sec2 .sec2wrap .main5 .main5_wrap .part3 .swiper-pagination-bullet-active {
+				width: 30px;
+				/* transition: width 0.5s; */
+				border-radius: 5px;
+				background: #e64231;
+				border: 1px solid transparent;
+			}
+
+			.sec2 .sec2wrap .main6 {
+				background-color: #542623;
+				padding: 6% 0;
+				position: relative;
+			}
+			.sec2 .sec2wrap .main6::before {
+				content: '';
+				background: url(img/about2/about2_6bg.png) no-repeat center;
+				background-size: 100% auto;
+				width: 220px;
+				height: 337px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.sec2 .sec2wrap .main6::after {
+				content: '';
+				background: url(img/about2/about2_6bg2.png) no-repeat center;
+				background-size: 100% auto;
+				width: 370px;
+				height: 488px;
+				position: absolute;
+				top: 20%;
+				right: 0;
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap {
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap .title {
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap .title .name {
+				font-size: 60px;
+				color: white;
+				font-weight: 300;
+				word-break: keep-all;
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap .title .name span {
+				font-size: 60px;
+				color: #ffd800;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap .title .sub {
+				font-size: 26px;
+				color: white;
+				word-break: keep-all;
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap .title .logo {
+				padding: 2% 0 10%;
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap .title .logo img {
+				width: 60%;
+				max-width: 299px;
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap .grid {
+				width: 90%;
+				max-width: 1395px;
+				margin: 0 auto;
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap .grid li {
+				position: relative;
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap .grid li:first-child {
+				width: 38%;
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap .grid li:first-child img {
+				width: 100%;
+				max-width: 520px;
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap .grid li:last-child {
+				width: 62%;
+				padding-left: 13px;
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap .grid li:last-child img {
+				width: 100%;
+				max-width: 835px;
+			}
+			.sec2 .sec2wrap .main6 .main6_wrap .grid li:last-child img:first-child {
+				width: 35%;
+				position: absolute;
+				top: -13%;
+				left: 0;
+			}
+
+			.sec2 .sec2wrap .main7 {
+				background-color: #e04b32;
+				padding: 7% 5% 0;
+				position: relative;
+			}
+			.sec2 .sec2wrap .main7 .main7_wrap {
+			}
+			.sec2 .sec2wrap .main7 .main7_wrap .grid {
+				width: 100%;
+			}
+			.sec2 .sec2wrap .main7 .main7_wrap .grid .title {
+				width: 45%;
+				color: white;
+				word-break: keep-all;
+			}
+			.sec2 .sec2wrap .main7 .main7_wrap .grid .title .name {
+				font-size: 60px;
+				font-weight: 300;
+				text-align: left;
+				line-height: 60px;
+			}
+			.sec2 .sec2wrap .main7 .main7_wrap .grid .title .name span {
+				color: #ffd800;
+				font-size: 60px;
+				font-weight: bold;
+				line-height: 60px;
+			}
+			.sec2 .sec2wrap .main7 .main7_wrap .grid .title .sub {
+				text-align: left;
+				font-size: 26px;
+				margin-top: 30px;
+			}
+			.sec2 .sec2wrap .main7 .main7_wrap .grid .title .img {
+			}
+			.sec2 .sec2wrap .main7 .main7_wrap .grid .title .img img {
+				width: 70%;
+			}
+			.sec2 .sec2wrap .main7 .main7_wrap .grid {
+			}
+			.sec2 .sec2wrap .main7 .main7_wrap .grid .slider5 {
+				width: 50%;
+				margin: 0 !important;
+				display: inline-block;
+				position: absolute;
+				bottom: 0;
+				right: 7%;
+			}
+			.sec2 .sec2wrap .main7 .main7_wrap .grid .slider5 .slider {
+			}
+			.sec2 .sec2wrap .main7 .main7_wrap .grid .slider5 .slider .swiper-slide {
+			}
+			.sec2 .sec2wrap .main7 .main7_wrap .grid .slider5 .slider .swiper-slide img {
+				width: 100%;
+				max-width: 361px;
+			}
+
+			.sec2 .main8 {
+				background-color: #fdf9ee;
+				height: 280px;
+				margin-top: 5%;
+				padding: 60px 0 0;
+			}
+			.sec2 .main8 div {
+				position: relative;
+				margin-top: 30px;
+
+				animation-name: arr;
+				animation-duration: 1s;
+				animation-timing-function: linear;
+
+				animation-delay: 0s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes arr {
+				0% {
+					margin-top: 30px;
+				}
+
+				50% {
+					margin-top: 15px;
+				}
+
+				100% {
+					margin-top: 30px;
+				}
+			}
+			.sec2 .main8 div .arr {
+				width: 18px;
+				height: 30px;
+				margin: 0 auto;
+			}
+			.sec2 .main8 div .arr span:nth-child(1) {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 2px;
+				height: 40px;
+				background-color: black;
+			}
+			.sec2 .main8 div .arr span:nth-child(2) {
+				position: absolute;
+				top: -4px;
+				left: 0;
+				transform: rotate(45deg);
+				width: 2px;
+				height: 25px;
+				background-color: black;
+			}
+			.sec2 .main8 div .arr span:nth-child(3) {
+				position: absolute;
+				top: -4px;
+				right: 0;
+				transform: rotate(135deg);
+				width: 2px;
+				height: 25px;
+				background-color: black;
+			}
+			.sec2 .main8 div p {
+				color: #686868;
+				position: absolute;
+				width: 100%;
+				top: 60px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-size: 18px;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1630px) {
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content {
+					gap: 3%;
+					width: 88%;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li span {
+					font-size: 30px;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li p {
+					font-size: 18px;
+					line-height: 48px;
+				}
+			}
+
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				.sec2 .sec2wrap .main1 .titleinner .title {
+					font-size: 44px;
+				}
+				.sec2 .sec2wrap .main1 .titleinner .title span {
+					font-size: 44px;
+				}
+				.sec2 .sec2wrap .main1 .titleinner .sub {
+					font-size: 18px;
+				}
+				.sec2 .sec2wrap .main1 .titleinner .sub2 {
+					font-size: 14px;
+				}
+				.sec2 .sec2wrap .main1 .content .li .numb {
+					font-size: 22px;
+				}
+				.sec2 .sec2wrap .main1 .content li:last-child .numb {
+					font-size: 32px;
+				}
+				.sec2 .sec2wrap .main1 .content .li .date {
+					font-size: 17px;
+				}
+				.sec2 .sec2wrap .main1 .content li:last-child .date {
+					font-size: 22px;
+					line-height: 28px;
+				}
+
+				.sec2 .sec2wrap .main2::before {
+					width: 24vw;
+					height: 22vw;
+					background-size: 100% auto;
+				}
+				.sec2 .sec2wrap .main2::after {
+					width: 18vw;
+					height: 25vw;
+					background-size: 100% auto;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .title .name {
+					font-size: 56px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .title .name span {
+					font-size: 56px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .title .sub {
+					font-size: 23px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content ul div p {
+					font-size: 28px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content ul li {
+					width: 100%;
+					font-size: 17px;
+					line-height: 40px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content ul li span {
+					font-size: 26px;
+				}
+
+				.sec2 .sec2wrap .main3 .main3_wrap .grid .title .name {
+					font-size: 48px;
+					line-height: 54px;
+				}
+				.sec2 .sec2wrap .main3 .main3_wrap .grid .title .name span {
+					font-size: 48px;
+					line-height: 54px;
+				}
+				.sec2 .sec2wrap .main3 .main3_wrap .grid .title .sub {
+					padding: 5% 0 0;
+					font-size: 18px;
+					line-height: 30px;
+				}
+
+				.sec2 .sec2wrap .main4 .main4_wrap .title {
+					font-size: 48px;
+					padding: 5% 0;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .title span {
+					font-size: 48px;
+				}
+
+				.sec2 .sec2wrap .main5 {
+					background-color: #fdfaf0;
+					padding: 6% 0% 12%;
+					position: relative;
+					overflow: hidden;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul > p {
+					font-size: 24px;
+					padding: 13px 30px 3px;
+
+					position: absolute;
+					top: -20px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li span {
+					font-size: 20px;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li p {
+					font-size: 12px;
+					line-height: 30px;
+				}
+
+				.sec2 .sec2wrap .main6::before {
+					content: '';
+					width: 18vw;
+					height: 100%;
+					top: -30%;
+					left: 0;
+				}
+				.sec2 .sec2wrap .main6::after {
+					content: '';
+					width: 25vw;
+					height: 100%;
+					top: -30%;
+					right: 0;
+				}
+				.sec2 .sec2wrap .main6 .main6_wrap .title .name {
+					font-size: 48px;
+					color: white;
+					font-weight: 300;
+					word-break: keep-all;
+				}
+				.sec2 .sec2wrap .main6 .main6_wrap .title .name span {
+					font-size: 48px;
+					color: #ffd800;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main6 .main6_wrap .title .sub {
+					font-size: 20px;
+					color: white;
+				}
+
+				.sec2 .sec2wrap .main7 .main7_wrap .grid .title .name {
+					font-size: 48px;
+					font-weight: 300;
+					text-align: left;
+				}
+				.sec2 .sec2wrap .main7 .main7_wrap .grid .title .name span {
+					color: #ffd800;
+					font-size: 48px;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main7 .main7_wrap .grid .title .sub {
+					text-align: left;
+					font-size: 17px;
+					margin-top: 30px;
+				}
+			}
+
+			@media only screen and (min-width: 100px) and (max-width: 900px) {
+				.main1_br {
+					display: none;
+				}
+				.sec2 .sec2wrap .main1 .titleinner {
+					width: 100%;
+				}
+				.sec2 .sec2wrap .main1 .content {
+					width: 100%;
+				}
+				.sec2 .sec2wrap .main1 .content .li {
+					height: 250px;
+				}
+
+				.sec2 .sec2wrap .main2 .main2_wrap .title .name {
+					font-size: 48px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .title .name span {
+					font-size: 48px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .title .sub {
+					font-size: 18px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content ul div p {
+					font-size: 22px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content ul li {
+					width: 100%;
+					font-size: 12px;
+					line-height: 24px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content ul li span {
+					font-size: 16px;
+				}
+
+				.sec2 .sec2wrap .main3::before {
+					content: '';
+					background: url(img/about2/about2_3bg.png) no-repeat center;
+					position: absolute;
+					top: -110px;
+					right: -116px;
+					left: unset;
+				}
+				.sec2 .sec2wrap .main3 .main3_wrap .grid {
+					display: grid;
+					grid-template-columns: 1fr;
+				}
+				.sec2 .sec2wrap .main3 .main3_br {
+					display: none;
+				}
+				.sec2 .sec2wrap .main3 .main3_wrap .grid .title .sub {
+					padding: 3% 0 0;
+					font-size: 22px;
+					line-height: 30px;
+				}
+
+				.sec2 .sec2wrap .main4 .main4_wrap .title {
+					font-size: 42px;
+					padding: 5% 0;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .title span {
+					font-size: 42px;
+				}
+
+				.sec2 .sec2wrap .main5 {
+					background-color: #fdfaf0;
+					padding: 6% 0% 12%;
+					position: relative;
+					overflow: hidden;
+				}
+				.sec2 .sec2wrap .main5::before {
+					content: '';
+					width: 30vw;
+					height: 100%;
+					top: 10%;
+					left: -7%;
+				}
+				.sec2 .sec2wrap .main5::after {
+					content: '';
+					width: 25vw;
+					height: 100%;
+					top: 0%;
+					right: 0%;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .title .name {
+					font-size: 48px;
+					font-weight: 300;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .title .name span {
+					font-size: 48px;
+					color: #e64231;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .title .sub {
+					font-size: 20px;
+					color: #686868;
+					line-height: 24px;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content {
+					display: grid;
+					grid-template-columns: 1fr;
+					gap: 0;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul {
+					background: white;
+					width: 100%;
+					position: relative;
+					border-radius: 20px;
+					margin: 2% 0;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul > p {
+					font-size: 36px;
+					padding: 13px 30px 3px;
+
+					position: absolute;
+					top: -30px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li:nth-child(4) {
+					border-top: 1px dashed #f8cd4081;
+					padding-bottom: 2%;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li span {
+					font-size: 3.5vw;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li p {
+					font-size: 22px;
+					line-height: 56px;
+				}
+
+				.sec2 .sec2wrap .main5 .main5_wrap .part2 {
+					width: 88%;
+					margin: 0 auto;
+					position: relative;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part2 .title {
+					font-size: 48px;
+					color: #e64231;
+					font-weight: bold;
+					margin: 8% 0 3%;
+				}
+
+				.sec2 .sec2wrap .main5 .main5_wrap .part3::before {
+					content: '';
+					width: 15vw;
+					height: 355px;
+					top: -30%;
+					left: 0;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part3::after {
+					content: '';
+					width: 17vw;
+					height: 260px;
+					top: -25%;
+					right: 0;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part3 .part3_wrap {
+					width: 88%;
+					margin: 0 auto;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part3 .title {
+					margin: 12% 0 3%;
+					font-size: 48px;
+					color: #e64231;
+					font-weight: bold;
+				}
+
+				.sec2 .sec2wrap .main6 .main6_wrap .grid {
+					width: 70%;
+					max-width: 1395px;
+					margin: 0 auto;
+				}
+				.sec2 .sec2wrap .main6 .main6_wrap .grid li:first-child {
+					width: 100%;
+				}
+				.sec2 .sec2wrap .main6 .main6_wrap .grid li:last-child {
+					width: 100%;
+					margin-top: 20%;
+					padding-left: 0;
+				}
+
+				.sec2 .sec2wrap .main7 .main7_wrap .grid .title {
+					width: 100%;
+					color: white;
+					word-break: keep-all;
+					text-align: center;
+					padding: 0 0 3%;
+				}
+				.sec2 .sec2wrap .main7 .main7_wrap .grid .title .name {
+					font-size: 48px;
+					font-weight: 300;
+					text-align: center;
+				}
+				.sec2 .sec2wrap .main7 .main7_wrap .grid .title .name span {
+					color: #ffd800;
+					font-size: 48px;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main7 .main7_wrap .grid .title .sub {
+					text-align: center;
+					font-size: 20px;
+					margin-top: 0px;
+				}
+				.sec2 .sec2wrap .main7 .main7_wrap .grid .title .img img {
+					width: 50%;
+				}
+				.sec2 .sec2wrap .main7 .main7_wrap .grid .title .sub .main7_br {
+					display: none;
+				}
+				.sec2 .sec2wrap .main7 .main7_wrap .grid .slider5 {
+					width: 100%;
+					margin: 0 !important;
+					display: inline-block;
+					position: unset;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				.sec2 .sec2wrap > .title {
+					margin: 15% 0 2%;
+				}
+
+				.sec2 .sec2wrap .main2 {
+					padding: 10% 0 15%;
+				}
+				.sec2 .sec2wrap .main2::before {
+					width: 34vw;
+					height: 45vw;
+				}
+				.sec2 .sec2wrap .main2::after {
+					width: 31vw;
+					height: 31vw;
+				}
+
+				.sec2 .sec2wrap .main2 .main2_wrap .title .name {
+					font-size: 56px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .title .name span {
+					font-size: 56px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .title .sub {
+					font-size: 23px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content {
+					display: grid;
+					grid-template-columns: 1fr;
+					gap: 10%;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content ul div p {
+					font-size: 28px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content ul li {
+					width: 100%;
+					font-size: 17px;
+					line-height: 40px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content ul li span {
+					font-size: 26px;
+				}
+
+				.sec2 .sec2wrap .main5 .main5_wrap .title .name {
+					font-size: 40px;
+					font-weight: 300;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .title .name span {
+					font-size: 40px;
+					color: #e64231;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .title .sub {
+					font-size: 18px;
+					color: #686868;
+					line-height: 22px;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul > p {
+					font-size: 24px;
+					padding: 13px 30px 3px;
+
+					position: absolute;
+					top: -20px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li p {
+					font-size: 18px;
+					line-height: 38px;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part3::before {
+					content: '';
+					width: 15vw;
+					height: 355px;
+					top: -40%;
+					left: 0;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part3::after {
+					content: '';
+					width: 15vw;
+					height: 260px;
+					top: -34%;
+					right: 0;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part2 .title {
+					font-size: 40px;
+					color: #e64231;
+					font-weight: bold;
+					margin: 12% 0 3%;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part3 .title {
+					margin: 12% 0 3%;
+					font-size: 40px;
+					color: #e64231;
+					font-weight: bold;
+				}
+
+				.sec2 .sec2wrap .main6 .main6_wrap .title .name {
+					font-size: 40px;
+					color: white;
+					font-weight: 300;
+					word-break: keep-all;
+				}
+				.sec2 .sec2wrap .main6 .main6_wrap .title .name span {
+					font-size: 40px;
+					color: #ffd800;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main6 .main6_wrap .title .sub {
+					font-size: 17px;
+					color: white;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 590px) {
+				.main1_br {
+					display: block;
+				}
+				.sec2 .sec2wrap .main1 .titleinner .title {
+					line-height: 50px;
+				}
+				.sec2 .sec2wrap .main1 .titleinner .title span {
+					line-height: 50px;
+				}
+
+				.sec2 .sec2wrap .main2 .main2_wrap .title .name {
+					font-size: 40px;
+					line-height: 48px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .title .name span {
+					font-size: 40px;
+					line-height: 48px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .title .sub {
+					font-size: 20px;
+					padding: 1% 0 3%;
+				}
+				.sec2 .sec2wrap .main1 .content .li .numb {
+					font-size: 17px;
+				}
+				.sec2 .sec2wrap .main1 .content li:last-child .numb {
+					font-size: 24px;
+				}
+				.sec2 .sec2wrap .main1 .content .li .date {
+					font-size: 14px;
+				}
+				.sec2 .sec2wrap .main1 .content li:last-child .date {
+					font-size: 16px;
+					line-height: 18px;
+				}
+
+				.sec2 .sec2wrap .main3 .main3_wrap .grid .title .name {
+					font-size: 40px;
+					line-height: 50px;
+				}
+				.sec2 .sec2wrap .main3 .main3_wrap .grid .title .name span {
+					font-size: 40px;
+					line-height: 50px;
+				}
+				.sec2 .sec2wrap .main3 .main3_wrap .grid .title .sub {
+					padding: 5% 0 0;
+					font-size: 16px;
+					line-height: 24px;
+				}
+				.sec2 .sec2wrap .main3 .main3_wrap .grid .content ul li .text p {
+					display: inline-block;
+					font-size: 22px;
+					padding: 20px 0 0;
+				}
+				.sec2 .sec2wrap .main3 .main3_wrap .grid .content ul li .text span {
+					font-size: 32px;
+					color: #ffd800;
+					font-weight: bold;
+				}
+
+				.sec2 .sec2wrap .main4 .main4_wrap .title {
+					font-size: 38px;
+					padding: 15% 0 5%;
+					line-height: 44px;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .title span {
+					font-size: 38px;
+					line-height: 44px;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider2 {
+					width: 100%;
+					margin: 5% 0 15%;
+				}
+				.main4 .main4_wrap .slider2 .swiper-button-next {
+					background: url(img/about1/arrow_next.png) no-repeat center;
+					width: 40px;
+					height: 40px;
+					background-color: rgba(246, 221, 114, 0.9);
+					border-radius: 50%;
+					right: 0%;
+				}
+				.main4 .main4_wrap .slider2 .swiper-button-prev {
+					background: url(img/about1/arrow_prev.png) no-repeat center;
+					width: 40px;
+					height: 40px;
+					background-color: rgba(246, 221, 114, 0.9);
+					border-radius: 50%;
+					left: 0%;
+				}
+
+				.sec2 .sec2wrap .main5 {
+					background-color: #fdfaf0;
+					padding: 6% 0% 20%;
+					position: relative;
+					overflow: hidden;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .title .name {
+					font-size: 40px;
+					font-weight: 300;
+					line-height: 50px;
+					padding-top: 10%;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .title .name span {
+					font-size: 40px;
+					color: #e64231;
+					font-weight: bold;
+					line-height: 50px;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .title .sub {
+					font-size: 14px;
+					color: #686868;
+					line-height: 18px;
+					margin-top: 4%;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul {
+					background: white;
+					width: 100%;
+					position: relative;
+					border-radius: 20px;
+					margin: 4% 0;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul > p {
+					font-size: 18px;
+					padding: 10px 30px 3px;
+
+					position: absolute;
+					top: -20px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li span {
+					font-size: 4.5vw;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part1 .content ul li p {
+					font-size: 12px;
+					line-height: 30px;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part3::before {
+					content: '';
+					width: 15vw;
+					height: 355px;
+					top: -35%;
+					left: 0;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part3::after {
+					content: '';
+					width: 15vw;
+					height: 260px;
+					top: -30%;
+					right: 0;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part2 .title {
+					font-size: 34px;
+					margin: 12% 0 3%;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part3 .title {
+					margin: 25% 0 3%;
+					font-size: 34px;
+				}
+
+				.sec2 .sec2wrap .main6 .main6_wrap .grid {
+					width: 90%;
+					max-width: 1395px;
+					margin: 0 auto;
+				}
+				.sec2 .sec2wrap .main6 .main6_wrap .title .name {
+					font-size: 34px;
+					color: white;
+					font-weight: 300;
+					word-break: keep-all;
+				}
+				.sec2 .sec2wrap .main6 .main6_wrap .title .name span {
+					font-size: 34px;
+					color: #ffd800;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main6 .main6_wrap .title .sub {
+					font-size: 14px;
+					color: white;
+				}
+				.sec2 .sec2wrap .main6 .main6_wrap .grid li:last-child img:first-child {
+					width: 45%;
+					position: absolute;
+					top: -18%;
+					left: 0;
+				}
+
+				.sec2 .sec2wrap .main7 .main7_wrap .grid .title .name {
+					font-size: 40px;
+					font-weight: 300;
+					text-align: center;
+					line-height: 45px;
+				}
+				.sec2 .sec2wrap .main7 .main7_wrap .grid .title .name span {
+					color: #ffd800;
+					font-size: 40px;
+					font-weight: bold;
+					line-height: 45px;
+				}
+				.sec2 .sec2wrap .main7 .main7_wrap .grid .title .sub {
+					text-align: center;
+					font-size: 15px;
+					margin-top: 10px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 430px) {
+				.sec2 .sec2wrap > .title {
+					margin: 20% 0 2%;
+				}
+				.sec2 .sec2wrap .main1 .content .li {
+					margin-top: 80px;
+					height: 180px;
+				}
+				.sec2 .sec2wrap .main1 .content .li .numb {
+					font-size: 17px;
+				}
+				.sec2 .sec2wrap .main1 .content li:last-child .numb {
+					font-size: 20px;
+				}
+
+				.sec2 .sec2wrap .main2 {
+					padding: 10% 0 20%;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .title .name {
+					font-size: 34px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .title .name span {
+					font-size: 34px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .title .sub {
+					font-size: 16px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content {
+					display: grid;
+					grid-template-columns: 1fr;
+					gap: 15%;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content ul div p {
+					font-size: 22px;
+					position: absolute;
+					top: -18px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content ul li {
+					width: 100%;
+					font-size: 13px;
+					line-height: 34px;
+				}
+				.sec2 .sec2wrap .main2 .main2_wrap .content ul li span {
+					font-size: 22px;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .title {
+					font-size: 34px;
+					padding: 5% 0;
+					line-height: 44px;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .title span {
+					font-size: 34px;
+					line-height: 44px;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .main4_br {
+					display: block;
+				}
+
+				.sec2 .sec2wrap .main5 {
+					background-color: #fdfaf0;
+					padding: 6% 0% 30%;
+					position: relative;
+					overflow: hidden;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .title .sub {
+					font-size: 12px;
+					color: #686868;
+					line-height: 18px;
+					margin-top: 4%;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part3::before {
+					content: '';
+					width: 15vw;
+					height: 355px;
+					top: -60%;
+					left: 0;
+				}
+				.sec2 .sec2wrap .main5 .main5_wrap .part3::after {
+					content: '';
+					width: 15vw;
+					height: 260px;
+					top: -40%;
+					right: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sec2">
+			<div class="sec2wrap">
+				<div class="title">브랜드 강점</div>
+
+				<div class="main1">
+					<div class="main1_wrap">
+						<div class="titleinner">
+							<div class="title" data-aos="fade-left" data-aos-delay="200">
+								3년만에 <br class="main1_br" /><span>400호점</span> 계약
+							</div>
+							<div class="sub" data-aos="fade-left" data-aos-delay="300">
+								독창적인 메뉴와 탄탄한 브랜딩으로<br class="main1_br" />
+								창업 만족도가 높은 삼첩분식
+							</div>
+							<div class="sub2" data-aos="fade-left" data-aos-delay="400">
+								현재 400호점 계약 완료 *23년 2월 기준
+							</div>
+						</div>
+						<div class="content">
+							<ul class="grid">
+								<li data-aos="fade-up" data-aos-delay="200">
+									<div class="li">
+										<div class="date">20년 1월</div>
+										<div class="grap grap1"></div>
+										<div class="numb">24개</div>
+									</div>
+								</li>
+								<li data-aos="fade-up" data-aos-delay="350">
+									<div class="li">
+										<div class="date">21년 1월</div>
+										<div class="grap grap2"></div>
+										<div class="numb">202개</div>
+									</div>
+								</li>
+								<li data-aos="fade-up" data-aos-delay="450">
+									<div class="li">
+										<div class="date">22년 1월</div>
+										<div class="grap grap3"></div>
+										<div class="numb">300개</div>
+									</div>
+								</li>
+								<li data-aos="fade-up" data-aos-delay="550">
+									<div class="li">
+										<div class="date">23년 2월</div>
+										<div class="grap grap4"></div>
+										<div class="numb">400개</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="main2">
+					<div class="main2_wrap">
+						<div class="title">
+							<div class="name" data-aos="fade-up" data-aos-delay="200">
+								<span>매출</span>로 증명하는 삼첩분식
+							</div>
+							<div class="sub" data-aos="fade-up" data-aos-delay="300">
+								직영점과 가맹점 둘 다 잘 되는 삼첩분식
+							</div>
+						</div>
+						<div class="content">
+							<ul data-aos="zoom-in" data-aos-delay="200">
+								<div><p>본점</p></div>
+								<li>
+									21년 12월 월매출
+									<span>
+										<span class="count-num" data-count="1">0</span>억
+										<span class="count-num" data-count="51">0</span>만원
+									</span>
+								</li>
+								<li>
+									21년 연매출
+									<span>
+										<span class="count-num" data-count="10">0</span>억
+										<span class="count-num" data-count="9583">0</span>만원
+									</span>
+								</li>
+							</ul>
+							<ul data-aos="zoom-in" data-aos-delay="400">
+								<div><p>전남S점</p></div>
+								<li>
+									21년 12월 월매출
+									<span>
+										<span class="count-num" data-count="1">0</span>억
+										<span class="count-num" data-count="1700">0</span>만원
+									</span>
+								</li>
+								<li>
+									21년 연매출
+									<span>
+										<span class="count-num" data-count="12">0</span>억
+										<span class="count-num" data-count="637">0</span>만원
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="main3">
+					<div class="main3_wrap">
+						<div class="grid">
+							<div class="title">
+								<div class="name" data-aos="fade-left" data-aos-delay="200">
+									<span>재주문율</span>로 증명하는 <br class="main3_br" />삼첩분식
+								</div>
+								<div class="sub" data-aos="fade-left" data-aos-delay="400">
+									업계 최고 수준의 재주문율로<br />
+									지속적인 판매가 이루어지고<br />
+									재구매 고객의 비중이 높습니다.
+								</div>
+							</div>
+							<div class="content">
+								<ul>
+									<li>
+										<div class="text">
+											<p>수원 00점</p>
+											<span><span class="count-num2" data-rate="94.3">0.0</span></span>
+										</div>
+										<div class="animate_wrap">
+											<div class="animate an1"></div>
+										</div>
+									</li>
+									<li>
+										<div class="text">
+											<p>인천 00점</p>
+											<span><span class="count-num2" data-rate="79.9">0.0</span></span>
+										</div>
+										<div class="animate_wrap">
+											<div class="animate an2"></div>
+										</div>
+									</li>
+									<li>
+										<div class="text">
+											<p>평택 00점</p>
+											<span><span class="count-num2" data-rate="78.0">0.0</span></span>
+										</div>
+										<div class="animate_wrap">
+											<div class="animate an3"></div>
+										</div>
+									</li>
+									<li>
+										<div class="text">
+											<p>창원 00점</p>
+											<span><span class="count-num2" data-rate="75.3">0.0</span></span>
+										</div>
+										<div class="animate_wrap">
+											<div class="animate an4"></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="main4">
+					<div class="main4_wrap">
+						<div class="title" data-aos="fade-up" data-aos-delay="300">
+							<span>맛집 랭킹</span>으로 <br class="main4_br" />증명하는 삼첩분식
+						</div>
+						<div class="swiper slider2" data-aos="fade-down" data-aos-delay="300">
+							<!-- data-aos="fade-down" data-aos-anchor-placement="center-bottom" -->
+							<ul class="swiper-wrapper slider">
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="./img/about2/about2_4_1.png" alt="" />
+								</li>
+							</ul>
+							<div class="swiper-button-next" data-aos-anchor-placement="center-bottom"></div>
+							<div class="swiper-button-prev" data-aos-anchor-placement="center-bottom"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="main5">
+					<div class="main5_wrap">
+						<div class="title">
+							<div class="name" data-aos="fade-up" data-aos-delay="200">
+								<span>마케팅</span>도 잘하는 삼첩분식
+							</div>
+							<div class="sub" data-aos="fade-up" data-aos-delay="300">
+								삼첩분식의 전문 마케터들이 타겟을 정확히 설정하고 <br />최고의 효율을 낼 수 있는 채널만 골라
+								광고합니다.
+							</div>
+						</div>
+						<div class="part1">
+							<div class="content">
+								<ul data-aos="fade-down" data-aos-delay="500">
+									<p>공중파</p>
+									<li>
+										<p>133회 22.04.16</p>
+										<span>MBC 놀면뭐하니</span>
+									</li>
+									<li>
+										<p>176회 21.10.30</p>
+										<span>MBC 전지적참견시점</span>
+									</li>
+									<li>
+										<p>429회 21.10.29</p>
+										<span>MBC 나혼자산다</span>
+									</li>
+								</ul>
+								<ul data-aos="fade-up" data-aos-delay="500">
+									<p>유튜브</p>
+									<li>
+										<span>튀르키예즈</span>
+										<p>351만뷰</p>
+									</li>
+									<li>
+										<span>바퀴 달린 입</span>
+										<p>360만뷰</p>
+									</li>
+									<li>
+										<span>문명 특급 2회</span>
+										<p>621만뷰+366만뷰</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="part2">
+							<div class="title" data-aos="fade-up" data-aos-delay="300">배민 쇼핑라이브</div>
+							<div class="slider_wrap" data-aos="zoom-in" data-aos-delay="300">
+								<div class="swiper slider3">
+									<!-- data-aos="fade-down" data-aos-anchor-placement="center-bottom" -->
+									<ul class="swiper-wrapper slider">
+										<li class="swiper-slide">
+											<img src="./img/about2/about2_5_2_1.png" alt="" />
+										</li>
+										<li class="swiper-slide">
+											<img src="./img/about2/about2_5_2_2.png" alt="" />
+										</li>
+										<li class="swiper-slide">
+											<img src="./img/about2/about2_5_2_3.png" alt="" />
+										</li>
+										<li class="swiper-slide">
+											<img src="./img/about2/about2_5_2_1.png" alt="" />
+										</li>
+										<li class="swiper-slide">
+											<img src="./img/about2/about2_5_2_2.png" alt="" />
+										</li>
+										<li class="swiper-slide">
+											<img src="./img/about2/about2_5_2_3.png" alt="" />
+										</li>
+										<li class="swiper-slide">
+											<img src="./img/about2/about2_5_2_1.png" alt="" />
+										</li>
+										<li class="swiper-slide">
+											<img src="./img/about2/about2_5_2_2.png" alt="" />
+										</li>
+									</ul>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+						<div class="part3">
+							<div class="part3_wrap">
+								<div class="title" data-aos="fade-up" data-aos-delay="300">SNS</div>
+								<div class="slider_wrap" data-aos="zoom-in" data-aos-delay="300">
+									<div class="swiper slider4">
+										<!-- data-aos="fade-down" data-aos-anchor-placement="center-bottom" -->
+										<ul class="swiper-wrapper slider">
+											<li class="swiper-slide">
+												<img src="./img/about2/about2_5_3_1.png" alt="" />
+											</li>
+											<li class="swiper-slide">
+												<img src="./img/about2/about2_5_3_2.png" alt="" />
+											</li>
+											<li class="swiper-slide">
+												<img src="./img/about2/about2_5_3_3.png" alt="" />
+											</li>
+											<li class="swiper-slide">
+												<img src="./img/about2/about2_5_3_1.png" alt="" />
+											</li>
+											<li class="swiper-slide">
+												<img src="./img/about2/about2_5_3_2.png" alt="" />
+											</li>
+											<li class="swiper-slide">
+												<img src="./img/about2/about2_5_3_3.png" alt="" />
+											</li>
+											<li class="swiper-slide">
+												<img src="./img/about2/about2_5_3_1.png" alt="" />
+											</li>
+											<li class="swiper-slide">
+												<img src="./img/about2/about2_5_3_2.png" alt="" />
+											</li>
+										</ul>
+									</div>
+									<div class="swiper-pagination1"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="main6">
+					<div class="main6_wrap">
+						<div class="title">
+							<div class="name" data-aos="fade-up" data-aos-delay="200">
+								<span>브랜드관 운영</span>하는 삼첩분식
+							</div>
+							<div class="sub" data-aos="fade-up" data-aos-delay="300">
+								매출 향상을 위해 플랫폼별 맞춤 프로모션을 진행합니다.
+							</div>
+							<div class="logo" data-aos="flip-left" data-aos-delay="400">
+								<img src="img/about2/about2_6_1.png" alt="" />
+							</div>
+						</div>
+						<ul class="grid">
+							<li data-aos="fade-down" data-aos-delay="300">
+								<img src="img/about2/about2_6_2.png" alt="" />
+							</li>
+							<li data-aos="fade-up" data-aos-delay="400">
+								<img src="img/about2/about2_6_3.png" alt="" />
+								<img src="img/about2/about2_6_4.png" alt="" />
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="main7">
+					<div class="main7_wrap">
+						<div class="grid">
+							<div class="title">
+								<div class="name" data-aos="fade-left" data-aos-delay="200">
+									<span>검색어 1등</span>
+									삼첩분식
+								</div>
+								<div class="sub" data-aos="fade-left" data-aos-delay="300">
+									많은 고객님께서 "삼첩분식"을<br class="main7_br" />
+									검색해주십니다.
+								</div>
+								<div class="img"><img src="img/about2/about2_7_1.png" alt="" /></div>
+							</div>
+							<div class="swiper slider5" data-aos="fade-right" data-aos-delay="400">
+								<ul class="swiper-wrapper slider">
+									<li class="swiper-slide">
+										<img src="./img/about2/about2_7_2.png" alt="" />
+									</li>
+									<li class="swiper-slide">
+										<img src="./img/about2/about2_7_2.png" alt="" />
+									</li>
+									<li class="swiper-slide">
+										<img src="./img/about2/about2_7_2.png" alt="" />
+									</li>
+									<li class="swiper-slide">
+										<img src="./img/about2/about2_7_2.png" alt="" />
+									</li>
+									<li class="swiper-slide">
+										<img src="./img/about2/about2_7_2.png" alt="" />
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main8">
+				<a href="about3.php"><img src="img/about2/about2_8.png" alt="" /></a>
+				<div>
+					<div class="arr">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<p>다음 페이지로 이동하기!</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		// 스크롤 했을때 스크롤 탑 값이 main2의 옵셋탑 -300만큼 왔으면 if문 안에 숫자카운트애니메이션을 실행
+		$(window).scroll(function () {
+			var threshold = $('.main2').offset().top - 300;
+			if ($(window).scrollTop() >= threshold) {
+				$('.count-num').each(function () {
+					var $this = $(this),
+						countTo = $this.attr('data-count');
+
+					$({ countNum: $this.text() }).animate(
+						{
+							countNum: countTo,
+						},
+						{
+							duration: 1200,
+							easing: 'linear',
+							step: function () {
+								$this.text(Math.floor(this.countNum));
+							},
+							complete: function () {
+								$this.text(this.countNum);
+							},
+						},
+					);
+				});
+			}
+		});
+
+		// 소수점 성공1
+		// $(window).scroll(function () {
+		// 	var threshold = $('.main3').offset().top - 500;
+		// 	if ($(window).scrollTop() >= threshold) {
+		// 		$('.count-num2').each(function () {
+		// 			var $this = $(this),
+		// 				countTo = parseFloat($this.attr('data-rate'));
+
+		// 			$({ countNum: $this.text() }).animate(
+		// 				{
+		// 					countNum: countTo,
+		// 				},
+		// 				{
+		// 					duration: 1000,
+		// 					easing: 'linear',
+		// 					step: function () {
+		// 						$this.text(Number(this.countNum).toFixed(1));
+		// 						// Number를 추가하기 전에는 문자취급돼서 소수점에 오류가 발생
+		// 					},
+		// 					complete: function () {
+		// 						$this.text(Number(this.countNum).toFixed(1));
+		// 					},
+		// 				},
+		// 			);
+		// 		});
+		// 	}
+		// });
+
+		// 소수점 성공2
+
+		var executed = false;
+		// executed는 숫자카운트 애니메이션에서 스크롤 할 때마다 숫자카운트 되는 걸 방지하기 위함
+		$(window).scroll(function () {
+			var threshold = $('.main3').offset().top - 400;
+
+			if (!executed) {
+				if ($(window).scrollTop() >= threshold) {
+					// attr은 가져온다는 뜻 count-num2의 data-rate를 가져온다는 뜻
+
+					$('.count-num2').each(function () {
+						// this = 각자를 지정한다는 의미 each펑션으로 열고 디스를 잡아준다
+
+						// 제이쿼리디스 잡는법
+						var $this = $(this);
+						var progressRate = parseFloat($this.attr('data-rate'));
+						$({ percent: 0 }).animate(
+							{ percent: progressRate },
+							{
+								duration: 1500,
+								progress: function () {
+									var now = this.percent;
+									$this.text(now.toFixed(1) + '%');
+								},
+							},
+						);
+					});
+					executed = true;
+
+					$(document).ready(function () {
+						$('.an1').addClass('on');
+						$('.an2').addClass('on');
+						$('.an3').addClass('on');
+						$('.an4').addClass('on');
+					});
+				}
+				// else {
+				// 	$(document).ready(function () {
+				// 		$('.an1').removeClass('on');
+				// 		$('.an2').removeClass('on');
+				// 		$('.an3').removeClass('on');
+				// 		$('.an4').removeClass('on');
+				// 	});
+				// }
+			}
+		});
+
+		// 소수점 성공2의 실패
+		// var excuted = false;
+		// $(window).scroll(function () {
+		// 	var threshold = $('.main3').offset().top - 800;
+
+		// 	if (!excuted) {
+		// 		if ($(window).scrollTop() >= threshold) {
+		// 			// attr은 가져온다는 뜻 count-num2의 data-rate를 가져온다는 뜻
+		// 			var progressRate = $('.count-num2').attr('data-rate');
+		// 			$({ percent: 0 }).animate(
+		// 				{ percent: progressRate },
+		// 				{
+		// 					duration: 1500,
+		// 					progress: function () {
+		// 						var now = this.percent;
+		// 						$('.count-num2').text(now.toFixed(1) + '%');
+		// 					},
+		// 				},
+		// 			);
+
+		// 			excuted = true;
+		// 		}
+		// 	}
+		// });
+
+		var swiper = new Swiper('.slider2', {
+			loop: true,
+			// threshold: 100,
+			// resistance: true,
+			centeredSlides: true,
+			autoplay: {
+				delay: 1000,
+				disableOnInteraction: false,
+			},
+			breakpoints: {
+				590: {
+					// 한번에 보이는 갯수 이거 적용시키고 loop오류 안 나려면
+					// 슬라이드 갯수를 x2만큼 만들어야함
+					slidesPerView: 5.3,
+					slidesPerGroup: 1,
+					spaceBetween: 0,
+				},
+				0: {
+					slidesPerView: 3,
+					slidesPerGroup: 1,
+					spaceBetween: 0,
+				},
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+		var swiper = new Swiper('.slider3', {
+			loop: true,
+			autoplay: {
+				delay: 1000,
+				disableOnInteraction: false,
+			},
+			breakpoints: {
+				900: {
+					slidesPerView: 4,
+					slidesPerGroup: 1,
+					spaceBetween: 10,
+				},
+				590: {
+					slidesPerView: 3,
+					slidesPerGroup: 1,
+					spaceBetween: 10,
+				},
+				0: {
+					slidesPerView: 2,
+					slidesPerGroup: 1,
+					spaceBetween: 10,
+				},
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+
+		var swiper = new Swiper('.slider4', {
+			loop: true,
+			autoplay: {
+				delay: 1200,
+				disableOnInteraction: false,
+			},
+			breakpoints: {
+				900: {
+					slidesPerView: 4,
+					slidesPerGroup: 1,
+					spaceBetween: 10,
+				},
+				590: {
+					slidesPerView: 3,
+					slidesPerGroup: 1,
+					spaceBetween: 10,
+				},
+				0: {
+					slidesPerView: 2,
+					slidesPerGroup: 1,
+					spaceBetween: 10,
+				},
+			},
+			pagination: {
+				el: '.swiper-pagination1',
+				clickable: true,
+			},
+		});
+
+		var swiper = new Swiper('.slider5', {
+			loop: true,
+			// threshold: 100,
+			// resistance: true,
+			autoplay: {
+				delay: 2000,
+				disableOnInteraction: false,
+			},
+			breakpoints: {
+				380: {
+					slidesPerView: 2,
+					slidesPerGroup: 1,
+					spaceBetween: 15,
+				},
+				0: {
+					// 한번에 보이는 갯수 이거 적용시키고 loop오류 안 나려면
+					// 슬라이드 갯수를 x2만큼 만들어야함
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+					spaceBetween: 15,
+				},
+			},
+		});
+	</script>
+</html>

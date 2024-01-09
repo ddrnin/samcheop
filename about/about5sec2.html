@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css?ver=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://kit.fontawesome.com/581fc6d10b.js" crossorigin="anonymous"></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.sec2 {
+				width: 100%;
+			}
+			.sec2 .sec2wrap {
+				width: 94%;
+				max-width: 1600px;
+				margin: 0 auto;
+			}
+			.sec2 .sec2wrap > .title {
+				margin: 8% 0 2%;
+				font-size: 40px;
+			}
+
+			form {
+				width: 100%;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			form .info {
+				border-top: 2px solid #e31111;
+				border-left: 1px solid #ddd;
+				border-right: 1px solid #ddd;
+			}
+			form .info li {
+				display: grid;
+				grid-template-columns: 20% 80%;
+			}
+			form .info li div:first-child {
+				background: #f8f8f8;
+				color: #333333;
+				border-bottom: 1px solid #ddd;
+				padding: 12px;
+				text-align: left;
+				font-size: 16px;
+				line-height: 40px;
+			}
+			form .info li .input {
+				width: 100%;
+				padding: 12px;
+				border-bottom: 1px solid #ddd;
+			}
+			form .info li .input input {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				width: 100%;
+				height: 40px;
+				border: 1px solid #ccc;
+				border-radius: 3px;
+				padding: 1%;
+				font-size: 12px;
+			}
+
+			form .agr {
+				margin-top: 2%;
+				border-bottom: 2px solid #686868;
+			}
+			form .agr .title {
+				text-align: left;
+				font-size: 20px;
+				color: #686868;
+				font-weight: bold;
+			}
+			form .agr .title i {
+				vertical-align: baseline;
+				margin-left: 40px;
+				font-size: 18px;
+			}
+			form .agr .title.active i {
+				transform: rotate(180deg);
+			}
+			form .agr .cont {
+				display: none;
+			}
+			form .agr .cont textarea {
+				background: #f9f9f9;
+				border: 1px solid #eee;
+				padding: 1.5%;
+				font-family: 'Noto Sans KR';
+				font-size: 15px;
+			}
+			form .agr .ch {
+				text-align: left;
+				margin: 1% 0 3px;
+			}
+			form .agr .ch input {
+				vertical-align: middle;
+			}
+			form .agr .ch label {
+				font-size: 16px;
+				color: #686868;
+			}
+			form .button {
+				margin: 2% 0 5%;
+			}
+			form .button div {
+				width: 200px;
+				height: 55px;
+				background-color: #e04b32;
+				border-radius: 5px;
+				display: inline-block;
+				color: white;
+				font-size: 17px;
+				line-height: 52px;
+				cursor: pointer;
+			}
+			form .button div:hover {
+				background-color: #4b190f;
+				transition: 0.5s;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1500px) {
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+			}
+
+			@media only screen and (min-width: 100px) and (max-width: 900px) {
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				.sec2 .sec2wrap > .title {
+					margin: 15% 0 2%;
+				}
+
+				form .info li {
+					display: grid;
+					grid-template-columns: 30% 70%;
+				}
+				form .info li div:first-child {
+					background: #f8f8f8;
+					color: #333333;
+					border-bottom: 1px solid #ddd;
+					padding: 12px;
+					text-align: left;
+					font-size: 15px;
+					line-height: 40px;
+				}
+
+				form .button {
+					margin: 6% 0 5%;
+				}
+				form .agr .ch {
+					text-align: left;
+					margin: 3% 0 3px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 590px) {
+				form .agr {
+					margin-top: 4%;
+					border-bottom: 2px solid #686868;
+				}
+				form .agr .title {
+					text-align: left;
+					font-size: 18px;
+					color: #686868;
+					font-weight: bold;
+				}
+				form .agr .title i {
+					vertical-align: baseline;
+					margin-left: 40px;
+					font-size: 16px;
+				}
+				form .agr .ch label {
+					font-size: 14px;
+					color: #686868;
+				}
+				form .agr .cont textarea {
+					background: #f9f9f9;
+					border: 1px solid #eee;
+					padding: 2%;
+					font-family: 'Noto Sans KR';
+					font-size: 13px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 430px) {
+				.sec2 .sec2wrap > .title {
+					margin: 20% 0 2%;
+				}
+
+				form .info li {
+					display: grid;
+					grid-template-columns: 35% 65%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sec2">
+			<div class="sec2wrap">
+				<div class="title">창업 문의</div>
+				<form>
+					<ul class="info">
+						<li>
+							<div>이름</div>
+							<div class="input">
+								<input type="text" />
+							</div>
+						</li>
+						<li>
+							<div>연락처</div>
+							<div class="input">
+								<input type="text" />
+							</div>
+						</li>
+						<li>
+							<div>창업희망지역</div>
+							<div class="input">
+								<input type="text" placeholder="시,군,동" />
+							</div>
+						</li>
+					</ul>
+					<div class="agr">
+						<div class="title">개인정보취급방침 <i class="fa-solid fa-caret-down"></i></div>
+						<div class="cont">
+							<textarea name="" id="" style="width: 100%; height: 200px">
+씨지에프 주식회사(이하 '삼첩분식'라 함)는 “정보통신망 이용촉진” 및 “정보보호 등에 관한 법률”, “개인정보보호법” 등 관련 법령에 따라 정보통신 서비스 제공자가 준수하여야 할 개인정보보호 규정을 준수하며, 관련 법령에 의거한 개인정보처리방침을 정하여 이용자 권익 보호에 최선을 다하고 있습니다. 개인정보보호방침을 통하여 귀하께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+
+본 개인정보처리방침은 회사가 제공하는 서비스(회사가 운영하는 “삼첩분식 홈페이지”와 모바일에 적용되며 다음과 같은 내용을 담고 있습니다
+								
+1. 개인정보의 수집목적 및 이용목적
+2. 개인정보의 수집항목
+3. 개인정보관리 책임자 및 담당자 / 민원서비스
+4. 개인정보의 보유 및 이용기간
+								
+								
+								
+1. 개인정보의 수집목적 및 이용목적
+							</textarea
+							>
+						</div>
+						<div class="ch">
+							<input type="checkbox" id="check" />
+							<label for="check">위 이용약관에 동의합니다.</label>
+						</div>
+					</div>
+					<div class="button">
+						<div>문의하기</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script>
+		$('.agr .title').click(function () {
+			$('.cont').slideToggle();
+			$(this).toggleClass('active');
+		});
+	</script>
+</html>

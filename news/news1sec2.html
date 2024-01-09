@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css?ver=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://kit.fontawesome.com/581fc6d10b.js" crossorigin="anonymous"></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.sec2 {
+				width: 100%;
+			}
+			.sec2 .sec2wrap {
+				width: 88%;
+				margin: 0 auto;
+			}
+			.sec2 .sec2wrap .title {
+			}
+			.sec2 .sec2wrap .title .name {
+				font-size: 40px;
+				padding: 8% 0 3%;
+			}
+
+			.sec2 .sec2wrap .main {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 0%;
+			}
+			.sec2 .sec2wrap .main li {
+				width: 100%;
+			}
+			.sec2 .sec2wrap .main li a {
+				width: 96%;
+				height: 96%;
+			}
+			.sec2 .sec2wrap .main li img {
+				width: 100%;
+				height: 100%;
+			}
+
+			.sec2 .sec2wrap .btn {
+				width: 90px;
+				margin: 0 auto;
+				padding: 15px 0;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 0;
+			}
+			.sec2 .sec2wrap .btn a {
+				width: 28px;
+				height: 28px;
+				line-height: 28px;
+				border: 1px solid #bbbcc3;
+				background-color: #f3f3f3;
+				color: #555555;
+				font-size: 17px;
+				border-radius: 3px;
+				margin: 15px 0 60px;
+			}
+			.sec2 .sec2wrap .btn a:first-child {
+				background-color: #4c4f6f;
+				color: white;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .btn a:nth-child(3) {
+				background: url(./img/store1/btn_end.gif) no-repeat center white;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				.sec2 .sec2wrap {
+					width: 90%;
+					margin: 0 auto;
+				}
+
+				.sec2 .sec2wrap .title .name {
+					font-size: 35px;
+					padding: 15% 0 4%;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				.sec2 .sec2wrap .title .name {
+					font-size: 30px;
+					padding: 15% 0 4%;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 430px) {
+				.sec2 .sec2wrap .title .name {
+					font-size: 30px;
+					padding: 25% 0 10%;
+				}
+
+				.sec2 .sec2wrap .main {
+					display: grid;
+					grid-template-columns: repeat(1, 1fr);
+					gap: 0%;
+				}
+
+				.sec2 .sec2wrap .btn {
+					width: 80px;
+					margin: 0 auto;
+					padding: 15px 0;
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+					gap: 0;
+				}
+				.sec2 .sec2wrap .btn a {
+					width: 22px;
+					height: 22px;
+					line-height: 22px;
+					border: 1px solid #bbbcc3;
+					background-color: #f3f3f3;
+					color: #555555;
+					font-size: 14px;
+					border-radius: 3px;
+					margin: 15px 0 60px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sec2">
+			<div class="sec2wrap">
+				<div class="title">
+					<div class="name">새소식</div>
+				</div>
+				<ul class="main">
+					<li>
+						<a href="news1_1.php"><img src="img/news1/news1.gif" alt="" /></a>
+					</li>
+					<li>
+						<a href="news1_1.php"><img src="img/news1/news2.png" alt="" /></a>
+					</li>
+					<li>
+						<a href="news1_1.php"><img src="img/news1/news3.png" alt="" /></a>
+					</li>
+					<li>
+						<a href="news1_1.php"><img src="img/news1/news2.png" alt="" /></a>
+					</li>
+					<li>
+						<a href="news1_1.php"><img src="img/news1/news3.png" alt="" /></a>
+					</li>
+					<li>
+						<a href="news1_1.php"><img src="img/news1/news1.gif" alt="" /></a>
+					</li>
+					<li>
+						<a href="news1_1.php"><img src="img/news1/news3.png" alt="" /></a>
+					</li>
+					<li>
+						<a href="news1_1.php"><img src="img/news1/news1.gif" alt="" /></a>
+					</li>
+					<li>
+						<a href="news1_1.php"><img src="img/news1/news2.png" alt="" /></a>
+					</li>
+				</ul>
+				<div class="btn">
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#"></a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

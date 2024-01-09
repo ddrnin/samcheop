@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>떡볶이의 새로운 기준 삼첩분식</title>
+		<link rel="stylesheet" href="./lib/setup.css?ver=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			}
+			main {
+				/* background-image: url(./img/slide_bg.jpg); */
+				background: url(./img/slide_bg.jpg) no-repeat top center;
+				background-size: cover;
+				height: 550px;
+				position: relative;
+			}
+			.visualbox {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				overflow: hidden;
+			}
+			.visualbox .vbtitle {
+				width: 78%;
+				text-align: left;
+				position: relative;
+				padding: 10% 10%;
+			}
+			.visualbox .vbtitle .vbname {
+				font-size: 52px;
+				font-weight: bold;
+				color: #f4b01b;
+				line-height: 55px;
+				padding-bottom: 22px;
+			}
+			.visualbox .vbtitle .vbsub {
+				color: #542623;
+				font-size: 20px;
+				font-weight: 500;
+			}
+			.visualbox img {
+				position: absolute;
+				bottom: 3%;
+				right: 0;
+				transform: translateY(20%);
+				width: 70%;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1480px) {
+				main {
+					background-image: url(./img/slide_bg.jpg);
+					height: calc(35vw - 40px);
+				}
+
+				.visualbox .vbtitle {
+					width: 78%;
+					text-align: left;
+					position: relative;
+					padding: 10% 5%;
+				}
+				.visualbox .vbtitle .vbname {
+					font-size: 45px;
+					font-weight: bold;
+					color: #f4b01b;
+					line-height: 55px;
+					padding-bottom: 22px;
+				}
+				.visualbox .vbtitle .vbsub {
+					color: #542623;
+					font-size: 18px;
+					font-weight: 500;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				main {
+					background-image: url(./img/slide_bg.jpg);
+					height: 400px;
+				}
+
+				.visualbox .vbtitle .vbname {
+					font-size: 42px;
+					font-weight: bold;
+					color: #f4b01b;
+					line-height: 55px;
+					padding-bottom: 22px;
+				}
+				.visualbox .vbtitle .vbsub {
+					color: #542623;
+					font-size: 16px;
+					font-weight: 500;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1024px) {
+				main {
+					background-image: url(./img/slide_bg.jpg);
+					height: 380px;
+				}
+				.visualbox img {
+					position: absolute;
+					bottom: 0;
+					right: -3%;
+					transform: translateY(0%);
+					width: 65%;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				main {
+					background-image: url(./img/slide_bg.jpg);
+					height: 300px;
+				}
+				.visualbox img {
+					position: absolute;
+					bottom: 0;
+					right: 0%;
+					transform: translateY(0%);
+					width: 70%;
+					z-index: 0;
+				}
+				.visualbox .vbtitle .vbname {
+					font-size: 30px;
+					font-weight: bold;
+					color: #f4b01b;
+					line-height: 40px;
+					padding-bottom: 22px;
+				}
+				.visualbox .vbtitle .vbsub {
+					color: #542623;
+					font-size: 14px;
+					font-weight: 500;
+					position: relative;
+					z-index: 1;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 560px) {
+				main {
+					background-image: url(./img/slide_bg.jpg);
+					height: 500px;
+				}
+				.visualbox img {
+					position: absolute;
+					bottom: 0;
+					right: -8%;
+					transform: translateY(0%);
+					width: 80%;
+					z-index: 0;
+				}
+				.visualbox .vbtitle .vbname {
+					font-size: 28px;
+					font-weight: bold;
+					color: #f4b01b;
+					line-height: 40px;
+					padding-bottom: 22px;
+				}
+				.visualbox .vbtitle .vbsub {
+					color: #542623;
+					font-size: 14px;
+					font-weight: 500;
+					position: relative;
+					z-index: 1;
+				}
+			}
+
+			.smenubox {
+				width: 88%;
+				height: 20%;
+				background-color: white;
+				position: absolute;
+				bottom: -11%;
+				left: 50%;
+				transform: translateX(-50%);
+				border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			}
+			.smenubox .smb_wrap {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 60%;
+			}
+			.smenubox .smb_wrap ul {
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+			}
+			.smenubox .smb_wrap ul li {
+				border-right: 1px solid #f1ece0;
+			}
+			.smenubox .smb_wrap ul li:nth-child(3) a {
+				color: #e04b32;
+			}
+			.smenubox .smb_wrap ul li:last-child {
+				border: none;
+			}
+			.smenubox .smb_wrap ul li a {
+				font-size: 17px;
+			}
+
+			.smenubox .smb_wrapm {
+				width: 100%;
+				display: none;
+				height: 100%;
+			}
+			.smenubox .smb_wrapm .mobileb {
+				width: 100%;
+				height: 100%;
+			}
+			.smenubox .smb_wrapm .mobileb div {
+				display: inline-block;
+			}
+
+			.smenubox .smb_wrapm .mobileb .mobilebimg {
+				background: url(./img/sec3_img.png);
+				background-repeat: no-repeat;
+				background-size: 70%;
+				background-position: center;
+				width: 55px;
+				height: 55px;
+				background-color: #e04b32;
+				float: left;
+			}
+			.smenubox .smb_wrapm .mobileb .list {
+				width: calc(100% - 55px);
+				float: right;
+			}
+			.smenubox .smb_wrapm .mobileb .list .menu1 {
+				width: 50%;
+				height: 100%;
+			}
+
+			.smenubox .smb_wrapm .mobileb .list .menu2 {
+				width: 50%;
+				height: 100%;
+			}
+			.smenubox .smb_wrapm .mobileb .list .title {
+				width: 100%;
+				border-left: 1px solid #f1ece0;
+				border-bottom: 1px solid #f1ece0;
+				height: 55px;
+				cursor: pointer;
+			}
+
+			.smenubox .smb_wrapm .mobileb .list .title .title_wrap {
+				width: 90%;
+				height: 100%;
+				background: url(./img/arrow_down.png);
+				background-repeat: no-repeat;
+				background-size: 5%;
+				background-position: right;
+				position: relative;
+			}
+			.smenubox .smb_wrapm .mobileb .list .title .title_wrap .name {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-30%);
+				font-size: 14px;
+			}
+			.smenubox .smb_wrapm .mobileb .list .submenu {
+				width: 100%;
+				background-color: #f9f9f9;
+				border: 1px solid #ddd;
+				border-top: none;
+				transition: 0.3s;
+				max-height: 0;
+				overflow: hidden;
+			}
+			.smenubox .smb_wrapm .mobileb .list .menu1 .submenu.active {
+				max-height: 500px;
+				transition: 0.6s;
+			}
+			.smenubox .smb_wrapm .mobileb .list .menu2 .submenu.active {
+				max-height: 500px;
+				transition: 0.6s;
+			}
+
+			.smenubox .smb_wrapm .mobileb .list .submenu > li {
+				width: 100%;
+				text-align: left;
+				border-top: 1px dotted #ddd;
+			}
+			.smenubox .smb_wrapm .mobileb .list .submenu > li:first-child {
+				border: none;
+			}
+			.smenubox .smb_wrapm .mobileb .list .menu1 .submenu > li:nth-child(5) a {
+				background-color: #f4b01b;
+				color: white;
+			}
+			.smenubox .smb_wrapm .mobileb .list .menu2 .submenu > li:nth-child(3) a {
+				background-color: #f4b01b;
+				color: white;
+			}
+			.smenubox .smb_wrapm .mobileb .list .submenu > li a {
+				width: 100%;
+				height: 100%;
+				font-size: 13px;
+				padding: 5px 15px;
+			}
+			.smenubox .smb_wrapm .mobileb .list .submenu > li a:hover {
+				background-color: #ddd;
+			}
+			.smenubox .smb_wrapm .mobileb .list .menu1 .submenu > li:nth-child(5) a:hover {
+				background-color: #f4b01b;
+			}
+			.smenubox .smb_wrapm .mobileb .list .menu2 .submenu > li:nth-child(3) a:hover {
+				background-color: #f4b01b;
+			}
+
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				.smenubox {
+					width: 88%;
+					height: 20%;
+					background-color: white;
+					position: absolute;
+					bottom: -11%;
+					left: 50%;
+					transform: translateX(-50%);
+					border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+				}
+				.smenubox .smb_wrap ul li a {
+					font-size: 15px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1024px) {
+				main {
+					background-image: url(./img/slide_bg.jpg);
+					height: 380px;
+				}
+				.smenubox .smb_wrap {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 80%;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				.smb_wrap {
+					display: none;
+				}
+				.smenubox .smb_wrapm {
+					display: block;
+				}
+				.smenubox {
+					width: 100%;
+					height: 55px;
+					background-color: white;
+					position: absolute;
+					bottom: -11%;
+					left: 50%;
+					transform: translateX(-50%);
+					border-bottom: none;
+				}
+				@media only screen and (min-width: 100px) and (max-width: 477px) {
+					.visualbox .vbtitle {
+						width: 90%;
+						text-align: left;
+						position: relative;
+						padding: 10% 0 10% 5%;
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="visualbox">
+				<div class="vbtitle">
+					<div data-aos="fade-up">
+						<div class="vbname">삼첩분식과 함께해요</div>
+						<div class="vbsub">
+							독창적인 메뉴와 탄탄한 브랜딩, <br />
+							매일이 새로운 삼첩분식과 함께할 점주님을 기다립니다.
+						</div>
+					</div>
+				</div>
+				<img src="./img/about1/about1_bg.png" alt="" />
+			</div>
+			<div class="smenubox">
+				<div class="smb_wrap">
+					<div class="pcb">
+						<ul>
+							<li><a href="about1.php">왜 삼첩분식인가</a></li>
+							<li><a href="about2.php">브랜드 강점</a></li>
+							<li><a href="about3.php">창업 강점</a></li>
+							<li><a href="about4.php">창업 비용</a></li>
+							<li><a href="about5.php">창업문의</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="smb_wrapm">
+					<div class="mobileb">
+						<div class="mobilebimg"></div>
+						<ul class="list">
+							<li class="menu1">
+								<div class="title">
+									<div class="title_wrap">
+										<div class="name">창업 안내</div>
+									</div>
+								</div>
+								<ul class="submenu">
+									<li><a href="../menu/menu1.php">메뉴</a></li>
+									<li><a href="../store/store1.php">매장 찾기</a></li>
+									<li><a href="../news/news1.php">삼첩 소식</a></li>
+									<li><a href="../cus/cus1.php">고객의 소리</a></li>
+									<li><a href="about1.php">창업 안내</a></li>
+								</ul>
+							</li>
+							<li class="menu2">
+								<div class="title">
+									<div class="title_wrap">
+										<div class="name">창업 강점</div>
+									</div>
+								</div>
+								<ul class="submenu">
+									<li><a href="about1.php">왜 삼첩분식인가</a></li>
+									<li><a href="about2.php">브랜드 강점</a></li>
+									<li><a href="about3.php">창업 강점</a></li>
+									<li><a href="about4.php">창업 비용</a></li>
+									<li><a href="about5.php">창업 문의</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div class="test"></div>
+	</body>
+	<script>
+		AOS.init({
+			duration: 1000,
+			delay: 200,
+		});
+
+		$('.mobileb .list .menu1').click(function () {
+			$('.mobileb .list .menu2 .submenu').removeClass('active');
+
+			if ($('.mobileb .list .menu1 .submenu').hasClass('active')) {
+				$('.mobileb .list .menu1 .submenu').removeClass('active');
+			} else {
+				$('.mobileb .list .menu1 .submenu').addClass('active');
+			}
+		});
+		$('.mobileb .list .menu2').click(function () {
+			$('.mobileb .list .menu1 .submenu').removeClass('active');
+
+			if ($('.mobileb .list .menu2 .submenu').hasClass('active')) {
+				$('.mobileb .list .menu2 .submenu').removeClass('active');
+			} else {
+				$('.mobileb .list .menu2 .submenu').addClass('active');
+			}
+		});
+	</script>
+</html>

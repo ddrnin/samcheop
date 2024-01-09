@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css?ver=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://kit.fontawesome.com/581fc6d10b.js" crossorigin="anonymous"></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			}
+			.sec2 {
+				width: 100%;
+			}
+			.sec2 .sec2wrap {
+				width: 100%;
+				margin: 0 auto;
+			}
+
+			.sec2 .sec2wrap .main1 {
+				position: relative;
+				z-index: 1;
+			}
+			.sec2 .sec2wrap .main1 .title {
+				position: absolute;
+				color: white;
+				font-size: 75px;
+				width: 88%;
+				text-align: left;
+				top: 25%;
+				left: 6%;
+				line-height: 90px;
+				font-weight: 300;
+				z-index: 3;
+			}
+			.sec2 .sec2wrap .main1 .title span {
+				font-size: 75px;
+				line-height: 90px;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .main1 .videowrap {
+				position: relative;
+				z-index: 1;
+				width: 100%;
+				height: 56vw;
+				overflow: hidden;
+				top: -3px;
+			}
+			.sec2 .sec2wrap .main1 .videowrap #videoPlayer {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			.sec2 .sec2wrap .main2 {
+				margin-top: -8px;
+				background-color: #ffa206;
+				position: relative;
+			}
+			.sec2 .sec2wrap .main2::before {
+				content: '';
+				width: 335px;
+				height: 468px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: url(img/about1/about1_2_bg1.png);
+			}
+			.sec2 .sec2wrap .main2::after {
+				content: '';
+				width: 339px;
+				height: 321px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				background: url(img/about1/about1_2_bg2.png);
+			}
+			.sec2 .sec2wrap .main2 .titlewrap {
+				padding-top: 100px;
+			}
+			.sec2 .sec2wrap .main2 .title {
+				width: 88%;
+				color: white;
+				text-align: left;
+				margin: 0 auto;
+				position: relative;
+			}
+			.sec2 .sec2wrap .main2 .title h3 {
+				font-size: 26px;
+				font-weight: 500;
+				margin: 0 0 20px;
+				padding: 36px 0 0 60px;
+			}
+			.sec2 .sec2wrap .main2 .title h3::before {
+				content: '';
+				width: 230px;
+				height: 92px;
+				background: url(img/about1/about1_title_bg.png) no-repeat;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+			.sec2 .sec2wrap .main2 .title div {
+				font-size: 48px;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .main2 .content {
+				width: 88%;
+				margin: 0 auto;
+				padding: 40px 0;
+				display: flex;
+				position: relative;
+				align-items: center;
+				z-index: 2;
+			}
+			.sec2 .sec2wrap .main2 .content .pcimg {
+				width: 100%;
+				max-width: 1040px;
+			}
+			.sec2 .sec2wrap .main2 .content .mimg {
+				display: none;
+			}
+			.sec2 .sec2wrap .main2 .content .mtitle {
+				display: none;
+				word-break: keep-all;
+			}
+			.sec2 .sec2wrap .main2 .content div:first-child {
+				width: 75%;
+			}
+			.sec2 .sec2wrap .main2 .content div:last-child {
+				width: 25%;
+				max-width: 232px;
+				margin-bottom: 2%;
+			}
+			.sec2 .sec2wrap .main2 .content div:last-child img {
+				width: 100%;
+			}
+			.sec2 .sec2wrap .main2 .content div:last-child div {
+				width: 100%;
+				color: white;
+				font-size: 27px;
+				margin-top: 10%;
+				line-height: 35px;
+			}
+
+			.sec2 .sec2wrap .main3 {
+				background: #fdfaf0;
+				overflow: hidden;
+			}
+			.sec2 .sec2wrap .main3 .titlewrap {
+				padding-top: 100px;
+			}
+			.sec2 .sec2wrap .main3 .title {
+				width: 88%;
+				color: black;
+				text-align: left;
+				margin: 0 auto;
+				position: relative;
+			}
+			.sec2 .sec2wrap .main3 .title h3 {
+				font-size: 26px;
+				font-weight: 500;
+				margin: 0 0 20px;
+				padding: 36px 0 0 60px;
+			}
+			.sec2 .sec2wrap .main3 .title h3::before {
+				content: '';
+				width: 230px;
+				height: 92px;
+				background: url(img/about1/about1_title_bg2.png) no-repeat;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+			.sec2 .sec2wrap .main3 .title div {
+				font-size: 48px;
+				font-weight: bold;
+				color: #e04b31;
+			}
+
+			.main3 .section.page1 {
+				position: relative;
+			}
+
+			.main3 .section.page1 .page1_wrap {
+				width: 60%;
+				margin: 0 auto;
+				padding: 30px 0;
+			}
+
+			.main3 .section.page1 .page1_wrap .slider2 {
+				position: relative;
+				top: 0%;
+				left: 0%;
+			}
+
+			.main3 .section.page1 .page1_wrap .slider li img {
+				width: 100%;
+			}
+			.main3 .section.page1 .page1_wrap .slider li div {
+				color: #542623;
+				font-size: 30px;
+			}
+			.main3 .section.page1 .page1_wrap .slider li div span {
+				font-size: 30px;
+				font-weight: bold;
+			}
+
+			.swiper {
+				width: 100%;
+				height: 100%;
+			}
+
+			.main3 .section.page1 .page1_wrap .swiper-slide {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+			}
+
+			.main3 .section.page1 .page1_wrap .swiper-button-next {
+				background: url(img/about1/arrow_next.png) no-repeat center;
+				width: 60px;
+				height: 60px;
+				background-color: rgba(218, 207, 199, 0.8);
+				border-radius: 50%;
+				right: 15%;
+			}
+			.main3 .section.page1 .page1_wrap .swiper-button-prev {
+				background: url(img/about1/arrow_prev.png) no-repeat center;
+				width: 60px;
+				height: 60px;
+				background-color: rgba(218, 207, 199, 0.8);
+				border-radius: 50%;
+				left: 15%;
+			}
+			.swiper-button-next::after,
+			.swiper-button-prev::after {
+				display: none;
+			}
+
+			.sec2 .sec2wrap .main4 {
+				margin-top: -3px;
+				background-color: #3d3838;
+				position: relative;
+			}
+			.sec2 .sec2wrap .main4::before {
+				content: '';
+				width: 335px;
+				height: 468px;
+				position: absolute;
+				bottom: 5%;
+				left: 0;
+				background: url(img/about1/about1_4_bg1.png) no-repeat;
+			}
+			.sec2 .sec2wrap .main4::after {
+				content: '';
+				width: 339px;
+				height: 321px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				background: url(img/about1/about1_4_bg2.png) no-repeat;
+			}
+			.sec2 .sec2wrap .main4 > .titlewrap {
+				padding-top: 100px;
+			}
+			.sec2 .sec2wrap .main4 .titlewrap .title {
+				width: 88%;
+				color: white;
+				text-align: left;
+				margin: 0 auto;
+				position: relative;
+			}
+			.sec2 .sec2wrap .main4 .titlewrap .title h3 {
+				font-size: 26px;
+				font-weight: 500;
+				margin: 0 0 20px;
+				padding: 36px 0 0 60px;
+			}
+			.sec2 .sec2wrap .main4 .titlewrap .title h3::before {
+				content: '';
+				width: 230px;
+				height: 92px;
+				background: url(img/about1/about1_title_bg3.png) no-repeat;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+			.sec2 .sec2wrap .main4 .titlewrap .title div {
+				font-size: 48px;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider {
+				padding: 3% 0 5%;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .slide_wrap {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				width: 75%;
+				margin-left: 10%;
+				margin-right: auto;
+				text-align: right;
+				position: relative;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title {
+				text-align: right;
+				width: 80%;
+				word-break: keep-all;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title .titlewrap {
+				margin-top: 30%;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title .name {
+				color: #e04b31;
+				font-size: 72px;
+				line-height: 72px;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title .name span {
+				font-weight: bold;
+				font-size: 72px;
+				line-height: 72px;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title .sub {
+				color: white;
+				font-size: 21px;
+				word-break: keep-all;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .img {
+				width: 80%;
+			}
+			.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .img img {
+				width: 100%;
+			}
+			.swiper-pagination {
+				position: absolute;
+				top: 32% !important;
+				left: 80% !important;
+				width: 200px !important;
+			}
+			.swiper-pagination-bullet {
+				width: 100%;
+				opacity: 1;
+				display: block !important;
+				margin-bottom: 10px !important;
+				width: 137px !important;
+				height: 137px !important;
+			}
+			.swiper-pagination-bullet:nth-child(1) {
+				background: url(img/about1/about1_4_1.png) no-repeat center;
+				background-size: cover;
+			}
+			.swiper-pagination-bullet:nth-child(2) {
+				background: url(img/about1/about1_4_2.png) no-repeat center;
+				background-size: cover;
+			}
+			.swiper-pagination-bullet:nth-child(3) {
+				background: url(img/about1/about1_4_3.png) no-repeat center;
+				background-size: cover;
+			}
+			.swiper-pagination-bullet:nth-child(4) {
+				background: url(img/about1/about1_4_4.png) no-repeat center;
+				background-size: cover;
+			}
+			.main4 .main4br {
+				display: none;
+			}
+
+			.sec2 .sec2wrap .main5 {
+				margin-top: -8px;
+				background: url(img/about1/about1_5_bg.jpg) no-repeat;
+				background-position: center bottom;
+				background-size: 100% auto;
+				position: relative;
+				height: 80vw;
+			}
+			.sec2 .sec2wrap .main5 .titlewrap {
+				padding-top: 100px;
+			}
+			.sec2 .sec2wrap .main5 .title {
+				width: 88%;
+				color: white;
+				text-align: left;
+				margin: 0 auto;
+				position: relative;
+				z-index: 10;
+			}
+			.sec2 .sec2wrap .main5 .title h3 {
+				font-size: 26px;
+				font-weight: 500;
+				margin: 0 0 20px;
+				padding: 36px 0 0 60px;
+			}
+			.sec2 .sec2wrap .main5 .title h3::before {
+				content: '';
+				width: 230px;
+				height: 92px;
+				background: url(img/about1/about1_title_bg.png) no-repeat;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+			.sec2 .sec2wrap .main5 .title div {
+				font-size: 48px;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .main5 .title .sub {
+				font-size: 22px;
+				font-weight: 500;
+			}
+
+			.sec2 .sec2wrap .main5 .content img {
+				position: absolute;
+				width: 8%;
+				z-index: 5;
+			}
+			.sec2 .sec2wrap .main5 .content img:nth-child(1) {
+				top: 2%;
+				left: 45%;
+			}
+			.sec2 .sec2wrap .main5 .content img:nth-child(2) {
+				top: 15%;
+				left: 35%;
+			}
+			.sec2 .sec2wrap .main5 .content img:nth-child(3) {
+				top: 13%;
+				left: 65%;
+			}
+			.sec2 .sec2wrap .main5 .content img:nth-child(4) {
+				top: 30%;
+				left: 25%;
+			}
+			.sec2 .sec2wrap .main5 .content img:nth-child(5) {
+				top: 28%;
+				left: 49%;
+			}
+			.sec2 .sec2wrap .main5 .content img:nth-child(6) {
+				top: 42%;
+				left: 43%;
+			}
+			.sec2 .sec2wrap .main5 .content img:nth-child(7) {
+				top: 47%;
+				left: 17%;
+			}
+			.sec2 .sec2wrap .main5 .content img:nth-child(8) {
+				top: 55%;
+				left: 70%;
+			}
+
+			.sec2 .sec2wrap .main6 {
+				margin-top: -3px;
+				background-color: #fdfaf0;
+				position: relative;
+			}
+			.sec2 .sec2wrap .main6 .titlewrap {
+				padding-top: 100px;
+			}
+			.sec2 .sec2wrap .main6 .title {
+				width: 88%;
+				color: black;
+				text-align: left;
+				margin: 0 auto;
+				position: relative;
+				z-index: 10;
+			}
+			.sec2 .sec2wrap .main6 .title h3 {
+				font-size: 26px;
+				font-weight: 500;
+				margin: 0 0 20px;
+				padding: 36px 0 0 60px;
+			}
+			.sec2 .sec2wrap .main6 .title h3::before {
+				content: '';
+				width: 230px;
+				height: 92px;
+				background: url(img/about1/about1_title_bg2.png) no-repeat;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+			.sec2 .sec2wrap .main6 .title div {
+				color: #e04b31;
+				font-size: 48px;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .main6 .grid {
+				/* display: flex;
+				justify-content: center;
+				flex-wrap: wrap; */
+				width: 88%;
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				padding: 20px 0 5%;
+			}
+			.sec2 .sec2wrap .main6 .grid li {
+			}
+			.sec2 .sec2wrap .main6 .grid li:nth-child(5) {
+				grid-column: 2/3;
+			}
+			.sec2 .sec2wrap .main6 .grid li img {
+				width: 100%;
+			}
+			.sec2 .sec2wrap .main6 .grid li div {
+				color: #542623;
+				font-size: 30px;
+			}
+			.sec2 .sec2wrap .main6 .grid li div span {
+				font-weight: bold;
+				font-size: 30px;
+			}
+			.sec2 .sec2wrap .main6 .grid li p {
+				font-size: 16px;
+				color: #989898;
+				line-height: 18px;
+				word-break: keep-all;
+			}
+			.main6br {
+				display: none;
+			}
+
+			.sec2 .sec2wrap .main7 {
+				background-color: #e6423e;
+				height: 280px;
+				padding: 60px 0 0;
+			}
+
+			.sec2 .sec2wrap .main7 div {
+				position: relative;
+				margin-top: 30px;
+
+				animation-name: arr;
+				animation-duration: 1s;
+				animation-timing-function: linear;
+
+				animation-delay: 0s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes arr {
+				0% {
+					margin-top: 30px;
+				}
+
+				50% {
+					margin-top: 15px;
+				}
+
+				100% {
+					margin-top: 30px;
+				}
+			}
+			.sec2 .sec2wrap .main7 div .arr {
+				width: 18px;
+				height: 30px;
+				margin: 0 auto;
+			}
+			.sec2 .sec2wrap .main7 div .arr span:nth-child(1) {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 2px;
+				height: 40px;
+				background-color: black;
+			}
+			.sec2 .sec2wrap .main7 div .arr span:nth-child(2) {
+				position: absolute;
+				top: -4px;
+				left: 0;
+				transform: rotate(45deg);
+				width: 2px;
+				height: 25px;
+				background-color: black;
+			}
+			.sec2 .sec2wrap .main7 div .arr span:nth-child(3) {
+				position: absolute;
+				top: -4px;
+				right: 0;
+				transform: rotate(135deg);
+				width: 2px;
+				height: 25px;
+				background-color: black;
+			}
+			.sec2 .sec2wrap .main7 div p {
+				position: absolute;
+				width: 100%;
+				top: 60px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-size: 18px;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1500px) {
+				.swiper-pagination-bullet {
+					width: 100%;
+					opacity: 1;
+					display: block !important;
+					margin-bottom: 10px !important;
+					width: 110px !important;
+					height: 110px !important;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				.sec2 .sec2wrap .main1 .title {
+					font-size: 65px;
+					line-height: 70px;
+				}
+				.sec2 .sec2wrap .main1 .title span {
+					font-size: 65px;
+					line-height: 70px;
+				}
+
+				.sec2 .sec2wrap .main2 .content div:last-child div {
+					font-size: 22px;
+					line-height: 25px;
+				}
+
+				.main4 .main4br {
+					display: inline-block;
+				}
+				.swiper-pagination {
+					position: absolute;
+					top: 36% !important;
+					left: 80% !important;
+				}
+				.swiper-pagination-bullet {
+					width: 100%;
+					opacity: 1;
+					display: block !important;
+					margin-bottom: 10px !important;
+					width: 90px !important;
+					height: 90px !important;
+				}
+				.main6br {
+					display: inline-block;
+				}
+			}
+
+			@media only screen and (min-width: 100px) and (max-width: 900px) {
+				.sec2 .sec2wrap .main2 .titlewrap {
+					padding-top: 50px;
+				}
+
+				.sec2 .sec2wrap .main2 .title div {
+					font-size: 42px;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main2 .title h3 {
+					font-size: 22px;
+					font-weight: 500;
+					margin: 0 0 10px;
+					padding: 25px 0 0 45px;
+				}
+				.sec2 .sec2wrap .main2 .title h3::before {
+					content: '';
+					width: 170px;
+					height: 70px;
+					background-size: 100% auto;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 1;
+				}
+
+				.sec2 .sec2wrap .main3 .titlewrap {
+					padding-top: 50px;
+				}
+
+				.sec2 .sec2wrap .main3 .title div {
+					font-size: 42px;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main3 .title h3 {
+					font-size: 22px;
+					font-weight: 500;
+					margin: 0 0 10px;
+					padding: 25px 0 0 45px;
+				}
+				.sec2 .sec2wrap .main3 .title h3::before {
+					content: '';
+					width: 170px;
+					height: 70px;
+					background-size: 100% auto;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 1;
+				}
+
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .slide_wrap {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					width: 80%;
+					margin-left: 5%;
+					margin-right: auto;
+					text-align: right;
+					position: relative;
+				}
+				.sec2 .sec2wrap .main4 > .titlewrap {
+					padding-top: 50px;
+				}
+
+				.sec2 .sec2wrap .main4 .titlewrap .title div {
+					font-size: 38px;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main4 .titlewrap .title h3 {
+					font-size: 22px;
+					font-weight: 500;
+					margin: 0 0 10px;
+					padding: 25px 0 0 45px;
+				}
+				.sec2 .sec2wrap .main4 .titlewrap .title h3::before {
+					content: '';
+					width: 170px;
+					height: 70px;
+					background-size: 100% auto;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 1;
+				}
+
+				.sec2 .sec2wrap .main5 .titlewrap {
+					padding-top: 50px;
+				}
+				.sec2 .sec2wrap .main5 .titlewrap .title div {
+					font-size: 38px;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main5 .titlewrap .title h3 {
+					font-size: 22px;
+					font-weight: 500;
+					margin: 0 0 10px;
+					padding: 25px 0 0 45px;
+				}
+				.sec2 .sec2wrap .main5 .titlewrap .title h3::before {
+					content: '';
+					width: 170px;
+					height: 70px;
+					background-size: 100% auto;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 1;
+				}
+				.sec2 .sec2wrap .main5 .titlewrap .title .sub {
+					font-size: 22px;
+					font-weight: 500;
+				}
+
+				.sec2 .sec2wrap .main6 .titlewrap {
+					padding-top: 50px;
+				}
+				.sec2 .sec2wrap .main6 .titlewrap .title div {
+					font-size: 38px;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main6 .titlewrap .title h3 {
+					font-size: 22px;
+					font-weight: 500;
+					margin: 0 0 10px;
+					padding: 25px 0 0 45px;
+				}
+				.sec2 .sec2wrap .main6 .titlewrap .title h3::before {
+					content: '';
+					width: 170px;
+					height: 70px;
+					background-size: 100% auto;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 1;
+				}
+
+				.sec2 .sec2wrap .main2 .content div:first-child {
+					width: 100%;
+				}
+				.sec2 .sec2wrap .main2 .content div:last-child {
+					width: 100%;
+					max-width: 232px;
+					margin-bottom: 2%;
+					margin: 0 auto;
+					padding-top: 5%;
+				}
+
+				.sec2 .sec2wrap .main2 .content {
+					width: 88%;
+					margin: 0 auto;
+					padding: 40px 0;
+					display: grid;
+					grid-template-columns: 1fr;
+					z-index: 2;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title {
+					text-align: center;
+					width: 100%;
+					word-break: keep-all;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title .titlewrap {
+					margin-top: 20%;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title .name {
+					color: #e04b31;
+					font-size: 52px;
+					line-height: 52px;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title .name span {
+					font-weight: bold;
+					font-size: 52px;
+					line-height: 52px;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title .sub {
+					color: white;
+					font-size: 16px;
+					word-break: keep-all;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .img {
+					width: 100%;
+				}
+				.swiper-pagination {
+					position: absolute;
+					top: 77% !important;
+					left: 0% !important;
+					width: 100% !important;
+				}
+				.swiper-pagination-bullet {
+					width: 100%;
+					opacity: 1;
+					display: inline-block !important;
+					margin-bottom: 10px !important;
+					width: 130px !important;
+					height: 130px !important;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider {
+					padding: 3% 0 20%;
+				}
+
+				.sec2 .sec2wrap .main6 .grid li div {
+					color: #542623;
+					font-size: 24px;
+				}
+				.sec2 .sec2wrap .main6 .grid li div span {
+					font-weight: bold;
+					font-size: 24px;
+				}
+				.sec2 .sec2wrap .main6 .grid li p {
+					font-size: 14px;
+					color: #989898;
+					line-height: 16px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				.sec2 .sec2wrap .main1 .titleinner {
+					overflow: hidden;
+				}
+				.sec2 .sec2wrap .main1 .title {
+					position: relative;
+					color: black;
+					margin: 130px 0 30px 0px;
+					overflow: hidden;
+
+					font-size: 55px;
+					line-height: 60px;
+				}
+				.sec2 .sec2wrap .main1 .title span {
+					font-size: 55px;
+					line-height: 60px;
+				}
+
+				.sec2 .sec2wrap .main2 .title div {
+					font-size: 38px;
+					font-weight: bold;
+				}
+
+				.sec2 .sec2wrap .main3 .title div {
+					font-size: 30px;
+					font-weight: bold;
+					word-break: keep-all;
+				}
+
+				.sec2 .sec2wrap .main4 .titlewrap .title div {
+					font-size: 30px;
+					font-weight: bold;
+				}
+
+				.sec2 .sec2wrap .main5 .titlewrap .title div {
+					font-size: 30px;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main5 .titlewrap .title .sub {
+					font-size: 20px;
+					font-weight: 500;
+				}
+
+				.sec2 .sec2wrap .main6 .titlewrap .title div {
+					font-size: 30px;
+					font-weight: bold;
+				}
+
+				.sec2 .sec2wrap .main2 .content .pcimg {
+					width: 100%;
+					max-width: 1040px;
+					display: none;
+				}
+				.sec2 .sec2wrap .main2 .content .mimg {
+					display: block;
+					width: 100%;
+				}
+				.sec2 .sec2wrap .main2 .content .mtitle {
+					margin-top: 10px;
+					display: block;
+					color: white;
+					font-size: 24px;
+				}
+				.sec2 .sec2wrap .main2 .content .mtitle span {
+					font-size: 24px;
+					font-weight: bold;
+				}
+
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .slide_wrap {
+					display: grid;
+					grid-template-columns: 1fr;
+					gap: 10%;
+					width: 80%;
+					margin: 0 auto;
+					text-align: right;
+					position: relative;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .img {
+					width: 50%;
+					margin: 0 auto;
+				}
+				.main4 .main4br {
+					display: none;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title .titlewrap {
+					margin-top: 0%;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title .sub {
+					color: white;
+					font-size: 14px;
+					word-break: keep-all;
+					margin-top: 3%;
+				}
+				.swiper-pagination {
+					position: absolute;
+					top: 80% !important;
+					left: 0% !important;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider {
+					padding: 3% 0 30%;
+				}
+
+				.sec2 .sec2wrap .main5 {
+					margin-top: -8px;
+					background: url(img/about1/about1_5_bg.jpg) no-repeat;
+					background-position: center bottom;
+					background-size: 100% auto;
+					position: relative;
+					height: 100vw;
+				}
+				.sec2 .sec2wrap .main5::before {
+					content: '';
+					background: url(img/about1/about1_5_bg2.png);
+					background-size: 100% auto;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 50vh;
+					z-index: -1;
+				}
+
+				.sec2 .sec2wrap .main6 .grid {
+					width: 88%;
+					margin: 0 auto;
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+					padding: 20px 0 5%;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 590px) {
+				.sec2 .sec2wrap .main1 .title {
+					font-size: 38px;
+					line-height: 40px;
+					margin: 90px 0 30px 0px;
+				}
+				.sec2 .sec2wrap .main1 .title span {
+					font-size: 38px;
+					line-height: 40px;
+				}
+
+				.sec2 .sec2wrap .main2 .title div {
+					font-size: 30px;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main4 .titlewrap .title div {
+					font-size: 26px;
+					font-weight: bold;
+					word-break: keep-all;
+				}
+
+				.sec2 .sec2wrap .main5 .titlewrap .title div {
+					font-size: 26px;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .main5 .titlewrap .title .sub {
+					font-size: 17px;
+					font-weight: 500;
+				}
+
+				.sec2 .sec2wrap .main6 .titlewrap .title div {
+					font-size: 26px;
+					font-weight: bold;
+				}
+
+				.swiper-pagination-bullet {
+					width: 100%;
+					opacity: 1;
+					display: inline-block !important;
+					margin-bottom: 10px !important;
+					width: 90px !important;
+					height: 90px !important;
+				}
+				.swiper-pagination {
+					position: absolute;
+					top: 80% !important;
+					left: 0% !important;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider {
+					padding: 3% 0 40%;
+				}
+
+				.sec2 .sec2wrap .main5 {
+					margin-top: -8px;
+					background: url(img/about1/about1_5_bg.jpg) no-repeat;
+					background-position: center bottom;
+					background-size: 100% auto;
+					position: relative;
+					height: 130vw;
+				}
+				.sec2 .sec2wrap .main5 .content img {
+					position: absolute;
+					width: 11%;
+					z-index: 5;
+				}
+				.sec2 .sec2wrap .main5 .content img:nth-child(1) {
+					top: 10%;
+					left: 55%;
+				}
+				.sec2 .sec2wrap .main5 .content img:nth-child(2) {
+					top: 25%;
+					left: 35%;
+				}
+				.sec2 .sec2wrap .main5 .content img:nth-child(3) {
+					top: 35%;
+					left: 55%;
+				}
+				.sec2 .sec2wrap .main5 .content img:nth-child(4) {
+					top: 45%;
+					left: 25%;
+				}
+				.sec2 .sec2wrap .main5 .content img:nth-child(5) {
+					top: 50%;
+					left: 72%;
+				}
+				.sec2 .sec2wrap .main5 .content img:nth-child(6) {
+					top: 55%;
+					left: 43%;
+				}
+				.sec2 .sec2wrap .main5 .content img:nth-child(7) {
+					top: 60%;
+					left: 17%;
+				}
+				.sec2 .sec2wrap .main5 .content img:nth-child(8) {
+					top: 70%;
+					left: 70%;
+				}
+
+				.sec2 .sec2wrap .main6 .grid li div {
+					color: #542623;
+					font-size: 20px;
+				}
+				.sec2 .sec2wrap .main6 .grid li div span {
+					font-weight: bold;
+					font-size: 20px;
+				}
+				.sec2 .sec2wrap .main6 .grid li p {
+					font-size: 12px;
+					color: #989898;
+					line-height: 14px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 430px) {
+				.sec2 .sec2wrap .main1 .title {
+					font-size: 32px;
+					line-height: 38px;
+					margin: 90px 0 20px 0px;
+				}
+				.sec2 .sec2wrap .main1 .title span {
+					font-size: 32px;
+					line-height: 38px;
+				}
+
+				.sec2 .sec2wrap .main2 .title div {
+					font-size: 24px;
+					font-weight: bold;
+				}
+
+				.sec2 .sec2wrap .main2 .content .mtitle {
+					margin-top: 10px;
+					display: block;
+					color: white;
+					font-size: 20px;
+					word-break: keep-all;
+				}
+				.sec2 .sec2wrap .main2 .content .mtitle span {
+					font-size: 20px;
+					font-weight: bold;
+				}
+
+				.main4 .main4br {
+					display: inline-block;
+				}
+				.swiper-pagination-bullet {
+					width: 100%;
+					opacity: 1;
+					display: inline-block !important;
+					margin-bottom: 10px !important;
+					width: 70px !important;
+					height: 70px !important;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title .name {
+					color: #e04b31;
+					font-size: 32px;
+					line-height: 32px;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider .swiper-slide .title .name span {
+					font-weight: bold;
+					font-size: 32px;
+					line-height: 32px;
+				}
+				.swiper-pagination {
+					position: absolute;
+					top: 80% !important;
+					left: 0% !important;
+				}
+				.sec2 .sec2wrap .main4 .main4_wrap .slider3 .slider {
+					padding: 3% 0 45%;
+				}
+
+				.sec2 .sec2wrap .main6 .grid {
+					width: 88%;
+					margin: 0 auto;
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					padding: 20px 0 5%;
+				}
+				.sec2 .sec2wrap .main6 .grid li:nth-child(5) {
+					grid-column: 1/2;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sec2">
+			<div class="sec2wrap">
+				<div class="main1">
+					<div class="titleinner">
+						<div class="title" data-aos="fade-up" data-aos-delay="200">
+							<span>성공하는 브랜드</span>는<br />
+							<span>시그니처</span>가 있습니다.
+						</div>
+					</div>
+					<div class="videowrap">
+						<video muted id="videoPlayer" autoplay loop>
+							<source src="img/about1/about1-1.mp4" />
+						</video>
+					</div>
+				</div>
+
+				<div class="main2">
+					<div class="titlewrap">
+						<div class="title">
+							<h3 data-aos="fade-up" data-aos-delay="100">시그니처 1.</h3>
+							<div data-aos="fade-up" data-aos-delay="300">분식 최초, 프리미엄 패키지</div>
+						</div>
+					</div>
+					<div class="content">
+						<div data-aos="zoom-in" data-aos-delay="200">
+							<img src="img/about1/about1_2_1.png" class="pcimg" />
+							<img src="img/about1/about1_2_1m.png" class="mimg" />
+							<p class="mtitle">
+								지속 가능한 환경을 위한 <span>FSC 인증과 디자인 특허</span>를 받은<br />
+								<span>유일무이한 패키지</span>로 경험의 깊이가 다릅니다.
+							</p>
+						</div>
+						<div data-aos="zoom-in" data-aos-delay="300">
+							<img src="img/about1/about1_2_2.png" alt="" />
+							<div>유일무이<br />특허받은 패키지</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="main3">
+					<div class="titlewrap">
+						<div class="title">
+							<h3 data-aos="fade-up" data-aos-delay="100">시그니처 2.</h3>
+							<div data-aos="fade-up" data-aos-delay="300">소장 욕구 자극하는 한정판 시즌 패키지</div>
+						</div>
+					</div>
+					<div class="section page1">
+						<div class="page1_wrap">
+							<div class="swiper slider2" data-aos="fade-left" data-aos-anchor-placement="center-bottom">
+								<ul class="swiper-wrapper slider">
+									<li class="swiper-slide">
+										<img src="./img/about1/about1_3_1.png" alt="" />
+										<div>2022년 <span>가을</span></div>
+									</li>
+									<li class="swiper-slide">
+										<img src="./img/about1/about1_3_2.png" alt="" />
+										<div>2022년 <span>겨울</span></div>
+									</li>
+									<li class="swiper-slide">
+										<img src="./img/about1/about1_3_3.png" alt="" />
+										<div>2023년 <span>봄</span></div>
+									</li>
+									<li class="swiper-slide">
+										<img src="./img/about1/about1_3_4.png" alt="" />
+										<div>2023년 <span>여름</span></div>
+									</li>
+									<li class="swiper-slide">
+										<img src="./img/about1/about1_3_5.png" alt="" />
+										<div>2023년 <span>가을</span></div>
+									</li>
+									<li class="swiper-slide">
+										<img src="./img/about1/about1_3_6.png" alt="" />
+										<div>2023년 <span>겨울</span></div>
+									</li>
+								</ul>
+							</div>
+							<div
+								class="swiper-button-next"
+								data-aos="fade-left"
+								data-aos-anchor-placement="center-bottom"
+							></div>
+							<div
+								class="swiper-button-prev"
+								data-aos="fade-left"
+								data-aos-anchor-placement="center-bottom"
+							></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="main4">
+					<div class="titlewrap">
+						<div class="title">
+							<h3 data-aos="fade-up" data-aos-delay="100">시그니처 3.</h3>
+							<div data-aos="fade-up" data-aos-delay="300">삼첩분식에서만 만날 수 있는 새로운 떡볶이</div>
+						</div>
+					</div>
+					<div class="main4_wrap" data-aos="fade-right" data-aos-delay="500">
+						<div class="swiper slider3">
+							<div class="swiper-wrapper slider">
+								<div class="swiper-slide">
+									<div class="slide_wrap">
+										<div class="title">
+											<div class="titlewrap">
+												<div class="name"><span>삼첩</span>떡볶이</div>
+												<div class="sub">
+													매콤하고 칼칼한 삼첩분식의 시그니처,<br />
+													기본 국물떡볶이!
+												</div>
+											</div>
+										</div>
+										<div class="img">
+											<img src="img/about1/about1_4_1.png" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="slide_wrap">
+										<!-- swiper-slide에 크기조절이 먹지않고 !important도 쓸 수 없어 
+											slide_wrap을 만듦 -->
+										<div class="title">
+											<div class="titlewrap">
+												<div class="name"><span>로제</span>떡볶이</div>
+												<div class="sub">
+													대한민국 떡볶이 트렌드의 중심!<br />
+													매콤한 국물떡볶이에 크림의 부드러움을 더해 만든 꾸덕한 로제떡볶이!
+												</div>
+											</div>
+										</div>
+										<div class="img">
+											<img src="img/about1/about1_4_2.png" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="slide_wrap">
+										<div class="title">
+											<div class="titlewrap">
+												<div class="name"><span>마라로제</span><br class="main4br" />떡볶이</div>
+												<div class="sub">
+													마라와 로제의 완벽한 조합!<br />
+													포두부와 분모자가 선사하는 다채로운 식감과 로제의 부드러움 속에 숨겨진 마라의
+													얼얼한 맛!
+												</div>
+											</div>
+										</div>
+										<div class="img">
+											<img src="img/about1/about1_4_3.png" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="slide_wrap">
+										<div class="title">
+											<div class="titlewrap">
+												<div class="name"><span>바질크림</span><br class="main4br" />떡볶이</div>
+												<div class="sub">
+													오직 삼첩분식에만 있는 시그니처 메뉴! <br />
+													향긋한 바질에 탱탱한 새우와 베이컨이 듬뿍!
+												</div>
+											</div>
+										</div>
+										<div class="img">
+											<img src="img/about1/about1_4_4.png" alt="" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination" data-aos="fade-right" data-aos-delay="300"></div>
+				</div>
+
+				<div class="main5">
+					<div class="titlewrap">
+						<div class="title">
+							<h3 data-aos="fade-up" data-aos-delay="100">시그니처 4.</h3>
+							<div data-aos="fade-up" data-aos-delay="300">삼첩분식의 킥! 감자폭탄</div>
+							<div class="sub" data-aos="fade-up" data-aos-delay="500">
+								최초의 테이스터펍스를 이용한 떡볶이 메뉴
+							</div>
+						</div>
+					</div>
+					<div class="content">
+						<img src="img/about1/about1_5_1.png" alt="" data-aos="fade-down" data-aos-delay="0" />
+						<img src="img/about1/about1_5_2.png" alt="" data-aos="fade-down" data-aos-delay="100" />
+						<img src="img/about1/about1_5_3.png" alt="" data-aos="fade-down" data-aos-delay="200" />
+						<img src="img/about1/about1_5_4.png" alt="" data-aos="fade-down" data-aos-delay="300" />
+						<img src="img/about1/about1_5_5.png" alt="" data-aos="fade-down" data-aos-delay="400" />
+						<img src="img/about1/about1_5_6.png" alt="" data-aos="fade-down" data-aos-delay="450" />
+						<img src="img/about1/about1_5_7.png" alt="" data-aos="fade-down" data-aos-delay="500" />
+						<img src="img/about1/about1_5_8.png" alt="" data-aos="fade-down" data-aos-delay="550" />
+					</div>
+				</div>
+
+				<div class="main6">
+					<div class="titlewrap">
+						<div class="title">
+							<h3 data-aos="fade-up" data-aos-delay="100">시그니처 5.</h3>
+							<div data-aos="fade-up" data-aos-delay="300">
+								삼첩분식에만 있다! <br class="main6br" />떡볶이와의 찰떡 조합 토핑
+							</div>
+						</div>
+					</div>
+					<ul class="grid">
+						<li data-aos="zoom-in" data-aos-delay="200">
+							<img src="img/about1/about1_6_1.png" alt="" />
+							<div><span>모둠</span>튀김</div>
+							<p>
+								떡볶이에 빠질 수 없는 <br />
+								바삭바삭 인기튀김 5종 세트!
+							</p>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="300">
+							<img src="img/about1/about1_6_2.png" alt="" />
+							<div><span>순살</span>치킨</div>
+							<p>부드러운 닭다리살로 튀겨낸 <br />순살치킨</p>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="400">
+							<img src="img/about1/about1_6_3.png" alt="" />
+							<div><span>대구</span>막창</div>
+							<p>
+								막창의 고향, 대구에서 온 <br />
+								쫄깃하고 고소한 대구 막창
+							</p>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="500">
+							<img src="img/about1/about1_6_4.png" alt="" />
+							<div><span>辛대패</span>뽀끔밥</div>
+							<p>고깃집에서 후식으로 먹었던 <br />바로 그 맛!</p>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="550">
+							<img src="img/about1/about1_6_5.png" alt="" />
+							<div><span>날치알 </span>주먹밥</div>
+							<p>입안에서 톡톡 터지는 <br />날치알이 가득!</p>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="600">
+							<img src="img/about1/about1_6_6.png" alt="" />
+							<div><span>누드</span>순대</div>
+							<p>껍질 없어 더욱 먹기 편한<br />쫀쫀 순대</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="main7">
+					<a href="about2.php"><img src="img/about1/about1_7.png" alt="" /></a>
+					<div>
+						<div class="arr">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<p>다음 페이지로 이동하기!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var swiper = new Swiper('.slider2', {
+			loop: true,
+
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+				loop: true,
+			},
+			breakpoints: {
+				1280: {
+					slidesPerView: 3,
+					slidesPerGroup: 1,
+					spaceBetween: 80,
+				},
+				767: {
+					slidesPerView: 2,
+					slidesPerGroup: 1,
+					spaceBetween: 40,
+				},
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+		// var swiper = new Swiper('.slider3', {
+		// 	loop: true,
+
+		// 	autoplay: {
+		// 		delay: 2500,
+		// 		disableOnInteraction: false,
+		// 		loop: true,
+		// 	},
+		// });
+		var swiper = new Swiper('.slider3', {
+			loop: true,
+
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+	</script>
+</html>

@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css?ver=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://kit.fontawesome.com/581fc6d10b.js" crossorigin="anonymous"></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			}
+			span {
+				font-size: inherit;
+				line-height: inherit;
+			}
+			.sec2 {
+				width: 100%;
+			}
+			.sec2 .sec2wrap {
+				width: 94%;
+				max-width: 1680px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.sec2 .sec2wrap > .title {
+				margin: 8% 0 2%;
+				font-size: 40px;
+			}
+
+			.sec2 .sec2wrap .main1 {
+				position: relative;
+				height: 100%;
+			}
+			.sec2 .sec2wrap .main1 .main1_wrap {
+			}
+			.sec2 .sec2wrap .main1 .main1_wrap .title {
+				position: absolute;
+				top: 10%;
+				left: 5%;
+				z-index: 2;
+				text-align: left;
+			}
+			.sec2 .sec2wrap .main1 .main1_wrap .title .name {
+				color: white;
+				font-size: 80px;
+				font-weight: 300;
+				line-height: 90px;
+				word-break: keep-all;
+			}
+			.sec2 .sec2wrap .main1 .main1_wrap .title .name span {
+				font-weight: bold;
+				line-height: 90px;
+			}
+			.sec2 .sec2wrap .main1 .main1_wrap .title .sub {
+				color: white;
+				font-size: 22px;
+				margin-top: 3%;
+				word-break: keep-all;
+			}
+			.sec2 .sec2wrap .main1 .main1_wrap .vod {
+				height: 52.9vw;
+				width: 100%;
+				position: relative;
+				overflow: hidden;
+			}
+			.sec2 .sec2wrap .main1 .main1_wrap .vod video {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100%;
+				height: 100%;
+				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+				background-color: transparent;
+			}
+			.sec2 .sec2wrap .main1 .main1_wrap .vod video source {
+			}
+
+			.main2 {
+				background: url(img/about3/about3_2bg.png) no-repeat center top;
+				background-size: cover;
+				margin-top: -36px;
+				/* padding-top: 36px; */
+			}
+			.main2 .main2_wrap {
+				width: 100%;
+			}
+			.main2 .main2_wrap .title {
+				width: 60%;
+				color: white;
+				text-align: left;
+				display: inline-block;
+				padding: 10% 0 0 5%;
+				word-break: keep-all;
+			}
+			.main2 .main2_wrap .title .name {
+				font-size: 60px;
+				font-weight: 300;
+				line-height: 70px;
+			}
+			.main2 .main2_wrap .title .name span {
+				font-weight: bold;
+			}
+			.main2 .main2_wrap .title .sub {
+				font-size: 26px;
+				padding: 1% 0 0;
+			}
+			.main2 .main2_wrap .title .sub2 {
+				font-size: 18px;
+				padding: 13% 0 0;
+			}
+			.main2 .main2_wrap .content {
+				width: 38%;
+				display: inline-block;
+				padding: 5% 0;
+			}
+			.main2 .main2_wrap .content ul {
+				display: flex;
+				justify-content: center;
+			}
+			.main2 .main2_wrap .content ul li {
+				width: 200px;
+			}
+			.main2 .main2_wrap .content ul li:first-child {
+				opacity: 0.6;
+			}
+			.main2 .main2_wrap .content ul li:first-child .rotate {
+				height: 500px;
+				transform: rotate(180deg);
+			}
+			.main2 .main2_wrap .content ul li:first-child .rotate .grap {
+				height: 40%;
+				background: #ffd800;
+				width: 50%;
+				margin: 0 auto;
+			}
+			.main2 .main2_wrap .content ul li:first-child .rotate .grap.on {
+				animation: stack1 2s 1;
+			}
+			@keyframes stack1 {
+				0% {
+					height: 0;
+				}
+				100% {
+					height: 40%;
+				}
+			}
+			.main2 .main2_wrap .content ul li:first-child .rotate .num {
+				transform: rotate(180deg);
+				color: #ffd800;
+				font-size: 28px;
+				font-weight: bold;
+			}
+			.main2 .main2_wrap .content ul li:first-child .sub {
+				color: white;
+				font-size: 20px;
+				padding: 4%;
+			}
+			.main2 .main2_wrap .content ul li:last-child {
+			}
+			.main2 .main2_wrap .content ul li:last-child .rotate {
+				transform: rotate(180deg);
+				height: 500px;
+			}
+			.main2 .main2_wrap .content ul li:last-child .rotate .grap {
+				height: 80%;
+				background: linear-gradient(#ffd800, #e04b31);
+				width: 50%;
+				margin: 0 auto;
+			}
+			.main2 .main2_wrap .content ul li:last-child .rotate .grap.on {
+				animation: stack2 2s 1;
+			}
+			@keyframes stack2 {
+				0% {
+					height: 0;
+				}
+				100% {
+					height: 80%;
+				}
+			}
+			.main2 .main2_wrap .content ul li:last-child .rotate .num {
+				transform: rotate(180deg);
+				color: #e04b31;
+				font-size: 44px;
+				font-weight: bold;
+
+				animation: blink 1s step-end infinite;
+			}
+			@keyframes blink {
+				50% {
+					opacity: 0;
+				}
+			}
+			.main2 .main2_wrap .content ul li:last-child .sub {
+				color: white;
+				font-size: 24px;
+				padding: 4%;
+			}
+
+			.main3 {
+				background-color: #dad0c7;
+			}
+			.main3 .main3_wrap {
+				padding: 8% 0;
+			}
+			.main3 .main3_wrap .title {
+				word-break: keep-all;
+			}
+			.main3 .main3_wrap .title .name {
+				font-size: 60px;
+				line-height: 70px;
+				font-weight: 300;
+			}
+			.main3 .main3_wrap .title .name span {
+				font-weight: bold;
+			}
+			.main3 .main3_wrap .title .sub {
+				font-size: 26px;
+				padding: 1% 0 3%;
+			}
+			.main3 .main3_wrap .content {
+			}
+			.main3 .main3_wrap .content ul {
+			}
+			.main3 .main3_wrap .content ul li {
+				width: 40%;
+			}
+			.main3 .main3_wrap .content ul li div {
+				background: #542623;
+				border: 7px solid #542623;
+				border-bottom: none;
+				margin: 0 1% 0 0;
+			}
+			.main3 .main3_wrap .content ul li:last-child div {
+				background: #e04b32;
+				border: 7px solid #e04b32;
+				border-bottom: none;
+				margin: 0 0 0 1%;
+			}
+			.main3 .main3_wrap .content ul li div img {
+				width: 100%;
+			}
+			.main3 .main3_wrap .content ul li div p {
+				color: white;
+				font-size: 16px;
+				line-height: 60px;
+			}
+			.main3 .main3_wrap .content ul li > p {
+				text-align: right;
+				color: #e04b31;
+				font-size: 28px;
+				font-weight: bold;
+				margin: 7% 0 0 0;
+			}
+			.main3 .main3_wrap .content ul li > p span {
+				color: black;
+				font-weight: 500;
+			}
+			.main3 .main3_wrap .content ul li:last-child > p {
+				text-align: left;
+			}
+
+			.main4 {
+				background: url(img/about3/about3_4bg.jpg) no-repeat center;
+				background-size: cover;
+			}
+			.main4 .main4_wrap {
+				padding: 7% 0;
+			}
+			.main4 .main4_wrap .title {
+				word-break: keep-all;
+			}
+			.main4 .main4_wrap .title .name {
+				color: #ce563d;
+				font-size: 70px;
+				font-weight: bold;
+				line-height: 80px;
+				letter-spacing: -3px;
+			}
+			.main4 .main4_wrap .title .sub {
+				font-size: 24px;
+			}
+			.main4 .main4_wrap .title .sub span {
+				text-decoration: underline;
+			}
+			.main4 .main4_wrap .content {
+				width: 90%;
+				margin: 50px auto 20px;
+				background: #ffffff65;
+				display: flex;
+				justify-content: space-between;
+				padding: 40px;
+			}
+			.main4 .main4_wrap .content .left {
+				display: inline-block;
+				width: 20%;
+			}
+			.main4 .main4_wrap .content .left img {
+				width: 100%;
+			}
+			.main4 .main4_wrap .content .right {
+				display: inline-block;
+				width: 75%;
+				padding: 2% 0 0 0;
+			}
+			.main4 .main4_wrap .content .right h1 {
+				font-size: 34px;
+				color: #604c3f;
+				font-weight: 400;
+				text-align: left;
+			}
+			.main4 .main4_wrap .content .right h1 .num {
+				position: relative;
+				margin-right: 50px;
+			}
+			.main4 .main4_wrap .content .right h1 .num::before {
+				content: '1';
+				position: absolute;
+				top: 45%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 35px;
+				height: 35px;
+				background-color: #604c3f;
+				color: white;
+				font-size: 30px;
+				text-align: center;
+				border-radius: 50%;
+				padding-bottom: 3px;
+			}
+			.main4 .main4_wrap .content .right h1 span {
+				font-size: 48px;
+				font-weight: bold;
+				vertical-align: middle;
+			}
+			.main4 .main4_wrap .content .right ul {
+				width: 95%;
+				display: flex;
+				justify-content: space-between;
+			}
+			.main4 .main4_wrap .content .right ul li {
+				width: 29%;
+				margin: 5%;
+			}
+			.main4 .main4_wrap .content .right ul li img {
+				width: 100%;
+			}
+			.main4 .main4_wrap .content .right p {
+				font-size: 18px;
+				color: #7a6a56;
+				text-align: left;
+				line-height: 26px;
+				word-break: keep-all;
+			}
+			.main4 .main4_wrap .content .right p span {
+				font-weight: bold;
+			}
+			.main4 .main4_wrap > p {
+				color: #ce563d;
+				font-size: 18px;
+				text-align: left;
+				width: 85%;
+				margin: 0 auto;
+			}
+
+			.main5 {
+				background: url(img/about3/about3_5bg.png) no-repeat center top;
+				background-size: cover;
+				position: relative;
+				z-index: 3;
+			}
+			.main5 .main5_wrap {
+				padding: 10% 0;
+			}
+			.main5 .main5_wrap .title {
+				color: white;
+				word-break: keep-all;
+			}
+			.main5 .main5_wrap .title .name {
+				font-size: 80px;
+				font-weight: 300;
+				line-height: 90px;
+			}
+			.main5 .main5_wrap .title .name span {
+				font-weight: bold;
+			}
+			.main5 .main5_wrap .title .sub {
+				font-size: 22px;
+				padding: 3%;
+			}
+
+			.main6 {
+				background: #e04b32;
+				position: relative;
+			}
+			.main6::before {
+				content: '';
+				background: url(img/about2/about2_6bg.png) no-repeat center;
+				background-size: 100% auto;
+				width: 220px;
+				height: 337px;
+				position: absolute;
+				top: -5%;
+				left: 0;
+			}
+			.main6 .main6_wrap {
+				padding: 8% 0 10% 5%;
+				white-space: nowrap;
+				position: relative;
+			}
+			.main6 .main6_wrap .title {
+				color: white;
+				text-align: left;
+				width: 40%;
+				height: 23vw;
+				display: inline-block;
+				white-space: normal;
+				word-break: keep-all;
+			}
+			.main6 .main6_wrap .title .name {
+				font-size: 60px;
+				font-weight: 300;
+				line-height: 70px;
+			}
+			.main6 .main6_wrap .title .title_wrap {
+			}
+			.main6 .main6_wrap .title .name span {
+				font-weight: bold;
+			}
+			.main6 .main6_wrap .title .sub {
+				font-size: 26px;
+			}
+			.main6 .main6_wrap .slider1 {
+				width: 60%;
+				display: inline-block;
+				margin-left: 2%;
+			}
+			.main6 .main6_wrap .slider1 .swiper-slide {
+				width: 557px;
+			}
+			.main6 .main6_wrap .slider1 .slider img {
+				width: 100%;
+			}
+
+			.main7 {
+				background: #542623;
+				position: relative;
+			}
+			.main7::before {
+				content: '';
+				background: url(img/about2/about2_6bg.png) no-repeat center;
+				background-size: 100% auto;
+				width: 220px;
+				height: 337px;
+				position: absolute;
+				top: -5%;
+				right: 0;
+			}
+			.main7 .main7_wrap {
+				padding: 8% 5% 10% 0%;
+				white-space: nowrap;
+				position: relative;
+			}
+			.main7 .main7_wrap .title {
+				color: white;
+				text-align: left;
+				width: 50%;
+				display: inline-block;
+				white-space: normal;
+				word-break: keep-all;
+			}
+			.main7 .main7_wrap .title .name {
+				font-size: 60px;
+				font-weight: 300;
+				line-height: 70px;
+			}
+			.main7 .main7_wrap .title .title_wrap {
+			}
+			.main7 .main7_wrap .title .name span {
+				font-weight: bold;
+			}
+			.main7 .main7_wrap .title .sub {
+				font-size: 26px;
+			}
+			.main7 .main7_wrap .slider2 {
+				width: 77%;
+				display: inline-block;
+				margin-right: 2%;
+				margin-left: -25%;
+			}
+			.main7 .main7_wrap .slider2 .swiper-slide {
+				width: 557px;
+			}
+			.main7 .main7_wrap .slider2 .slider img {
+				width: 100%;
+			}
+
+			.main8 {
+				background: #c21920;
+				white-space: nowrap;
+				position: relative;
+				z-index: 3;
+			}
+			.main8 .main8_wrap {
+			}
+			.main8 .main8_wrap .title {
+				color: white;
+				padding: 10% 5% 5%;
+				text-align: left;
+				width: 45%;
+				display: table-cell;
+				vertical-align: middle;
+				white-space: normal;
+				word-break: keep-all;
+			}
+			.main8 .main8_wrap .title .name {
+				font-size: 60px;
+				font-weight: bold;
+			}
+			.main8 .main8_wrap .title .sub {
+				font-size: 26px;
+			}
+			.main8 .main8_wrap .title .logo {
+				width: 80%;
+				margin-top: 5%;
+			}
+			.main8 .main8_wrap .title .logo img {
+				width: 25%;
+				margin-right: 5%;
+			}
+			.main8 .main8_wrap .right {
+				width: 55%;
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.main8 .main8_wrap .right img {
+				width: 100%;
+			}
+
+			.main9 {
+				background: url(img/about3/about3_9bg.png) no-repeat center;
+				background-size: 100% 100%;
+			}
+			.main9 .main9_wrap {
+				padding: 10% 0;
+			}
+			.main9 .main9_wrap .title {
+				color: white;
+				word-break: keep-all;
+			}
+			.main9 .main9_wrap .title .name {
+				font-size: 80px;
+				font-weight: 300;
+				line-height: 90px;
+			}
+			.main9 .main9_wrap .title .name span {
+				font-weight: bold;
+			}
+			.main9 .main9_wrap .title .sub {
+				font-size: 22px;
+				margin-top: 3%;
+			}
+
+			.sec2 .main10 {
+				background-color: #e6423e;
+				height: 280px;
+				padding: 60px 0 0;
+				margin-top: 5%;
+			}
+			.sec2 .main10 div {
+				position: relative;
+				margin-top: 30px;
+
+				animation-name: arr;
+				animation-duration: 1s;
+				animation-timing-function: linear;
+
+				animation-delay: 0s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes arr {
+				0% {
+					margin-top: 30px;
+				}
+
+				50% {
+					margin-top: 15px;
+				}
+
+				100% {
+					margin-top: 30px;
+				}
+			}
+			.sec2 .main10 div .arr {
+				width: 18px;
+				height: 30px;
+				margin: 0 auto;
+			}
+			.sec2 .main10 div .arr span:nth-child(1) {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 2px;
+				height: 40px;
+				background-color: black;
+			}
+			.sec2 .main10 div .arr span:nth-child(2) {
+				position: absolute;
+				top: -4px;
+				left: 0;
+				transform: rotate(45deg);
+				width: 2px;
+				height: 25px;
+				background-color: black;
+			}
+			.sec2 .main10 div .arr span:nth-child(3) {
+				position: absolute;
+				top: -4px;
+				right: 0;
+				transform: rotate(135deg);
+				width: 2px;
+				height: 25px;
+				background-color: black;
+			}
+			.sec2 .main10 div p {
+				position: absolute;
+				width: 100%;
+				top: 60px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-size: 18px;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1500px) {
+				.main6 .main6_wrap .title .name {
+					font-size: 50px;
+					line-height: 60px;
+				}
+				.main6 .main6_wrap .title .sub br {
+					display: none;
+				}
+				.main6 .main6_wrap .title .sub {
+					font-size: 24px;
+				}
+
+				.main7 .main7_wrap .title .name {
+					font-size: 50px;
+					line-height: 60px;
+				}
+				.main7 .main7_wrap .title .sub br {
+					display: none;
+				}
+				.main7 .main7_wrap .title .sub {
+					font-size: 24px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				.sec2 .sec2wrap .main1 .main1_wrap .title .name {
+					color: white;
+					font-size: 60px;
+					font-weight: 300;
+					line-height: 70px;
+				}
+				.sec2 .sec2wrap .main1 .main1_wrap .title .name span {
+					font-weight: bold;
+					line-height: 70px;
+				}
+				.sec2 .sec2wrap .main1 .main1_wrap .title .sub {
+					color: white;
+					font-size: 18px;
+					margin-top: 3%;
+				}
+
+				.main2 .main2_wrap .title .name {
+					font-size: 48px;
+					line-height: 58px;
+				}
+				.main2 .main2_wrap .title .sub {
+					font-size: 20px;
+					padding: 1% 0 0;
+				}
+				.main2 .main2_wrap .title .sub2 {
+					font-size: 16px;
+					padding: 13% 0 0;
+				}
+				.main2 .main2_wrap .content ul li:first-child .rotate .num {
+					font-size: 24px;
+				}
+				.main2 .main2_wrap .content ul li:first-child .sub {
+					font-size: 18px;
+				}
+				.main2 .main2_wrap .content ul li:last-child .rotate .num {
+					font-size: 32px;
+				}
+
+				.main2 .main2_wrap .content ul li:last-child .sub {
+					font-size: 20px;
+				}
+
+				.main4 .main4_wrap .title .name {
+					font-size: 58px;
+				}
+				.main4 .main4_wrap .title .sub {
+					font-size: 20px;
+				}
+				.main4 .main4_wrap .content .right ul li {
+					width: 29%;
+					margin: 3%;
+				}
+				.main3 .main3_wrap .content ul li > p {
+					font-size: 24px;
+					margin: 7% 0 0 0;
+				}
+
+				.main4 .main4_wrap .content .right p {
+					font-size: 16px;
+				}
+				.main4 .main4_wrap .content .right p br {
+					display: none;
+				}
+
+				.main5 .main5_wrap .title .name {
+					font-size: 60px;
+					line-height: 70px;
+				}
+				.main5 .main5_wrap .title .sub {
+					font-size: 18px;
+					padding: 3%;
+				}
+
+				.main6 .main6_wrap .title .name {
+					font-size: 48px;
+					line-height: 50px;
+				}
+				.main6 .main6_wrap .title .name br {
+					display: none;
+				}
+				.main6 .main6_wrap .title .sub {
+					font-size: 20px;
+				}
+
+				.main7 .main7_wrap .title .name {
+					font-size: 48px;
+					line-height: 50px;
+				}
+				.main7 .main7_wrap .title .name br {
+					display: none;
+				}
+				.main7 .main7_wrap .title .sub {
+					font-size: 20px;
+				}
+
+				.main8 .main8_wrap .title .name {
+					font-size: 48px;
+					font-weight: bold;
+					line-height: 58px;
+				}
+				.main8 .main8_wrap .title .sub {
+					font-size: 20px;
+				}
+
+				.main9 .main9_wrap .title .name {
+					font-size: 70px;
+					font-weight: 300;
+					line-height: 80px;
+				}
+
+				.main9 .main9_wrap .title .sub {
+					font-size: 18px;
+					margin-top: 3%;
+				}
+			}
+
+			@media only screen and (min-width: 100px) and (max-width: 900px) {
+				.sec2 .sec2wrap .main1 .main1_wrap .title .name {
+					font-size: 54px;
+					line-height: 64px;
+				}
+				.sec2 .sec2wrap .main1 .main1_wrap .title .name span {
+					line-height: 64px;
+				}
+				.sec2 .sec2wrap .main1 .main1_wrap .title .sub {
+					font-size: 18px;
+				}
+
+				.main2 .main2_wrap .content ul li:first-child .rotate .num {
+					font-size: 22px;
+				}
+				.main2 .main2_wrap .content ul li:first-child .sub {
+					font-size: 16px;
+				}
+				.main2 .main2_wrap .content ul li:last-child .rotate .num {
+					font-size: 28px;
+				}
+
+				.main2 .main2_wrap .content ul li:last-child .sub {
+					font-size: 17px;
+				}
+
+				.main3 .main3_wrap .title .name {
+					font-size: 48px;
+					line-height: 58px;
+					font-weight: 300;
+				}
+				.main3 .main3_wrap .title .name span {
+					font-weight: bold;
+				}
+				.main3 .main3_wrap .title .sub {
+					font-size: 20px;
+					padding: 1% 0 3%;
+				}
+				.main3 .main3_wrap .content ul li > p {
+					font-size: 20px;
+					margin: 7% 0 0 0;
+				}
+
+				.main6 .main6_wrap {
+					padding: 8% 0 6% 0%;
+				}
+				.main6 .main6_wrap .title {
+					width: 100%;
+					height: unset;
+					text-align: center;
+					display: block;
+					padding: 0 2% 3%;
+				}
+				.main6 .main6_wrap .slider1 {
+					width: 100%;
+					display: inline-block;
+					margin-left: 5%;
+				}
+
+				.main7 .main7_wrap {
+					padding: 8% 0 6% 0%;
+				}
+				.main7 .main7_wrap .title {
+					width: 100%;
+					height: unset;
+					text-align: center;
+					display: block;
+					padding: 3% 2% 0%;
+				}
+				.main7 .main7_wrap .slider2 {
+					width: 140%;
+					display: inline-block;
+					padding-right: 0%;
+					margin-left: -50%;
+				}
+
+				.main8 .main8_wrap .title {
+					width: 55%;
+				}
+				.main8 .main8_wrap .title br {
+					display: none;
+				}
+				.main8 .main8_wrap .right {
+					width: 45%;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				.sec2 .sec2wrap > .title {
+					margin: 15% 0 2%;
+				}
+
+				.sec2 .sec2wrap .main1 .main1_wrap .title {
+					position: inherit;
+					top: 0%;
+					left: 0%;
+				}
+				.sec2 .sec2wrap .main1 .main1_wrap .title .name {
+					color: black;
+					font-size: 54px;
+					font-weight: 300;
+					line-height: 64px;
+				}
+				.sec2 .sec2wrap .main1 .main1_wrap .title .name span {
+					color: #e04b32;
+					font-weight: bold;
+					line-height: 64px;
+				}
+				.sec2 .sec2wrap .main1 .main1_wrap .title .sub {
+					color: #686868;
+					font-size: 18px;
+					margin-top: 3%;
+				}
+
+				.main2 .main2_wrap .title {
+					width: 100%;
+					color: white;
+					text-align: left;
+					display: inline-block;
+					padding: 15% 0 0 5%;
+					word-break: keep-all;
+				}
+				.main2 .main2_wrap .title .sub2 {
+					font-size: 16px;
+					padding: 5% 0 0;
+				}
+				.main2 .main2_wrap .content {
+					width: 100%;
+					display: inline-block;
+					padding: 0% 0 5%;
+				}
+				.main2 .main2_wrap .content ul li {
+					width: 150px;
+				}
+				.main2 .main2_wrap .content ul li:first-child .rotate {
+					height: 300px;
+				}
+				.main2 .main2_wrap .content ul li:last-child .rotate {
+					height: 300px;
+				}
+
+				.main3 .main3_wrap .title .name {
+					font-size: 40px;
+					line-height: 50px;
+					font-weight: 300;
+				}
+				.main3 .main3_wrap .title .name span {
+					font-weight: bold;
+				}
+				.main3 .main3_wrap .title .sub {
+					font-size: 16px;
+					padding: 1% 0 3%;
+				}
+				.main3 .main3_wrap .content ul li > p {
+					font-size: 16px;
+					margin: 7% 0 0 0;
+				}
+
+				.main4 .main4_wrap .title {
+					word-break: keep-all;
+					padding: 0 2% 0;
+				}
+				.main4 .main4_wrap .title .name {
+					font-size: 58px;
+					line-height: 68px;
+					letter-spacing: -3px;
+				}
+				.main4 .main4_wrap .title .sub {
+					font-size: 20px;
+				}
+				.main4 .main4_wrap .title .sub br {
+					display: none;
+				}
+				.main4 .main4_wrap .content {
+					width: 90%;
+					flex-wrap: wrap;
+					padding: 4%;
+				}
+				.main4 .main4_wrap .content .left {
+					display: inline-block;
+					width: 40%;
+					margin: 0 auto;
+				}
+				.main4 .main4_wrap .content .right {
+					display: inline-block;
+					width: 100%;
+					padding: 2% 0 0 0;
+				}
+				.main4 .main4_wrap .content .right p {
+					font-size: 14px;
+				}
+				.main4 .main4_wrap .content .right h1 {
+					font-size: 28px;
+				}
+				.main4 .main4_wrap .content .right h1 span {
+					font-size: 36px;
+				}
+
+				.main5 .main5_wrap .title .name {
+					font-size: 48px;
+					line-height: 58px;
+				}
+				.main5 .main5_wrap .title .sub {
+					font-size: 18px;
+					padding: 3%;
+				}
+
+				.main6::before {
+					width: 220px;
+					height: 337px;
+					position: absolute;
+					top: -15%;
+					left: -5%;
+					z-index: 0;
+				}
+				.main6 .main6_wrap .title .name {
+					font-size: 48px;
+					font-weight: 300;
+					line-height: 58px;
+				}
+				.main6 .main6_wrap .title .sub {
+					font-size: 18px;
+				}
+
+				.main7::before {
+					width: 220px;
+					height: 337px;
+					position: absolute;
+					top: unset;
+					bottom: -15%;
+					right: -10%;
+					z-index: 0;
+				}
+				.main7 .main7_wrap .title .name {
+					font-size: 48px;
+					font-weight: 300;
+					line-height: 58px;
+				}
+				.main7 .main7_wrap .title .sub {
+					font-size: 18px;
+				}
+
+				.main8 .main8_wrap .title {
+					width: 95%;
+					display: block;
+					text-align: center;
+					margin: 0 auto;
+				}
+
+				.main8 .main8_wrap .right {
+					width: 45%;
+				}
+				.main8 .main8_wrap .title .name {
+					font-size: 40px;
+					font-weight: bold;
+					line-height: 46px;
+				}
+				.main8 .main8_wrap .title .sub {
+					font-size: 16px;
+				}
+
+				.main8 .main8_wrap .title .logo {
+					width: 60%;
+					margin: 0 auto;
+					margin-top: 5%;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 590px) {
+				.sec2 .sec2wrap .main1 .main1_wrap .title .name {
+					color: black;
+					font-size: 46px;
+					font-weight: 300;
+					line-height: 56px;
+				}
+				.sec2 .sec2wrap .main1 .main1_wrap .title .name span {
+					color: #e04b32;
+					font-weight: bold;
+					line-height: 56px;
+				}
+				.sec2 .sec2wrap .main1 .main1_wrap .title .sub {
+					color: #686868;
+					font-size: 16px;
+					margin-top: 3%;
+				}
+
+				.main2 .main2_wrap .title .name {
+					font-size: 40px;
+					line-height: 50px;
+				}
+				.main2 .main2_wrap .title .sub {
+					font-size: 18px;
+					padding: 1% 0 0;
+				}
+				.main2 .main2_wrap .title .sub2 {
+					font-size: 13px;
+					padding: 5% 0 0;
+				}
+
+				.main3 .main3_wrap .title .name {
+					font-size: 38px;
+					line-height: 48px;
+					font-weight: 300;
+				}
+				.main3 .main3_wrap .title .name span {
+					font-weight: bold;
+				}
+				.main3 .main3_wrap .title .sub {
+					font-size: 14px;
+					padding: 1% 0 3%;
+					letter-spacing: -0.5px;
+				}
+				.main3 .main3_wrap .content ul li {
+					width: 80%;
+				}
+				.main3 .main3_wrap .content ul li > p {
+					display: none;
+				}
+				.main3 .main3_wrap .content ul li div {
+					margin: 0 0% 0 0;
+				}
+				.main3 .main3_wrap .content ul li:last-child div {
+					margin: 2% 0 0 0%;
+				}
+
+				.main4 .main4_wrap .title .name {
+					font-size: 48px;
+					line-height: 58px;
+					letter-spacing: -3px;
+				}
+				.main4 .main4_wrap .title .sub {
+					font-size: 16px;
+				}
+				.main4 .main4_wrap .content .right h1 {
+					font-size: 22px;
+				}
+				.main4 .main4_wrap .content .right h1 span {
+					font-size: 28px;
+				}
+				.main4 .main4_wrap .content .right h1 .num {
+					position: relative;
+					margin-right: 30px;
+				}
+				.main4 .main4_wrap .content .right h1 .num::before {
+					width: 25px;
+					height: 25px;
+					font-size: 20px;
+					padding-bottom: 1px;
+				}
+
+				.main5 .main5_wrap .title .name {
+					font-size: 32px;
+					line-height: 42px;
+				}
+				.main5 .main5_wrap .title .sub {
+					font-size: 16px;
+					padding: 3%;
+				}
+
+				.main6 .main6_wrap .slider1 {
+					width: 80%;
+					display: inline-block;
+					margin: 5%;
+				}
+
+				.main6 .main6_wrap .title .name {
+					font-size: 36px;
+					font-weight: 300;
+					line-height: 46px;
+				}
+				.main6 .main6_wrap .title .sub {
+					font-size: 16px;
+				}
+
+				.main7 .main7_wrap .title .name {
+					font-size: 36px;
+					font-weight: 300;
+					line-height: 46px;
+				}
+				.main7 .main7_wrap .title .sub {
+					font-size: 16px;
+				}
+				.main7 .main7_wrap .slider2 {
+					width: 80%;
+					display: inline-block;
+					margin: 5%;
+				}
+
+				.main8 .main8_wrap .title .name {
+					font-size: 34px;
+					font-weight: bold;
+					line-height: 46px;
+				}
+
+				.main9 .main9_wrap .title .name {
+					font-size: 38px;
+					font-weight: 300;
+					line-height: 48px;
+				}
+
+				.main9 .main9_wrap .title .sub {
+					font-size: 16px;
+					margin-top: 3%;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 430px) {
+				.sec2 .sec2wrap > .title {
+					margin: 20% 0 2%;
+				}
+
+				.sec2 .sec2wrap .main1 .main1_wrap .title .name {
+					font-size: 42px;
+					line-height: 52px;
+				}
+				.sec2 .sec2wrap .main1 .main1_wrap .title .name span {
+					line-height: 52px;
+				}
+				.sec2 .sec2wrap .main1 .main1_wrap .title .sub {
+					font-size: 16px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sec2">
+			<div class="sec2wrap">
+				<div class="title">창업 강점</div>
+				<div class="main1">
+					<div class="main1_wrap">
+						<div class="title">
+							<div class="name" data-aos="fade-left" data-aos-delay="200">
+								<span>5분!</span><br />
+								삼첩분식은 <span>쉽고 빠릅니다.</span>
+							</div>
+							<div class="sub" data-aos="fade-left" data-aos-delay="400">
+								본사의 레시피 체계화로 조리시간을 최소화했습니다.<br />
+								단순화된 주방 운영 시스템으로 누구나 쉽게 매장을 운영할 수 있습니다.
+							</div>
+						</div>
+						<div class="vod">
+							<video muted id="videoPlayer" autoplay loop playsinline>
+								<source src="img/about3/about3_1.mp4" type="video/mp4" />
+							</video>
+						</div>
+					</div>
+				</div>
+
+				<div class="main2">
+					<div class="main2_wrap">
+						<div class="title">
+							<div class="name" data-aos="fade-left" data-aos-delay="200">
+								<span>2만3천원!</span><br />
+								삼첩분식은 <span>객단가가 높습니다.</span>
+							</div>
+							<div class="sub" data-aos="fade-left" data-aos-delay="300">
+								전략적인 세트메뉴와 토핑의 차별화로<br />
+								높은 객단가를 설계했습니다.
+							</div>
+							<div class="sub2" data-aos="fade-left" data-aos-delay="400">전국 평균 대비 약 2개 높은 객단가</div>
+						</div>
+						<div class="content" data-aos="fade-up" data-aos-delay="500">
+							<ul>
+								<li>
+									<div class="rotate">
+										<div class="grap"></div>
+										<div class="num">11,831원</div>
+									</div>
+									<div class="sub">업계 평균 객단가</div>
+								</li>
+								<li>
+									<div class="rotate">
+										<div class="grap"></div>
+										<div class="num">23,312원</div>
+									</div>
+									<div class="sub">삼첩분식 객단가</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="main3">
+					<div class="main3_wrap">
+						<div class="title">
+							<div class="name" data-aos="flip-left" data-aos-delay="200">
+								<span>1km</span><br />
+								삼첩분식은 <span>최대 영업범위</span>를 보장합니다.
+							</div>
+							<div class="sub" data-aos="flip-left" data-aos-delay="300">
+								상생의 기본은 매출, 넓은 영업권역으로 평생 가는 매장 만드세요!
+							</div>
+						</div>
+						<div class="content">
+							<ul>
+								<li data-aos="fade-right" data-aos-delay="300">
+									<div>
+										<img src="img/about3/about3_3_1.png" alt="" />
+										<p>타브랜드-영업구역 500m</p>
+									</div>
+									<p>타 브랜드 5개 지점 영업범위 <span>V</span></p>
+								</li>
+								<li data-aos="fade-left" data-aos-delay="300">
+									<div>
+										<img src="img/about3/about3_3_2.png" alt="" />
+										<p>삼첩분식-영업구역 1000m</p>
+									</div>
+									<p><span>S</span> 삼첩분식 1개 지점 영업범위</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="main4">
+					<div class="main4_wrap">
+						<div class="title">
+							<div class="name" data-aos="flip-left" data-aos-delay="200">GLOBAL SAMCHEOP TOPOKKI!</div>
+							<div class="sub" data-aos="flip-left" data-aos-delay="400">
+								확고한 브랜드 아이덴티티와 공격적인 마케팅을 통해 2023년,
+								<span>베트남을 시작으로 해외 시장에 진출</span>하였습니다.<br />
+								글로벌 브랜드로써의 트렌드 역시, 만들어나가겠습니다.
+							</div>
+						</div>
+						<div class="content" data-aos="zoom-in" data-aos-delay="400">
+							<div class="left">
+								<img src="img/about3/about3_4_1.png" alt="" />
+							</div>
+							<div class="right">
+								<h1><span class="num"></span><span>Hanoi</span>_Vietnam</h1>
+								<ul>
+									<li><img src="img/about3/about3_4_2.png" alt="" /></li>
+									<li><img src="img/about3/about3_4_3.png" alt="" /></li>
+									<li><img src="img/about3/about3_4_4.png" alt="" /></li>
+								</ul>
+								<p>
+									하노이 직영점은 ‘<span>SAMCHEOP TOPOKKI</span>’라는 이름으로,<br />
+									브랜드 컬러인 레드와 베이지를 활용한 인테리어를 통해 삼첩분식 특유의 트렌디하고 활기찬
+									분위기를 제공합니다.<br />매장에서는 브랜드 시그니처 메뉴인 마라로제떡볶이부터 감자폭탄은
+									물론<br />
+									현지 반응을 고려해 베트남에서 특히 인기 있는 다양한 김밥 메뉴들도 함께 선보입니다.
+								</p>
+							</div>
+						</div>
+						<p data-aos="fade-right" data-aos-delay="200">* 각국 프랜차이즈 지사 모집 중</p>
+					</div>
+				</div>
+
+				<div class="main5">
+					<div class="main5_wrap">
+						<div class="title">
+							<div class="name" data-aos="zoom-in" data-aos-delay="200">
+								삼첩분식의<br /><span>본사 CGF(주)</span>는<br />
+								<span>대한민국 1%</span>입니다.
+							</div>
+							<div class="sub" data-aos="fade-down" data-aos-delay="300">
+								800개 이상의 가맹점을 운영하면서 자체 공장을 통해 제조와 유통을 하는 본사는 CGF(주) 뿐입니다.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="main6">
+					<div class="main6_wrap">
+						<div class="title">
+							<div class="title_wrap">
+								<div class="name" data-aos="flip-left" data-aos-delay="200">
+									<span>자체 HACCP 인증</span><br />
+									제조 시설
+								</div>
+								<div class="sub" data-aos="flip-left" data-aos-delay="300">
+									육가공과 더불어 삼첩분식 내 모든 소스를 자체 개발,<br />
+									제조하면 R&D 시설을 갖추고 있습니다.
+								</div>
+							</div>
+						</div>
+						<div class="swiper slider1" data-aos="fade-left" data-aos-delay="400">
+							<ul class="swiper-wrapper slider">
+								<li class="swiper-slide">
+									<img src="img/about3/about3_6_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="img/about3/about3_6_2.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="img/about3/about3_6_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="img/about3/about3_6_2.png" alt="" />
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="main7">
+					<div class="main7_wrap">
+						<div class="swiper slider2" data-aos="fade-left" data-aos-delay="300">
+							<ul class="swiper-wrapper slider">
+								<li class="swiper-slide">
+									<img src="img/about3/about3_7_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="img/about3/about3_7_2.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="img/about3/about3_7_1.png" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="img/about3/about3_7_2.png" alt="" />
+								</li>
+							</ul>
+						</div>
+						<div class="title">
+							<div class="title_wrap">
+								<div class="name" data-aos="flip-left" data-aos-delay="200">
+									<span>2000평 규모</span>의 자체<br />
+									<span>물류, 제조 시설</span>
+								</div>
+								<div class="sub" data-aos="flip-left" data-aos-delay="300">
+									합리적인 공급가로 가맹점에 납품이 가능합니다.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="main8">
+					<div class="main8_wrap">
+						<div class="title">
+							<div class="name" data-aos="flip-left" data-aos-delay="200">800개의 가맹점 운영</div>
+							<div class="sub" data-aos="flip-left" data-aos-delay="300">
+								덮덮밥, 대천국밥, 존가네, 삼처분식 등 외식업계<br />
+								주류를 이룬 브랜드들을 운영해오고 있습니다.
+							</div>
+							<div class="logo" data-aos="fade-right" data-aos-delay="300">
+								<img src="img/about3/about3_8_1.png" alt="" />
+								<img src="img/about3/about3_8_2.png" alt="" />
+								<img src="img/about3/about3_8_3.png" alt="" />
+							</div>
+						</div>
+						<div class="right" data-aos="fade-left" data-aos-delay="300">
+							<img src="img/about3/about3_8_4.png" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div class="main9">
+					<div class="main9_wrap">
+						<div class="title">
+							<div class="name" data-aos="zoom-in" data-aos-delay="200">
+								80명의<br />
+								<span>외식 전문가</span>들이<br />
+								<span>가명점의 성공</span>을 위해 일합니다.
+							</div>
+							<div class="sub" data-aos="fade-down" data-aos-delay="300">
+								매일이 새로운 삼첩분식을 만들겠습니다!
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main10">
+				<a href="about4.php"><img src="img/about3/about3_10.png" alt="" /></a>
+				<div>
+					<div class="arr">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<p>다음 페이지로 이동하기!</p>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		// 스크롤해서 .mian2의 옵셋탑값 -800에 오면 on클래스를 추가해 애니메이션을 실행시키고
+		// 낮아지면 on클래스를 제거하여 다시 -800에 오면 애니메이션을 실행시킬 수 있는 상태로 만듦
+		$(window).scroll(function () {
+			var threshold = $('.main2').offset().top - 800;
+
+			if ($(window).scrollTop() >= threshold) {
+				$('.main2 .main2_wrap .content ul li:last-child .rotate .grap').addClass('on');
+			} else {
+				$('.main2 .main2_wrap .content ul li:last-child .rotate .grap').removeClass('on');
+			}
+			if ($(window).scrollTop() >= threshold) {
+				$('.main2 .main2_wrap .content ul li:first-child .rotate .grap').addClass('on');
+			} else {
+				$('.main2 .main2_wrap .content ul li:first-child .rotate .grap').removeClass('on');
+			}
+		});
+
+		var swiper = new Swiper('.slider1', {
+			loop: true,
+			// threshold: 100,
+			// resistance: true,
+			autoplay: {
+				delay: 2000,
+				disableOnInteraction: false,
+			},
+			breakpoints: {
+				590: {
+					slidesPerView: 1.5,
+					slidesPerGroup: 1,
+					spaceBetween: 10,
+				},
+				0: {
+					// 한번에 보이는 갯수 이거 적용시키고 loop오류 안 나려면
+					// 슬라이드 갯수를 x2만큼 만들어야함
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+					spaceBetween: 10,
+				},
+			},
+		});
+
+		var swiper = new Swiper('.slider2', {
+			loop: true,
+			// threshold: 100,
+			// resistance: true,
+			// centeredSlides: true,
+			// initialSlide: 2, 슬라이드 시작 위치
+			autoplay: {
+				delay: 2000,
+				disableOnInteraction: false,
+			},
+			breakpoints: {
+				590: {
+					slidesPerView: 2,
+					slidesPerGroup: 0.5,
+					spaceBetween: 10,
+				},
+				0: {
+					// 한번에 보이는 갯수 이거 적용시키고 loop오류 안 나려면
+					// 슬라이드 갯수를 x2만큼 만들어야함
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+					spaceBetween: 10,
+				},
+			},
+		});
+	</script>
+</html>

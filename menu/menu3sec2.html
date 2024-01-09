@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css?ver=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<style>
+			@font-face {
+				font-family: 'NEXON Lv2 Gothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+					format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+					format('woff');
+				font-weight: 300;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+					format('woff');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GmarketSans';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+			}
+			body {
+				font-family: 'GmarketSans', 'NEXON Lv2 Gothic';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.sec2 {
+				width: 100%;
+			}
+			.sec2 .sec2wrap {
+				width: 88%;
+				margin: 0 auto;
+			}
+			.sec2 .sec2wrap .title {
+			}
+			.sec2 .sec2wrap > .title .name {
+				font-size: 40px;
+				padding: 8% 0 0%;
+			}
+			.sec2 .sec2wrap > .title img {
+				padding: 0 0 10px;
+			}
+			.sec2 .sec2wrap > .title .sub {
+				font-size: 34px;
+				color: #542623;
+				font-weight: 500;
+			}
+			.sec2 .sec2wrap > .title .sub span {
+				font-size: 34px;
+				color: #e04b31;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .grid {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 2%;
+				width: 80%;
+				margin: 0 auto;
+				padding: 40px 0 80px;
+			}
+			.sec2 .sec2wrap .grid .gridbox {
+				border: 1px solid #e5e5e5;
+				width: 100%;
+				position: relative;
+				padding: 0 0 70px;
+			}
+			.sec2 .sec2wrap .grid .gridbox img {
+				width: 100%;
+			}
+			.sec2 .sec2wrap .grid .gridbox .title {
+				padding: 10% 0 2%;
+			}
+			.sec2 .sec2wrap .grid .gridbox .title .name {
+				font-size: 30px;
+				color: #542623;
+			}
+			.sec2 .sec2wrap .grid .gridbox .title .name span {
+				font-size: 30px;
+				font-weight: bold;
+			}
+			.sec2 .sec2wrap .grid .gridbox .title .sub {
+				font-size: 16px;
+				color: #989898;
+			}
+			.sec2 .sec2wrap .grid .gridbox a {
+				color: #e04b31;
+				border: 0.5px solid #e04b3169;
+				border-radius: 30px;
+				padding: 2.5% 16%;
+				transition: 0.3s;
+				position: absolute;
+				bottom: 4%;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.sec2 .sec2wrap .grid .gridbox a:hover {
+				color: white;
+				background-color: #e04b31;
+			}
+			.br {
+				display: none;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1280px) {
+				.sec2 .sec2wrap {
+					width: 90%;
+					margin: 0 auto;
+				}
+
+				.sec2 .sec2wrap > .title .name {
+					font-size: 35px;
+					padding: 10% 0 4%;
+				}
+				.sec2 .sec2wrap > .title .sub {
+					font-size: 28px;
+					color: #542623;
+					font-weight: 500;
+				}
+				.sec2 .sec2wrap > .title .sub span {
+					font-size: 28px;
+					color: #e04b31;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .grid {
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+					gap: 2%;
+					width: 100%;
+					margin: 0 auto;
+					padding: 40px 0 80px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 767px) {
+				.sec2 .sec2wrap {
+					width: 100%;
+					margin: 0 auto;
+				}
+				.sec2 .sec2wrap > .title .name {
+					font-size: 30px;
+					padding: 15% 0 4%;
+				}
+
+				.sec2 .sec2wrap > .title .sub {
+					font-size: 20px;
+					color: #542623;
+					font-weight: 500;
+				}
+				.sec2 .sec2wrap > .title .sub span {
+					font-size: 20px;
+					color: #e04b31;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .grid {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					width: 90%;
+					margin: 0 auto;
+					padding: 40px 0 80px;
+				}
+				.sec2 .sec2wrap .grid .gridbox:last-child {
+					margin-top: 5%;
+				}
+				.sec2 .sec2wrap .grid .gridbox .title {
+					padding: 5% 0 2%;
+				}
+				.sec2 .sec2wrap .grid .gridbox .title .name {
+					font-size: 20px;
+					color: #542623;
+					word-break: keep-all;
+				}
+				.sec2 .sec2wrap .grid .gridbox .title .name span {
+					font-size: 20px;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .grid .gridbox .title .sub {
+					font-size: 14px;
+					color: #989898;
+					word-break: keep-all;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 580px) {
+				.br {
+					display: inline-block;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 464px) {
+				.sec2 .sec2wrap > .title .sub {
+					font-size: 17px;
+					color: #542623;
+					font-weight: 500;
+				}
+				.sec2 .sec2wrap > .title .sub span {
+					font-size: 17px;
+					color: #e04b31;
+					font-weight: bold;
+				}
+				.sec2 .sec2wrap .grid .gridbox .title .sub {
+					font-size: 12.5px;
+					color: #989898;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sec2">
+			<div class="sec2wrap">
+				<div class="title">
+					<div class="name">2첩</div>
+					<img src="img/menu3/menu3_tit.png" alt="" />
+					<div class="sub">
+						<span>내가 원하는 떡볶이를 만들자!</span><br />
+						오직 삼첩분식에서만 맛볼 수 있는 특별한 토핑 메뉴
+					</div>
+				</div>
+				<div class="grid">
+					<div class="gridbox">
+						<img src="./img/menu3/menu3_1.png" alt="" />
+						<div class="title">
+							<div class="name"><span>모둠</span>튀김</div>
+							<div class="sub">
+								떡볶이에 빠질 수 없는<br />
+								바삭바삭 인기 튀김 세트!
+							</div>
+						</div>
+						<a href="menu2_1.php">MORE+</a>
+					</div>
+					<div class="gridbox">
+						<img src="./img/menu3/menu3_2.png" alt="" />
+						<div class="title">
+							<div class="name"><span>순살</span>치킨</div>
+							<div class="sub">부드러운 닭다리살로 튀겨낸!</div>
+						</div>
+						<a href="menu2_1.php">MORE+</a>
+					</div>
+					<div class="gridbox">
+						<img src="./img/menu3/menu3_3.png" alt="" />
+						<div class="title">
+							<div class="name"><span>대구</span>막창</div>
+							<div class="sub">
+								막창의 고향 대구에서 온<br />
+								쫄깃하고 고소한 대구막창
+							</div>
+						</div>
+						<a href="menu2_1.php">MORE+</a>
+					</div>
+					<div class="gridbox">
+						<img src="./img/menu3/menu3_4.png" alt="" />
+						<div class="title">
+							<div class="name"><span>대패</span> 우삼겹</div>
+							<div class="sub">
+								야들야들 구운 고소한<br />
+								대패 우삼겹
+							</div>
+						</div>
+						<a href="menu2_1.php">MORE+</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
